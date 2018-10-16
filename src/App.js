@@ -1,26 +1,44 @@
 import React, { Component } from 'react';
-import './styles/config.css';
+import Home from './components/Home';
+
+import { get, getAll, update, search } from './api/BooksAPI'
+
+
+
 
 class App extends Component {
+  
+  constructor(){
+    super();
+    this.state = { books: '' }
+    getAll().then(result => {
+      this.setState({
+        books: result
+      })
+    })
+  }
+
+  console = () => {
+
+    console.log('books.:', this.state.books)
+    this.setState({})  
+  }
+
   render() {
+
+    const { books } = this.state;
+    
+    console.log('boooooooks:', books) 
+
     return (
-      <div className="container">
-          <div clasName="header-profile" > HEADER PROFILE </div>
-          <div clasName="header-profile"  style={style}> SEARCH BOOKS </div>
-          
-          {/* <div clasName="stand"> */}
-            <div style={style}> Currently Reading </div>
-            <div style={style}> Want to Read </div>
-            <div style={style}> Read </div>
-          {/* </div> */}
+      <div>
+        <button onClick={ this.console}>butaaaaaaaao</button>
+        <br />
+        { (books === '') ? 'aguardando ...':<Home books={books}>  </Home> }
+
       </div>
     );
   }
 }
 
 export default App;
-
-const style = {
-  'border': 'solid',
-  'border-color': 'blue'
-};

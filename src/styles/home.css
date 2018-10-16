@@ -1,0 +1,9 @@
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5%;
+    margin: 5%;
+
+}
