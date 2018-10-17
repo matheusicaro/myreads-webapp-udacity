@@ -6,7 +6,6 @@ const Book = ({ book, styles }) => {
     const { title, imageLinks } = book;
     const { divTag, titleTag, imgTag } = styles;
 
-    console.log(titleTag)
     return (
     <div style={divTag}>
         { (imageLinks) && 

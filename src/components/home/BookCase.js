@@ -4,14 +4,16 @@ import PropTypes from 'prop-types'
 
 import Book from '../utils/Book'
 
-const BookCase = ({ books, style }) => {
-
+const BookCase = (props) => {
+  const style = props.styleChild
+  const {books} = props;
+  
   return (
     <div className={ style }>
      <ol style={ grid }>
-        {books.map( book =>(
+        {books.map( (book, index) =>(
 
-          <li><Book book={ book } styles={styles}></Book></li> 
+          <li key={index}><Book book={ book } styles={styles}></Book></li> 
         
         ))}
      </ol>
@@ -26,16 +28,16 @@ BookCase.propTypes = {
 export default BookCase
 
 const grid = {
-  'list-style-type': 'none',
+  'listStyleType': 'none',
   'padding': '0',
   'margin': '0',
   'display': 'grid',
-  'grid-template-columns': '25% 25% 25% 25%',
-  'grid-gap': '2%',
+  'gridTemplateColumns': '25% 25% 25% 25%',
+  'gridGap': '2%',
 }
 
 const styles = {
   titleTag: {
-    'font-size' : '90%'
+    'fontSize' : '90%'
   }
 }
