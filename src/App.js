@@ -28,8 +28,6 @@ class App extends Component {
 
     const { books } = this.state;
     
-    console.log('boooooooks:', books) 
-
     return (
       <div>
         <button onClick={ this.console}>butaaaaaaaao</button>

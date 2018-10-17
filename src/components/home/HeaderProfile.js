@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../styles/home/HeaderProfile.css'
-
-
-const HeaderProfile = () => {
+const HeaderProfile = ({ style }) => {
   return (
-    <div className='header-profile'>
+    <div className={ style }>
       HEADER PROFILE
     </div>
   )

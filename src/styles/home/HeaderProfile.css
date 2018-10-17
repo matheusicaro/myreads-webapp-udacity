@@ -1,8 +1,0 @@
-@import '../home.css';
-
-.header-profile {
-  grid-column: 1/4 !important;
-  grid-row: 1/1 !important;
-  border: solid;
-  border-color: blue;
-}

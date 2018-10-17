@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../styles/home/HeaderSearch.css'
-
-
-const HeaderSearch = () => {
+const HeaderSearch = ({ style }) => {
   return (
-    <div className='header-search'>
+    <div className={ style }>
       SEARCH BOOKS
     </div>
   )

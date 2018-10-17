@@ -1,8 +1,0 @@
-@import '../home.css';
-
-.header-search {
-  grid-column: 4/4;
-  grid-row: 1/1;
-  border: solid;
-  border-color: red;
-}

@@ -1,8 +1,0 @@
-@import '../home.css';
-
-.currently-reading {
-  grid-column: 1/5;
-  grid-row: 2/2;
-  border: solid;
-  border-color: green;
-}

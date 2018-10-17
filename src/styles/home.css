@@ -1,5 +1,5 @@
 
-.container {
+#bookcase {
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -7,3 +7,41 @@
     margin: 5%;
 
 }
+
+.header-profile {
+    grid-column: 1/4 !important;
+    grid-row: 1/1 !important;
+    border: solid;
+    border-color: blue;
+}
+
+.header-search {
+    grid-column: 4/4;
+    grid-row: 1/1;
+    border: solid;
+    border-color: red;
+}
+
+.currently-reading {
+    grid-column: 1/5;
+    grid-row: 2/2;
+    border: solid;
+    border-color: green;
+    text-align: center;
+}
+
+.want-read {
+    grid-column: 1/5;
+    grid-row: 3/3;
+    border: solid;
+    border-color: orange;
+    text-align: center;
+  }
+
+.read {
+    grid-column: 1/5;
+    grid-row: 4/4;
+    border: solid;
+    border-color: maroon;
+    text-align: center;
+  }
