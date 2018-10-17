@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
+
 import Home from './components/Home';
+import Search from './components/Search';
 
 import { get, getAll, update, search } from './api/BooksAPI'
 
@@ -7,8 +10,8 @@ import { get, getAll, update, search } from './api/BooksAPI'
 
 
 class App extends Component {
-  
-  constructor(){
+
+  constructor() {
     super();
     this.state = { books: '' }
     getAll().then(result => {
@@ -19,22 +22,31 @@ class App extends Component {
   }
 
   console = () => {
-
-    console.log('books.:', this.state.books)
-    this.setState({})  
+    this.setState({})
   }
+
 
   render() {
 
     const { books } = this.state;
-    
-    return (
-      <div>
-        <button onClick={ this.console}>butaaaaaaaao</button>
-        <br />
-        { (books === '') ? 'aguardando ...':<Home books={books}>  </Home> }
 
-      </div>
+    return (
+      <BrowserRouter>
+        <section>
+
+          <button onClick={this.console}>butaaaaaaaao</button>
+          <br />
+
+          <Route exact path='/' render={() => (
+            (books === '') ? 'aguardando ...' : <Home books={books} >  </Home>
+          )} />
+
+          
+          <Route exact path='/search-books' component={Search}  />
+
+        </section>
+      </BrowserRouter>
+
     );
   }
 }
