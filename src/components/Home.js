@@ -5,7 +5,7 @@ import '../styles/home.css';
 
 import HeaderProfile from './home/HeaderProfile';
 import HeaderSearch from './home/HeaderSearch';
-import BookCase from './home/BookCase';
+import BookCase from './utils/BookCase';
 
 
 const Home = (props) =>{

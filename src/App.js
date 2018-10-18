@@ -25,7 +25,9 @@ class App extends Component {
     this.setState({})
   }
 
-
+  search = (value) =>{
+    console.log('query book: ', value)
+  }
   render() {
 
     const { books } = this.state;
@@ -42,7 +44,9 @@ class App extends Component {
           )} />
 
           
-          <Route exact path='/search-books' component={Search}  />
+          <Route exact path='/search-books' render={() =>( 
+            <Search search={ this.search }></Search>
+          )}/>
 
         </section>
       </BrowserRouter>

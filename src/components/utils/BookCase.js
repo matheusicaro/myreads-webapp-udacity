@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Book from '../utils/Book'
+import Book from './Book'
 
 const BookCase = (props) => {
   const style = props.styleChild
@@ -10,13 +10,17 @@ const BookCase = (props) => {
   
   return (
     <div className={ style }>
-     <ol style={ grid }>
-        {books.map( (book, index) =>(
+      
+      { books && 
+        <ol style={ grid }>
+            {books.map( (book, index) =>(
 
-          <li key={index}><Book book={ book } styles={styles}></Book></li> 
-        
-        ))}
-     </ol>
+              <li key={index}><Book book={ book } styles={styles}></Book></li> 
+            
+            ))}
+        </ol>
+      }
+      
     </div>
   )
 }
@@ -32,8 +36,10 @@ const grid = {
   'padding': '0',
   'margin': '0',
   'display': 'grid',
-  'gridTemplateColumns': '25% 25% 25% 25%',
+  'gridTemplateColumns': 'auto auto auto auto',
   'gridGap': '2%',
+  'border':'solid',
+  'border-color':'black'
 }
 
 const styles = {
