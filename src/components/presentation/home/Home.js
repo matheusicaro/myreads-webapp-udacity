@@ -1,11 +1,12 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
-import '../styles/home.css';
+import '../../../styles/home.css';
+import './Home.css';
 
-import HeaderProfile from './home/HeaderProfile';
-import HeaderSearch from './home/HeaderSearch';
-import BookCase from './utils/BookCase';
+import HeaderProfile from './HeaderProfile';
+import HeaderSearch from './HeaderSearch';
+import BookCase from '../utils/BookCase';
 
 
 const Home = (props) =>{
@@ -116,11 +117,11 @@ const Home = (props) =>{
 
   return (
         <section>
-          <header id="header">
-            <HeaderProfile styleChild={styleHeaderProfile}> </HeaderProfile>
-            <HeaderSearch styleChild={styleHeaderSearch} addBooks={ addBooksSearch } > </HeaderSearch>
+          <header className="home-header">
+            <HeaderProfile> </HeaderProfile>
+            <HeaderSearch addBooks={ addBooksSearch } > </HeaderSearch>
           </header>
-          <section id="casesbook">         
+          <section className="home-casesbook">         
             <BookCase books={ booksCurrentlyReading } styleChild={ styleCurretlyReading } ></BookCase>
             <BookCase books={ booksWantToRead } styleChild={ styleWantToRead }></BookCase>
             <BookCase books={ booksRead } styleChild={ styleRead }></BookCase>
@@ -131,8 +132,6 @@ const Home = (props) =>{
 
 export default Home
 
-const styleHeaderProfile = 'header-profile';
-const styleHeaderSearch = 'header-search';
 const styleCurretlyReading = 'currently-reading';
 const styleWantToRead = 'want-read';
 const styleRead = 'read';

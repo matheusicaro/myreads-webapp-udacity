@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const HeaderProfile = (props) => {
-  const style = props.styleChild
+import './Home.css';
+
+const HeaderProfile = () => {
 
   return (
-    <div className={ style }>
+    <div className='header-profile'>
       HEADER PROFILE
     </div>
   )
@@ -16,4 +17,3 @@ HeaderProfile.propTypes = {
 }
 
 export default HeaderProfile
-

@@ -1,4 +1,11 @@
-#casesbook {
+.home-header {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 5%;
+
+}
+
+.home-casesbook {
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -7,16 +14,8 @@
 
 }
 
-#header {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin: 5%;
-
-}
-
 .header-profile {
     grid-column: 1/4 !important;
-    grid-row: 1/1 !important;
     border: solid;
     border-color: blue;
 }
