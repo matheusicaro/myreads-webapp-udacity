@@ -1,11 +1,8 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
 import '../../../styles/home.css';
 import './Home.css';
 
-import HeaderProfile from './HeaderProfile';
-import HeaderSearch from './HeaderSearch';
 import BookCase from '../utils/BookCase';
 
 
@@ -111,28 +108,19 @@ const Home = (props) =>{
     else if(element.shelf === 'read') booksRead.push(element);
   })
 
-  const addBooksSearch = () =>{
-    props.onNavigateSearch()
-  }
-
-  return (
-        <section>
-          <header className="home-header">
-            <HeaderProfile> </HeaderProfile>
-            <HeaderSearch addBooks={ addBooksSearch } > </HeaderSearch>
-          </header>
-          <section className="home-casesbook">         
-            <BookCase books={ booksCurrentlyReading } styleChild={ styleCurretlyReading } ></BookCase>
-            <BookCase books={ booksWantToRead } styleChild={ styleWantToRead }></BookCase>
-            <BookCase books={ booksRead } styleChild={ styleRead }></BookCase>
+  return (     
+          <section className="bookshelf">
+            <h2 className="bookshelf-title">Currently Reading</h2>         
+            <BookCase books={ booksCurrentlyReading } ></BookCase>
+            
+            <h2 className="bookshelf-title">booksWantToRead</h2>
+            <BookCase books={ booksWantToRead } ></BookCase>
+            
+            <h2 className="bookshelf-title">read</h2>
+            <BookCase books={ booksRead } ></BookCase>
           </section>
-        </section>
     )
 }
 
 export default Home
-
-const styleCurretlyReading = 'currently-reading';
-const styleWantToRead = 'want-read';
-const styleRead = 'read';
 

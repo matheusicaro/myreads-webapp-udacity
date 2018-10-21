@@ -1,52 +1,37 @@
 .home-header {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-flow: 1;
     margin: 5%;
-
-}
-
-.home-casesbook {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 5%;
-    margin: 5%;
-
 }
 
 .header-profile {
-    grid-column: 1/4 !important;
+    flex-grow: 2;
     border: solid;
     border-color: blue;
 }
 
 .header-search {
-    grid-column: 4/4;
-    grid-row: 1/1;
     border: solid;
     border-color: red;
 }
 
-.currently-reading {
-    grid-column: 1/5;
-    grid-row: 2/2;
-    border: solid;
-    border-color: green;
-    text-align: center;
+
+.home-casesbook {
+    margin: 5%;
 }
 
-.want-read {
-    grid-column: 1/5;
-    grid-row: 3/3;
-    border: solid;
-    border-color: orange;
-    text-align: center;
+/* main page */
+  
+  .bookshelf {
+    padding: 0 2% 10%;
   }
-
-.read {
-    grid-column: 1/5;
-    grid-row: 4/4;
-    border: solid;
-    border-color: maroon;
-    text-align: center;
+  
+  @media (min-width: 600px) {
+    .bookshelf {
+      padding: 0 20px 40px;
+    }
+  }
+  
+  .bookshelf-title {
+    border-bottom: 1px solid #dedede;
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Home.css';
+import '../home/Home.css';
 
 const HeaderProfile = () => {
 

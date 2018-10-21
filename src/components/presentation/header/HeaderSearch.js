@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import './Home.css';
+import '../home/Home.css';
 
 const HeaderSearch = (props) => {
   const style = props.styleChild;
