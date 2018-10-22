@@ -2,10 +2,11 @@ import React from 'react'
 
 import './Book.css'
 
+import BookDetailsContainer from '../../container/utils/BookDetailsContainer'
+
 const Book = ({ book }) => {
 
     const { title, imageLinks } = book;
-
     return (
         <div className="book" >
             <article className="book-top">
@@ -13,7 +14,8 @@ const Book = ({ book }) => {
             </article>
 
             <article className="book-title">{title}</article>
-            <article className="book-authors">SubTitle</article>
+
+            <BookDetailsContainer book={ book } > </BookDetailsContainer>
         </div>
     )
 }

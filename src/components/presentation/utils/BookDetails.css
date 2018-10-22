@@ -1,0 +1,27 @@
+.details {
+    text-align: -webkit-center !important;
+}
+
+.title {
+    margin-block-end: -1em !important;
+    background: blue
+}
+
+.subtitle {
+    padding-bottom: 5% !important;
+    padding: 2% 0 10% 0 !important;
+}
+
+img {
+    float: left !important;
+    padding: 1% 2% 0 0 !important;
+}
+
+h4 {
+    margin-block-end: -3% !important;
+}
+
+
+.test{
+    background: blue
+}
