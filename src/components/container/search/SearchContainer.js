@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { search } from '../../../api/BooksAPI'
-import Search from '../../presentation/search/Search';
+import Search from '../../presentation/screen/search/Search';
 
 class SearchContainer extends Component {
 

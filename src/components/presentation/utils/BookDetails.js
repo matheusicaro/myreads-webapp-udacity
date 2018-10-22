@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
 
-import BookAdd from './BookAdd'
 
 import './BookDetails.css'
 
@@ -40,27 +37,24 @@ import './BookDetails.css'
           open={ open }
           onRequestClose={ onRequestClose }
           titleStyle={styles.title}
+          bodyStyle={styles.bodyStyle}
         >
-          <FloatingActionButton mini={true} style={styles.button} onClick={ addButton } >
-            <ContentAdd />
-          </FloatingActionButton>
 
-          <h4 className='subtitle'>{ subtitle }</h4>
+          {subtitle && <h4><span className="subtitle">{ subtitle }</span></h4> }
         
-          <article>
+          <article >
             <img src={imageLinks.smallThumbnail} alt="Avatar" />
             {description}
           </article>
 
-          <article>
-            <h4>Authors: {authors} </h4>
-            <h4>Categories: {categories} </h4>
-            <h4>Language: {language.toUpperCase()} </h4>
-            <h4>Published in: {publishedDate} </h4>
-          </article>
-
-          <a href={infoLink}><h4>Info or Buy</h4></a>
-
+          <aside className="others-atributes">
+            <h4><b> Authors:</b> {authors} </h4>
+            <h4><b> Categories:</b> {categories} </h4>
+            <h4><b> Language:</b>  {language.toUpperCase()}</h4>
+            <h4><b> Published in:</b>  {publishedDate} </h4>
+            <a href={infoLink}> <h4>Info or Buy</h4> </a>
+          </aside>
+ 
         </Dialog>
       </div>
     )
@@ -76,6 +70,12 @@ const styles ={
     },
 
     title:{
-      'margin-block-end': '-2em'
+      'margin-block-end': '-2em',
+    },
+
+    bodyStyle:{
+      'overflow-y': 'scroll',
+      'margin-top': '6%',
+
     }
 }

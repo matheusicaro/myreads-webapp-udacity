@@ -30,7 +30,6 @@ class App extends Component {
           <section>
             <Route exact path='/' component={ HomeContainer } />
             <Route exact path='/search-books' component={ SearchContainer }/>
-
           </section>
 
         </MuiThemeProvider>

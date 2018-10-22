@@ -3,20 +3,27 @@ import React from 'react'
 import './Book.css'
 
 import BookDetailsContainer from '../../container/utils/BookDetailsContainer'
+import BookAdd from './BookAdd';
 
-const Book = ({ book }) => {
+const Book = ({ book, moveBookCategorie }) => {
+    
+    const { imageLinks } = book;
 
-    const { title, imageLinks } = book;
+    const moveBook = (newCategorieBook) =>{
+        moveBookCategorie(book, newCategorieBook)
+    }
+
     return (
-        <div className="book" >
-            <article className="book-top">
-                <img src={imageLinks.smallThumbnail} alt="Avatar" />
-            </article>
-
-            <article className="book-title">{title}</article>
+        <article className="book" >
+            
+            <aside className="book-top">
+                <img src={imageLinks.smallThumbnail} alt="Avatar" />    <BookAdd moveBook={ moveBook }></BookAdd>
+            </aside>
+            
 
             <BookDetailsContainer book={ book } > </BookDetailsContainer>
-        </div>
+
+        </article>
     )
 }
 

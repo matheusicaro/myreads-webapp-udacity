@@ -1,57 +1,42 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import Popover from 'material-ui/Popover';
-import Menu from 'material-ui/Menu';
+import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
-export default class Ts extends React.Component {
+/**
+ * Simple Icon Menus demonstrating some of the layouts possible using the `anchorOrigin` and
+ * `targetOrigin` properties.
+ */
+const BookAdd = ({ moveBook }) => {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      open: false,
-    };
+  const click = (event) =>{
+    moveBook(event.target.innerHTML);
   }
 
-  handleClick = (event) => {
-    // This prevents ghost click.
-    event.preventDefault();
+  return (
+    <div>
+      <IconMenu
+        iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+        anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
+        targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+        style={style}
+        onItemClick={click}
+      >
+        <h6>Mover para ...</h6>
+        <MenuItem primaryText="Currently Reading" />
+        <MenuItem primaryText="Want to Read" />
+        <MenuItem primaryText="Read" />
+        <MenuItem primaryText="None" />
+      </IconMenu>
 
-    this.setState({
-      open: true,
-      anchorEl: event.currentTarget,
-    });
-  };
+    </div>
+  );
+}
 
-  handleRequestClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
+export default BookAdd
 
-  render() {
-    return (
-      <div>
-        <RaisedButton
-          onClick={this.handleClick}
-          label="Click me"
-        />
-        <Popover
-          open={this.state.open}
-          anchorEl={this.state.anchorEl}
-          anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-          targetOrigin={{horizontal: 'left', vertical: 'top'}}
-          onRequestClose={this.handleRequestClose}
-        >
-          <Menu>
-            <MenuItem primaryText="Refresh" />
-            <MenuItem primaryText="Help &amp; feedback" />
-            <MenuItem primaryText="Settings" />
-            <MenuItem primaryText="Sign out" />
-          </Menu>
-        </Popover>
-      </div>
-    );
-  }
+const style = {
+  'right': '8px',
+  'bottom': '15px',
 }

@@ -4,9 +4,7 @@ import './BookCase.css'
 
 import Book from './Book'
 
-const BookCase = (props) => {
-
-  const { books } = props;
+const BookCase = ({ books, moveBookCategorie }) => {
 
   return (
     <section className="bookshelf-books">
@@ -14,7 +12,7 @@ const BookCase = (props) => {
 
           {books.map((book, index) => (
 
-           <li key={index}><Book book={book} ></Book></li>
+           <li key={index}><Book book={ book } moveBookCategorie={ moveBookCategorie } ></Book></li>
 
           ))}
         

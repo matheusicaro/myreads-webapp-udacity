@@ -1,12 +1,11 @@
 import React from 'react'
 
-import '../../../styles/home.css';
 import './Home.css';
 
-import BookCase from '../utils/BookCase';
+import BookCase from '../../utils/BookCase';
 
 
-const Home = ({ books }) =>{
+const Home = ({ books, moveBookCategorie }) =>{
   
   // TODO: Implementar loading na pagina
   // até chamar a API demora um pouco, logo renderiza '' para não haver erros.
@@ -27,13 +26,13 @@ const Home = ({ books }) =>{
   return (     
           <section className="bookshelf">
             <h2 className="bookshelf-title">Currently Reading</h2>         
-            <BookCase books={ booksCurrentlyReading } ></BookCase>
+            <BookCase books={ booksCurrentlyReading } moveBookCategorie={ moveBookCategorie }></BookCase>
             
             <h2 className="bookshelf-title">booksWantToRead</h2>
-            <BookCase books={ booksWantToRead } ></BookCase>
+            <BookCase books={ booksWantToRead } moveBookCategorie={ moveBookCategorie }></BookCase>
             
             <h2 className="bookshelf-title">read</h2>
-            <BookCase books={ booksRead } ></BookCase>
+            <BookCase books={ booksRead } moveBookCategorie={ moveBookCategorie }></BookCase>
           </section>
     )
 }

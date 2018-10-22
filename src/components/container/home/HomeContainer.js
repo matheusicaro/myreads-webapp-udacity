@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import Home from '../../presentation/home/Home'
+import Home from '../../presentation/screen/home/Home'
 
-import { getAll } from '../../../api/BooksAPI'
+import { getAll, update } from '../../../api/BooksAPI'
 
 class HomeContainer extends Component {
 
@@ -13,9 +13,20 @@ class HomeContainer extends Component {
             this.setState({
                 books: result
             })
+            console.log(result)
         })
     }
 
+    moveBookCategorie = (book, newCategorieBook) =>{
+        update( book, newCategorieBook).then( (res)=>{
+            console.log(res)
+            getAll().then(result => {
+                this.setState({
+                    books: result
+                })
+            })        
+        })
+    }
 
     render() {
 
@@ -24,7 +35,7 @@ class HomeContainer extends Component {
         return (
             <div>
                 {
-                    (books === '') ? 'aguardando ...' : <Home books={books} >  </Home>
+                    (books === '') ? 'aguardando ...' : <Home books={books} moveBookCategorie={ this.moveBookCategorie }>  </Home>
                 }
             </div>
         )
