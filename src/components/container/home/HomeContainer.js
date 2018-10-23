@@ -13,29 +13,27 @@ class HomeContainer extends Component {
             this.setState({
                 books: result
             })
-            console.log(result)
         })
     }
 
-    moveBookCategorie = (book, newCategorieBook) =>{
-        update( book, newCategorieBook).then( (res)=>{
-            console.log(res)
+    moveBookCategorie = (book, newCategorieBook) => {
+
+        update(book, newCategorieBook).then(() => {
             getAll().then(result => {
                 this.setState({
                     books: result
                 })
-            })        
+            })
         })
     }
 
     render() {
 
         const { books } = this.state;
-
         return (
             <div>
                 {
-                    (books === '') ? 'aguardando ...' : <Home books={books} moveBookCategorie={ this.moveBookCategorie }>  </Home>
+                    (books === '') ? 'aguardando ...' : <Home books={books} moveBookCategorie={this.moveBookCategorie}>  </Home>
                 }
             </div>
         )

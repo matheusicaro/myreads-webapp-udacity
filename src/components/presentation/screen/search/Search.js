@@ -6,8 +6,7 @@ import './Search.css';
 
 import BookCase from '../../utils/BookCase';
 
-const Search = ({ books, searchQuery, onKeyPress }) => {
-
+const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie }) => {
     return (
         <section className="bookshelf">
 
@@ -15,7 +14,12 @@ const Search = ({ books, searchQuery, onKeyPress }) => {
 
             <section id="casesbook">
                 {books &&
-                    <BookCase styles={styles} books={books} styleChild={'grid-column : 1/5'}></BookCase>
+                    <BookCase 
+                        styles={ styles } 
+                        books={ books } 
+                        moveBookCategorie={ moveBookCategorie }
+                        styleChild={'grid-column : 1/5'}
+                    ></BookCase>
                 }
                 {!books && 'nenhum livro encontrado'}
             </section>

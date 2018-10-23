@@ -11,7 +11,14 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 const BookAdd = ({ moveBook }) => {
 
   const click = (event) =>{
-    moveBook(event.target.innerHTML);
+    let categorie = event.target.innerHTML;
+
+    if (categorie === 'Currently Reading') categorie = 'currentlyReading'
+    else if (categorie === 'Want to Read')  categorie = 'wantToRead'
+    else if (categorie === 'Read')  categorie = 'read'
+    else if (categorie === 'None')  categorie = 'none'
+    
+    moveBook(categorie);
   }
 
   return (
