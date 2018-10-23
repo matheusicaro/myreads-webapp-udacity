@@ -1,18 +1,19 @@
 import React from 'react'
 
-import './BookCase.css'
-
 import Book from './Book'
 
-const BookCase = ({ books, moveBookCategorie }) => {
-
+const BookCase = ({ books, moveBookCategorie, styles }) => {
+    
   return (
-    <section className="bookshelf-books">
-        <ol className="books-grid">
+    // TODO: Styles Nunca pode ser 'undenfined', aplicar PROPS-REQUIRED
+    <section style={styles.section} >
+        <ol style={styles.ol} >
 
           {books.map((book, index) => (
 
-           <li key={index}><Book book={ book } moveBookCategorie={ moveBookCategorie } ></Book></li>
+            <li style={styles.li} key={index}>
+              <Book book={ book } moveBookCategorie={ moveBookCategorie }> </Book>
+            </li>
 
           ))}
         

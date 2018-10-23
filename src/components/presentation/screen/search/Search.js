@@ -11,17 +11,40 @@ const Search = ({ books, searchQuery, onKeyPress }) => {
     return (
         <section className="bookshelf">
 
-            <input placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} />
+            <input className="search-contacts" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} />
 
             <section id="casesbook">
                 {books &&
-                    <BookCase books={books} styleChild={'grid-column : 1/5'}></BookCase>
+                    <BookCase styles={styles} books={books} styleChild={'grid-column : 1/5'}></BookCase>
                 }
                 {!books && 'nenhum livro encontrado'}
             </section>
-            
+
         </section>
-    )
+    )   
 }
 
 export default Search
+
+const styles = {
+
+    section: {
+      textAlign: 'center',
+      overflowX: 'auto',
+    },
+    
+    ol: {
+      listStyleType: 'none',
+      padding: '0',
+      margin: '0',
+    
+      display: 'flex',
+      justifyContent: 'center',
+      flexFlow: 'wrap',
+    },
+  
+    li: {
+      padding: '0% 4% 4% 0%',
+      textAlign: 'left',
+    }
+  }
