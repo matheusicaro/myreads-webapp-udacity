@@ -1,0 +1,16 @@
+x.home-header {
+    display: flex;
+    flex-flow: 1;
+    margin: 5%;
+}
+
+.header-profile {
+    flex-grow: 2;
+    border: solid;
+    border-color: blue;
+}
+
+.header-search {
+    border: solid;
+    border-color: red;
+}

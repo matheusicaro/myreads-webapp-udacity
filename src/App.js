@@ -7,11 +7,12 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './App.css'
 
 // TODO: É um contaiener e não apresentation
-import HeaderProfile from './components/presentation/header/HeaderProfile';
-import HeaderSearch from './components/presentation/header/HeaderSearch';
+import Header from './components/presentation/header/Header';
 
 import HomeContainer from './components/container/home/HomeContainer';
 import SearchContainer from './components/container/search/SearchContainer';
+
+import Testes from './code-testes/Testes'
 
 class App extends Component {
 
@@ -23,13 +24,13 @@ class App extends Component {
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
           
           <header className="home-header">
-            <HeaderProfile> </HeaderProfile>
-            <HeaderSearch > </HeaderSearch>
+            <Header> </Header>
           </header>
 
           <section>
             <Route exact path='/' component={ HomeContainer } />
             <Route exact path='/search-books' component={ SearchContainer }/>
+            <Route exact path='/testes' component={ Testes }/>
           </section>
 
         </MuiThemeProvider>
