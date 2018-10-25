@@ -24,44 +24,44 @@ class App extends Component {
     }
   }
 
-  logon = (value, user) => {
+  logon = (auth) => {
 
-    console.log("LOGON --", value, "USER --")
+    if(auth) this.setState({ auth })
   }
 
   render() {
     const { auth } = this.state;
 
     return (
-        <BrowserRouter>
-          <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <BrowserRouter>
+        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+          <div>
+            {auth && (
+              <main className='app'>
 
-            { auth && (
-                <main className='app'>
+                <header className="home-header">
+                  <Header> </Header>
+                </header>
 
-                  <header className="home-header">
-                    <Header> </Header>
-                  </header>
+                <section>
+                  <Route exact path='/' component={HomeContainer} />
+                  <Route exact path='/search-books' component={SearchContainer} />
+                  <Route exact path='/testes' component={Testes} />
+                </section>
 
-                  <section>
-                    <Route exact path='/' component={HomeContainer} />
-                    <Route exact path='/search-books' component={SearchContainer} />
-                    <Route exact path='/testes' component={Testes} />
-                  </section>
-                  
-                </main>
-              )
+              </main>
+            )
             }
 
-            { !auth && (
-                <Route exact path='/' render={() => 
-                  <LoginContainer isLogged={this.logon}> </LoginContainer> 
-                }></Route> 
-              )
+            {!auth && (
+              <Route exact path='/' render={() =>
+                <LoginContainer isLogged={this.logon}> </LoginContainer>
+              }></Route>
+            )
             }
-
-          </MuiThemeProvider>
-        </BrowserRouter>
+          </div>
+        </MuiThemeProvider>
+      </BrowserRouter>
     );
   }
 }

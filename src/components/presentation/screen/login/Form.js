@@ -3,65 +3,132 @@ import React, { Component } from 'react'
 import './Form.css'
 
 
-const Form = (props) => {
+class Form extends Component {
 
-    return (
-<div class="login-wrap">
-		<div class="login-html">
-			<input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label for="tab-1" class="tab">Sign In</label>
-			<input id="tab-2" type="radio" name="tab" class="sign-up"/><label for="tab-2" class="tab">Sign Up</label>
-			<div class="login-form">
-				<div class="sign-in-htm">
-					<div class="group">
-						<label for="user" class="label">Username</label>
-						<input id="user" type="text" class="input"/>
+	constructor(props) {
+		super(props);
+		this.state = {
+			user:{
+				name:'',
+				email: '',
+				pass: '',
+			},
+			isLogin: true
+		}
+	}	
+
+	login = (event) => {
+		event.preventDefault();
+
+		const { user } = this.state;
+
+		this.props.logon(user);
+	}
+
+	createUser = (event) => {
+		event.preventDefault();
+
+		const { user } = this.state;
+		this.props.create(user);
+	}
+
+	inputData = (event) => {
+		const { id, value } = event.target;
+
+		this.setState(currentState => ({
+			user: {
+				...currentState.user,
+				[id]:value
+			}
+		}))
+	}
+
+	changeInput = () => {
+		this.setState(currentState => ({
+			isLogin: !currentState.isLogin
+		}))
+	}
+
+	render() {
+		const { user, isLogin } = this.state
+
+		return (
+			<div className="login-wrap">
+				<div className="login-html">
+
+					<button className="" onClick={this.changeInput}> SIGN IN </button>
+
+					<button className="tab" onClick={this.changeInput}> SIGN UP </button>
+
+					<div className="login-form">
+
+						{isLogin &&
+
+							<form className="Component" onSubmit={this.login}>
+								<label >E-mail</label>
+								<input
+									type="text"
+									id="email"
+									name="e-mail"
+									value={user.login}
+									onChange={this.inputData}
+								/>
+
+								<label > Password</label>
+								<input
+									type="text"
+									id="pass"
+									name="password"
+									value={user.pass}
+									onChange={this.inputData}
+								/>
+
+								<button> Login </button>
+
+							</form>
+
+						}
+						{!isLogin &&
+
+							<form className="Component" onSubmit={this.createUser}>
+								<label >Name</label>
+								<input
+									type="text"
+									id="name"
+									name="Name"
+									value={user.name}
+									onChange={this.inputData}
+								/>
+								<label >E-mail</label>
+								<input
+									type="text"
+									id="email"
+									name="e-mail"
+									value={user.email}
+									onChange={this.inputData}
+								/>
+
+								<label > Password</label>
+								<input
+									type="text"
+									id="pass"
+									name="password"
+									value={user.pass}
+									onChange={this.inputData}
+								/>
+								<label >Confirm Password</label>
+
+								<button> Inscrever </button>
+
+							</form>
+						}
+
 					</div>
-					<div class="group">
-						<label for="pass" class="label">Password</label>
-						<input id="pass" type="password" class="input" data-type="password"/>
-					</div>
-					<div class="group">
-						<input id="check" type="checkbox" class="check" checked/>
-						<label for="check"><span class="icon"></span> Keep me Signed in</label>
-					</div>
-					<div class="group">
-						<input type="submit" class="button" value="Sign In"/>
-					</div>
-					<div class="hr"></div>
-					<div class="foot-lnk">
-						<a href="#forgot">Forgot Password?</a>
-					</div>
-				</div>
-				<div class="sign-up-htm">
-					<div class="group">
-						<label for="user" class="label">Username</label>
-						<input id="user" type="text" class="input"/>
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Password</label>
-						<input id="pass" type="password" class="input" data-type="password"/>
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Repeat Password</label>
-						<input id="pass" type="password" class="input" data-type="password"/>
-					</div>
-					<div class="group">
-						<label for="pass" class="label">Email Address</label>
-						<input id="pass" type="text" class="input"/>
-					</div>
-					<div class="group">
-						<input type="submit" class="button" value="Sign Up"/>
-					</div>
-					<div class="hr"></div>
-					<div class="foot-lnk">
-                        <a><label for="tab-1"/>Already Member?</a>
-					</div>
+
 				</div>
 			</div>
-		</div>
-	</div>
-
-    )
+		)
+	}
 }
 
 export default Form
