@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
+import './Login.css'
 
-export default class Login extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
+import Form from './Form'
 
-  render() {
-    return (
-      <div>
-            TELA DE LOGIN
+const Login = (props) => {
+
+  return (
+    <div className="root">
+      <div className="screen">
+        Tela bonita
       </div>
-    )
-  }
+
+      <div>
+        <Form></Form>
+      </div>
+
+
+    </div>
+  )
 }
+
+export default Login

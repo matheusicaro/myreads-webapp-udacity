@@ -9,6 +9,7 @@ import './App.css'
 // TODO: É um contaiener e não apresentation
 import Header from './components/presentation/header/Header';
 
+import LoginContainer from './components/container/login/LoginContainer'
 import HomeContainer from './components/container/home/HomeContainer';
 import SearchContainer from './components/container/search/SearchContainer';
 
@@ -16,26 +17,51 @@ import Testes from './code-testes/Testes'
 
 class App extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      auth: false
+    }
+  }
+
+  logon = (value, user) => {
+
+    console.log("LOGON --", value, "USER --")
+  }
 
   render() {
+    const { auth } = this.state;
+
     return (
-      <main className='app'>
-      <BrowserRouter>  
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-          
-          <header className="home-header">
-            <Header> </Header>
-          </header>
+        <BrowserRouter>
+          <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
 
-          <section>
-            <Route exact path='/' component={ HomeContainer } />
-            <Route exact path='/search-books' component={ SearchContainer }/>
-            <Route exact path='/testes' component={ Testes }/>
-          </section>
+            { auth && (
+                <main className='app'>
 
-        </MuiThemeProvider>
-      </BrowserRouter>
-      </main>
+                  <header className="home-header">
+                    <Header> </Header>
+                  </header>
+
+                  <section>
+                    <Route exact path='/' component={HomeContainer} />
+                    <Route exact path='/search-books' component={SearchContainer} />
+                    <Route exact path='/testes' component={Testes} />
+                  </section>
+                  
+                </main>
+              )
+            }
+
+            { !auth && (
+                <Route exact path='/' render={() => 
+                  <LoginContainer isLogged={this.logon}> </LoginContainer> 
+                }></Route> 
+              )
+            }
+
+          </MuiThemeProvider>
+        </BrowserRouter>
     );
   }
 }
