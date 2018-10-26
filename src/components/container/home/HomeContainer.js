@@ -3,15 +3,18 @@ import React, { Component } from 'react'
 import Home from '../../presentation/screen/home/Home'
 
 import { getAll, update } from '../../../api/BooksAPI'
+import Loading from '../../presentation/utils/Loading';
 
 class HomeContainer extends Component {
 
     constructor() {
         super();
-        this.state = { books: '' }
+        this.state = { books: '', loading: true }
         getAll().then(result => {
             this.setState({
                 books: result
+            }, ()=>{ 
+                setTimeout(()=> this.setState({ loading: false}), 3000)
             })
         })
     }
@@ -29,12 +32,11 @@ class HomeContainer extends Component {
 
     render() {
 
-        const { books } = this.state;
+        const { books, loading } = this.state;
         return (
             <div>
-                {
-                    (books === '') ? 'aguardando ...' : <Home books={books} moveBookCategorie={this.moveBookCategorie}>  </Home>
-                }
+                { loading && <Loading></Loading> }
+                { !loading && <Home books={books} moveBookCategorie={this.moveBookCategorie}>  </Home> }
             </div>
         )
     }
