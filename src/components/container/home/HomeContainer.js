@@ -10,12 +10,9 @@ class HomeContainer extends Component {
     constructor() {
         super();
         this.state = { books: '', loading: true }
+        
         getAll().then(result => {
-            this.setState({
-                books: result
-            }, ()=>{ 
-                setTimeout(()=> this.setState({ loading: false}), 3000)
-            })
+            setTimeout(()=> this.setState({ books: result, loading: false}), 3000)
         })
     }
 
@@ -31,7 +28,6 @@ class HomeContainer extends Component {
     }
 
     render() {
-
         const { books, loading } = this.state;
         return (
             <div>

@@ -21,39 +21,6 @@ const IconMenuExampleSimple = () => (
       <MenuItem primaryText="Help" />
       <MenuItem primaryText="Sign out" />
     </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-      targetOrigin={{horizontal: 'left', vertical: 'bottom'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'right', vertical: 'bottom'}}
-      targetOrigin={{horizontal: 'right', vertical: 'bottom'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
-    <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-      anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-      targetOrigin={{horizontal: 'right', vertical: 'top'}}
-    >
-      <MenuItem primaryText="Refresh" />
-      <MenuItem primaryText="Send feedback" />
-      <MenuItem primaryText="Settings" />
-      <MenuItem primaryText="Help" />
-      <MenuItem primaryText="Sign out" />
-    </IconMenu>
   </div>
 );
 
