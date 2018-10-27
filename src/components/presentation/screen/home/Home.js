@@ -28,10 +28,10 @@ const Home = ({ books, moveBookCategorie }) =>{
             <h2 className="bookshelf-title">Currently Reading</h2>         
             <BookCase styles={styles} books={ booksCurrentlyReading } moveBookCategorie={ moveBookCategorie }></BookCase>
             
-            <h2 className="bookshelf-title">booksWantToRead</h2>
+            <h2 className="bookshelf-title">Want To Read</h2>
             <BookCase styles={styles} books={ booksWantToRead } moveBookCategorie={ moveBookCategorie }></BookCase>
             
-            <h2 className="bookshelf-title">read</h2>
+            <h2 className="bookshelf-title">Read</h2>
             <BookCase styles={styles} books={ booksRead } moveBookCategorie={ moveBookCategorie }></BookCase>
           </section>
     )
@@ -44,6 +44,7 @@ const styles = {
   section: {
     textAlign: 'center',
     overflowX: 'auto',
+    marginTop: '4%',
   },
   
   ol: {
@@ -57,7 +58,7 @@ const styles = {
   },
 
   li: {
-    padding: '0% 4%',
+    padding: '0% 4% 4% 0%',
     textAlign: 'left',
   }
 }

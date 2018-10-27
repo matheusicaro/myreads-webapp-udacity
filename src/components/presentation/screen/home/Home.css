@@ -16,4 +16,6 @@
   
   .bookshelf-title {
     border-bottom: 1px solid #dedede;
+    padding: 2%;
+    text-align: center;
   }

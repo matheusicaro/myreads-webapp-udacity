@@ -1,16 +1,17 @@
-x.home-header {
+.header {
     display: flex;
-    flex-flow: 1;
-    margin: 5%;
-}
-
-.header-profile {
     flex-grow: 2;
     border: solid;
     border-color: blue;
+    align-items: center;
 }
 
-.header-search {
-    border: solid;
-    border-color: red;
+.add-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    width: 75%;
 }

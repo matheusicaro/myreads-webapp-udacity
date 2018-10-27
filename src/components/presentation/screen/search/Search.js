@@ -35,6 +35,7 @@ const styles = {
     section: {
       textAlign: 'center',
       overflowX: 'auto',
+      marginTop: '4%',
     },
     
     ol: {
