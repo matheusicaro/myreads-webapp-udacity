@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -17,16 +17,6 @@ import './BookDetails.css'
       />,
     ];
 
-    const addButton = () =>(
-      <select>
-      <option value="move" disabled>Move to...</option>
-      <option value="currentlyReading">Currently Reading</option>
-      <option value="wantToRead">Want to Read</option>
-      <option value="read">Read</option>
-      <option value="none">None</option>
-    </select>
-    )
-
     return (
       <div className='details'>
         <RaisedButton label='Details' onClick={ handleOpen } />
@@ -42,12 +32,17 @@ import './BookDetails.css'
 
           {subtitle && <h4><span className="subtitle">{ subtitle }</span></h4> }
         
-          <article >
-            <img src={imageLinks.smallThumbnail} alt="Avatar" />
-            {description}
+          <article style={{display: 'flex'}}>
+
+            <div className="img-description">
+              <img src={imageLinks.smallThumbnail} alt="Avatar" />
+            </div>
+
+              { description }
+            
           </article>
 
-          <aside className="others-atributes">
+          <aside className="atributes">
             <h4><b> Authors:</b> {authors} </h4>
             <h4><b> Categories:</b> {categories} </h4>
             <h4><b> Language:</b>  {language.toUpperCase()}</h4>
@@ -76,6 +71,5 @@ const styles ={
     bodyStyle:{
       'overflow-y': 'scroll',
       'margin-top': '6%',
-
     }
 }

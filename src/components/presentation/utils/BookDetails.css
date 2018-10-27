@@ -20,7 +20,11 @@ span {
 
 
 .atributes h4 {
-    padding-top: 5% !important;
+    padding-top: 1.5% !important;
     margin-block-start: 1.33em !important;
     margin-block-end: -1.67em !important;
+}
+
+.img-description {
+    padding: 0% 2% 2% 0%;
 }

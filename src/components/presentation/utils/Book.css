@@ -1,12 +1,17 @@
 
 .book {
     width: 140px;
+    display: flex;
+    flex-direction: column;
   }
 
 .book-top {
-    position: relative;
-    height: 200px;
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.cover img{
+  height: 200px;
 }
 
 .book-title,
