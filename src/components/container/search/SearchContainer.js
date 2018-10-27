@@ -13,35 +13,38 @@ class SearchContainer extends Component {
     this.state = {
       query: '',
       books: '',
+      loading: false,
+      isDisabledInput: false,
       updateBooks: {
         book: '',
         newCategorieBook: '',
-        isUpdate: false
-      }
-
+        isUpdate: false,
+      },
     }
   }
 
   search = () => {
     const { query } = this.state;
 
+    this.setState({ loading: true,  isDisabledInput:true });
+    
     search(query).then(result => {
+
       if (!result.length > 0) result = false;
-      this.setState({ books: result });
+      setTimeout(() => this.setState({ books: result, loading: false, isDisabledInput: false }), 3000)
     })
+  }
+
+  searchBooks = (event) => {
+    if (event.key === 'Enter') {
+      this.search()
+    }
   }
 
   searchQuery = (event) => {
     this.setState({
       query: event.target.value
     })
-  }
-
-  searchBooks = (event) => {
-
-    if (event.key === 'Enter') {
-      this.search()
-    }
   }
 
   moveBookCategorie = (book, newCategorieBook) => {
@@ -60,9 +63,6 @@ class SearchContainer extends Component {
         isUpdate: !currentState.updateBooks.isUpdate
       }
     }))
-
-    console.log(this.state.books)
-
   }
 
   componentDidUpdate() {
@@ -76,14 +76,14 @@ class SearchContainer extends Component {
       update(book, newCategorieBook).then((result) => {
 
         // TRATAMENTO PARA UPDATE === FAIL, POIS API SEMPRE RETORNA 200. ANALISE ATRAVÉS DO RESULT
-        if (result){
+        if (result) {
           let updateState = verifyReturnUpdate(result, book);
-          if(updateState){
+          if (updateState) {
             this.setState(currentState => ({
               books: [book, ...currentState.books]
             }))
           }
-        }else {
+        } else {
           window.alert('Error ao mudar o book de categoria');
           this.setState(currentState => ({
             books: [book, ...currentState.book]
@@ -99,15 +99,19 @@ class SearchContainer extends Component {
 
   render() {
     const books = (this.state.books) ? (this.state.books) : (false);
+    const { isDisabledInput, loading } = this.state;
 
     return (
-      <Search
-        books={books}
-        moveBookCategorie={this.moveBookCategorie}
-        searchQuery={this.searchQuery}
-        onKeyPress={this.searchBooks}>
-      </Search>
+       <Search
+          books={books}
+          isDisabled={isDisabledInput}
+          isLoading={loading}
 
+          moveBookCategorie={this.moveBookCategorie}
+          searchQuery={this.searchQuery}
+          onKeyPress={this.searchBooks}
+        >
+      </Search>
     )
   }
 }
