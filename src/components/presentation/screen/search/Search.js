@@ -6,13 +6,16 @@ import './Search.css';
 
 import BookCase from '../../utils/BookCase';
 import Loading from '../../utils/Loading';
+import SearchTip from './SearchTip';
 
-const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, isDisabled }) => {
+const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, isDisabled, actionSearchTip, isOpenSearchTip }) => {
     return (
         <section className="bookshelf">
 
-            <input className="search-contacts" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabled} />
-
+            <div>
+                <input className="search-contacts" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabled} />
+                <SearchTip actionSearchTip={ actionSearchTip } isOpen={ isOpenSearchTip }></SearchTip>
+            </div>
             {isLoading && <Loading></Loading>}
 
             {!isLoading &&
@@ -21,11 +24,15 @@ const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, 
                         <BookCase
                             styles={styles}
                             books={books}
-                            moveBookCategorie={moveBookCategorie}
+                            moveBookCategorie={ moveBookCategorie }
                             styleChild={'grid-column : 1/5'}
                         ></BookCase>
                     }
-                    {!books && 'nenhum livro encontrado'}
+                    {!books &&
+                        <div>
+                            Busque por um livro
+                        </div>
+                    }
                 </section>
             }
         </section>

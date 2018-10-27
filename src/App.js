@@ -20,7 +20,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      auth: false
+      auth: true
     }
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
             {auth && (
               <main className='main'>
 
-                <header className="home-header">
+                <header>
                   <Header> </Header>
                 </header>
 

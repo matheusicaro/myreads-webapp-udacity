@@ -15,6 +15,7 @@ class SearchContainer extends Component {
       books: '',
       loading: false,
       isDisabledInput: false,
+      isOpenSearchTip: false,
       updateBooks: {
         book: '',
         newCategorieBook: '',
@@ -65,6 +66,10 @@ class SearchContainer extends Component {
     }))
   }
 
+  isOpenSearchTip = (isOpen) =>{
+    this.setState({isOpenSearchTip: isOpen})
+  }
+
   componentDidUpdate() {
 
     const { isUpdate } = this.state.updateBooks;
@@ -99,7 +104,7 @@ class SearchContainer extends Component {
 
   render() {
     const books = (this.state.books) ? (this.state.books) : (false);
-    const { isDisabledInput, loading } = this.state;
+    const { isDisabledInput, loading, isOpenSearchTip } = this.state;
 
     return (
        <Search
@@ -110,6 +115,9 @@ class SearchContainer extends Component {
           moveBookCategorie={this.moveBookCategorie}
           searchQuery={this.searchQuery}
           onKeyPress={this.searchBooks}
+
+          isOpenSearchTip={isOpenSearchTip}
+          actionSearchTip={this.isOpenSearchTip}
         >
       </Search>
     )
