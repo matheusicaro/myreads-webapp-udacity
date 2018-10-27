@@ -35,9 +35,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-          <div>
+          <div className="app">
             {auth && (
-              <main className='app'>
+              <main className='main'>
 
                 <header className="home-header">
                   <Header> </Header>

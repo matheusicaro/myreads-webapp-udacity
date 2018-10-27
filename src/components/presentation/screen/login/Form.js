@@ -8,14 +8,14 @@ class Form extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			user:{
-				name:'',
+			user: {
+				name: '',
 				email: '',
 				pass: '',
 			},
 			isLogin: true
 		}
-	}	
+	}
 
 	login = (event) => {
 		event.preventDefault();
@@ -30,6 +30,10 @@ class Form extends Component {
 
 		const { user } = this.state;
 		this.props.create(user);
+
+		this.setState({
+			isLogin: !this.state.isLogin
+		})
 	}
 
 	inputData = (event) => {
@@ -38,7 +42,7 @@ class Form extends Component {
 		this.setState(currentState => ({
 			user: {
 				...currentState.user,
-				[id]:value
+				[id]: value
 			}
 		}))
 	}
@@ -56,34 +60,47 @@ class Form extends Component {
 			<div className="login-wrap">
 				<div className="login-html">
 
-					<button className="" onClick={this.changeInput}> SIGN IN </button>
+					<div className="buttons-sign-in-up" >
+						<button onClick={this.changeInput} >{ (isLogin) ? 'me inscrever?' : 'Efetuar Login' }</button>
+					</div>
 
-					<button className="tab" onClick={this.changeInput}> SIGN UP </button>
+					<div className="hr"></div>
+
 
 					<div className="login-form">
 
 						{isLogin &&
 
 							<form className="Component" onSubmit={this.login}>
-								<label >E-mail</label>
-								<input
-									type="text"
-									id="email"
-									name="e-mail"
-									value={user.login}
-									onChange={this.inputData}
-								/>
+								<div className="group">
+									<label className="label">E-mail</label>
+									<input
+										className="input"
+										type="text"
+										id="email"
+										name="e-mail"
+										value={user.login}
+										onChange={this.inputData}
+									/>
+								</div>
 
-								<label > Password</label>
-								<input
-									type="text"
-									id="pass"
-									name="password"
-									value={user.pass}
-									onChange={this.inputData}
-								/>
+								<div className="group">
+									<label className="label"> Password</label>
+									<input
+										className="input"
+										type="password"
+										id="pass"
+										name="password"
+										value={user.pass}
+										onChange={this.inputData}
+									/>
+								</div>
 
-								<button> Login </button>
+								<div className="hr"></div>
+
+								<div className="group">
+									<button type="submit" className="button"> Login </button>
+								</div>
 
 							</form>
 
@@ -91,34 +108,48 @@ class Form extends Component {
 						{!isLogin &&
 
 							<form className="Component" onSubmit={this.createUser}>
-								<label >Name</label>
-								<input
-									type="text"
-									id="name"
-									name="Name"
-									value={user.name}
-									onChange={this.inputData}
-								/>
-								<label >E-mail</label>
-								<input
-									type="text"
-									id="email"
-									name="e-mail"
-									value={user.email}
-									onChange={this.inputData}
-								/>
 
-								<label > Password</label>
-								<input
-									type="text"
-									id="pass"
-									name="password"
-									value={user.pass}
-									onChange={this.inputData}
-								/>
-								<label >Confirm Password</label>
+								<div className="group">
+									<label className="label">Name</label>
+									<input
+										className="input"
+										type="text"
+										id="name"
+										name="Name"
+										value={user.name}
+										onChange={this.inputData}
+									/>
+								</div>
 
-								<button> Inscrever </button>
+								<div className="group">
+									<label className="label">E-mail</label>
+									<input
+										className="input"
+										type="text"
+										id="email"
+										name="e-mail"
+										value={user.email}
+										onChange={this.inputData}
+									/>
+								</div>
+
+								<div className="group">
+									<label className="label"> Password</label>
+									<input
+										className="input"
+										type="password"
+										id="pass"
+										name="password"
+										value={user.pass}
+										onChange={this.inputData}
+									/>
+								</div>
+
+								<div className="hr"></div>
+
+								<div className="group">
+									<button type="submit" className="button" > Inscrever </button>
+								</div>
 
 							</form>
 						}
