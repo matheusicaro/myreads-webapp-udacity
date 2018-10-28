@@ -10,11 +10,16 @@ import Account from 'material-ui/svg-icons/action/account-circle';
 
 import './Header.css';
 import { HardwareDesktopWindows } from 'material-ui/svg-icons';
+import spa from 'material-ui/svg-icons/places/spa';
 
 const Header = () => {
 
   return (
     <div className='header'>
+
+      <div className="profile">
+        <span>Welcome My Reads</span>
+      </div>
 
       <Link to='/'>
         <FlatButton
@@ -24,16 +29,14 @@ const Header = () => {
         />
       </Link>
 
-      <div className="profile">
-        <IconMenu
-          iconButtonElement={<IconButton><Account color="rgb(0, 151, 167)" /></IconButton>}
-          anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
-          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-          onItemClick={()=> window.alert("tes")}
-          >
-          <MenuItem primaryText="Sair" />
-        </IconMenu>
-      </div>
+      <IconMenu
+        iconButtonElement={<IconButton><Account color="rgb(0, 151, 167)" /></IconButton>}
+        anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
+        targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+        onItemClick={() => window.alert("tes")}
+      >
+        <MenuItem primaryText="Sair" />
+      </IconMenu>
 
       <Link to='/search-books' >
         <FlatButton
