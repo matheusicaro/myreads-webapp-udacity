@@ -1,3 +1,4 @@
+
 /* main page */
   
   .bookshelf {
@@ -10,10 +11,17 @@
     }
   }
 
-  .search-contacts {
-    width: 95%;
-    padding: 20px 20px 20px 60px;
+  .fild-search-help {
+    display: flex;
+    align-items: center;  
     margin: 2% 0% 2% 0%;
+
+  }
+
+  .search-books {
+    width: 70%;
+    padding: 20px 20px 20px 60px;
+    margin: 0% 2% 0% 0%;
     background-image: url('../../utils/icons/search.svg');
     background-repeat: no-repeat;
     background-position: 20px center;
@@ -21,4 +29,10 @@
     font-size: 1.2em;
     border: 0;
     outline: none;
+
+    color: rgba(153,153,153);
+    background-color: rgb(0, 113, 133, 0.5);
+    border-radius: 5px;
   }
+
+  

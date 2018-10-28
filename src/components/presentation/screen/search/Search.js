@@ -12,10 +12,11 @@ const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, 
     return (
         <section className="bookshelf">
 
-            <div>
-                <input className="search-contacts" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabled} />
+            <div className="fild-search-help">
+                <input className="search-books" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabled} />
                 <SearchTip actionSearchTip={ actionSearchTip } isOpen={ isOpenSearchTip }></SearchTip>
             </div>
+
             {isLoading && <Loading></Loading>}
 
             {!isLoading &&
@@ -29,8 +30,8 @@ const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, 
                         ></BookCase>
                     }
                     {!books &&
-                        <div>
-                            Busque por um livro
+                        <div style={{color:'red'}}>
+                            GIFF QUE DEMONSTRA LIVROSS
                         </div>
                     }
                 </section>
