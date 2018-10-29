@@ -32,7 +32,12 @@ class Form extends Component {
 		this.props.create(user);
 
 		this.setState({
-			isLogin: !this.state.isLogin
+			isLogin: !this.state.isLogin,
+			user:{
+				name:'',
+				email:'',
+				pass:'',
+			}
 		})
 	}
 
@@ -49,7 +54,12 @@ class Form extends Component {
 
 	changeInput = () => {
 		this.setState(currentState => ({
-			isLogin: !currentState.isLogin
+			isLogin: !currentState.isLogin,
+			user:{
+					name:'',
+					email:'',
+					pass:'',
+				}
 		}))
 	}
 
@@ -153,9 +163,7 @@ class Form extends Component {
 
 							</form>
 						}
-
 					</div>
-
 				</div>
 			</div>
 		)
