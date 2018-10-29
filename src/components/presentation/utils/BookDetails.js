@@ -19,7 +19,7 @@ import './BookDetails.css'
 
     return (
       <div className='details'>
-        <RaisedButton label='Details' onClick={ handleOpen } />
+        <RaisedButton label='Details' onClick={ handleOpen }  style={styles.rasedButton} labelColor={styles.rasedButton.labelColor}/>
         <Dialog
           title={title}
           actions={ actions }
@@ -66,10 +66,16 @@ const styles ={
 
     title:{
       'margin-block-end': '-2em',
+      color: 'rgb(0, 151, 167)'
     },
 
     bodyStyle:{
       'overflow-y': 'scroll',
       'margin-top': '6%',
+    },
+
+    rasedButton: {
+      boxShadow: '0',
+      labelColor: 'rgb(0, 151, 167)'
     }
 }

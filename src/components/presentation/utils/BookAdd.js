@@ -10,31 +10,42 @@ import MoreVertIcon from 'material-ui/svg-icons/content/add-circle';
  */
 const BookAdd = ({ moveBook }) => {
 
-  const click = (event) =>{
+  const click = (event) => {
     let categorie = event.target.innerHTML;
 
     if (categorie === 'Currently Reading') categorie = 'currentlyReading'
-    else if (categorie === 'Want to Read')  categorie = 'wantToRead'
-    else if (categorie === 'Read')  categorie = 'read'
-    else if (categorie === 'None')  categorie = 'none'
-    
+    else if (categorie === 'Want to Read') categorie = 'wantToRead'
+    else if (categorie === 'Read') categorie = 'read'
+    else if (categorie === 'None') categorie = 'none'
+
     moveBook(categorie);
   }
 
   return (
-      <IconMenu
-        iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
-        anchorOrigin={{ horizontal: 'left', vertical: 'top' }}
-        targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-        onItemClick={click}
-      >
-        <MenuItem primaryText="move to Currently Reading" />
-        <MenuItem primaryText="move to Want to Read" />
-        <MenuItem primaryText="move to Read" />
-        <MenuItem primaryText="Remove" />
-      </IconMenu>
+    <IconMenu
+      iconButtonElement={<IconButton iconStyle={styles.iconButton}><MoreVertIcon /></IconButton>}
+      anchorOrigin={styles.iconMenu}
+      targetOrigin={styles.iconMenu}
+      onItemClick={click}
+    >
+      <MenuItem primaryText="move to Currently Reading"/>
+      <MenuItem primaryText="move to Want to Read" />
+      <MenuItem primaryText="move to Read" />
+      <MenuItem primaryText="Remove" />
+    </IconMenu>
   );
 }
 
 export default BookAdd
 
+const styles = {
+
+  iconButton: {
+    color: 'rgb(0, 151, 167)',
+  },
+
+  iconMenu: {
+    horizontal: 'left',
+    vertical: 'top'
+  }
+}
