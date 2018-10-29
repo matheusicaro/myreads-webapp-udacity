@@ -33,8 +33,9 @@ class App extends Component {
     const { auth } = this.state;
 
     return (
-      <BrowserRouter>
+      <BrowserRouter>        
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <div className="backgroung-img"> TEEEEEEEEEEEEEEEEESTE</div>
           <div className="app">
             {auth && (
               <main className='main'>
@@ -50,7 +51,7 @@ class App extends Component {
                 </section>
 
               </main>
-            )
+              )
             }
 
             {!auth && (

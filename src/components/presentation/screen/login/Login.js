@@ -21,10 +21,8 @@ const Login = (props) => {
   return (
     <div className="slider">
       <div className="load">
-      <div className="menu-login">
-        {/* <DropDownMenu openImmediately={true} style={ styles }> */}
-            <Form create={create} logon={login}></Form>
-        {/* </DropDownMenu> */}
+        <div className="menu-login">
+          <Form create={create} logon={login}></Form>
         </div>
       </div>
     </div >

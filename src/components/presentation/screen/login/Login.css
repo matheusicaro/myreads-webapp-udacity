@@ -12,13 +12,13 @@
 
 @keyframes slide{
     0%{
-       background-image: url(img/wallpaper-1.jpg);
+       background-image: url(../../utils/img/wallpaper-1.jpg);
     }
     50%{
-        background-image: url(img/wallpaper-2.jpg); 
+        background-image: url(../../utils/img/wallpaper-2.jpg); 
     }
     100%{
-        background-image: url(img/wallpaper-3.jpg); 
+        background-image: url(../../utils/img/wallpaper-3.jpg); 
     }
 }
 
