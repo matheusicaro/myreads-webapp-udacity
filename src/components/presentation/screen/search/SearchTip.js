@@ -1,6 +1,8 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
+import Clear from 'material-ui/svg-icons/content/clear';
 
 import './SearchTip.css'
 
@@ -13,29 +15,33 @@ const SearchTip = (props) => {
     <div>
 
       <RaisedButton
-        label="O que pesquisar?"
+        label="O que pesquisar ?"
         onClick={handleToggle}
         labelStyle={styles.button}
-        style={ styles.rasedButton }
+        style={styles.rasedButton}
       />
 
       <Drawer width={'40%'} openSecondary={true} open={isOpen} >
-        
+
         <div className="title">
+          <IconButton tooltip="Fechar">
+            <Clear onClick={handleToggle} color='rgba(48, 48, 48)'/>
+          </IconButton>
+
           <h1 className="title-h1"> DICAS PARA PESQUISAR </h1>
         </div>
-       
-        <div style={styles.div} >   
-          
+
+        <div style={styles.div} >
+
           Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como "An", "Ba", por exemplo.
-          
+
           <ul>
-            { itensSearch.map( (topics, index) =>(
-                <li key={index} style={styles.li}>  {topics} </li>
-              ))
+            {itensSearch.map((topics, index) => (
+              <li key={index} style={styles.li}>  {topics} </li>
+            ))
             }
           </ul>
-        
+
         </div>
       </Drawer>
 
@@ -65,8 +71,8 @@ const styles = {
     margin: '5% 5% 5% 5%'
   },
 
-  li: { 
-    padding: '0% 0% 1.5% 0%' 
+  li: {
+    padding: '0% 0% 1.5% 0%'
   },
 
   button: {

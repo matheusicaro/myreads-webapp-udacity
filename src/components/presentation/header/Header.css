@@ -1,14 +1,15 @@
 .header {
-    display: flex;
+    grid-template-columns: 1fr 2fr 1fr;
+    display: grid;
+    margin: 0% 0% 5% 0%;
+    padding: 2% 0% 2% 0%;
+
     flex-grow: 2;
-    border: solid;
     background: black;
     align-items: center;
-    padding: 0 2% 0 2%;
     color: black;
-    
-    
-    height: 100px;
+    height: 100%;
+    width: 100%;
 }
 
 .add-book {
@@ -17,12 +18,37 @@
     justify-content: center;
 }
 
-.profile {
-    width: 75%;
+.tittle {
     padding: 2%;
     text-align: center;
     font-family: Roboto, sans-serif;
     font-size: 40px;
-    color: rgb(0, 151, 167)
+    color: rgb(0, 151, 167);
+    margin: 0% 10% 0% 10%;
+
+}
+
+.header-social {
+    display: flex;
+    align-items: center;
+    justify-content: center        
+}
+
+.button-hover:hover {
+    color: #303030;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+.header-navegate {
+    align-items: center;
+    display: flex;
+    justify-content: center        
+
+}
+
+.powered {
+    color: rgb(0, 151, 167) !important;
+    padding: 0% 3% 0% 0%;
 }
 
