@@ -109,7 +109,7 @@ class SearchContainer extends Component {
     return (
        <Search
           books={books}
-          isDisabled={isDisabledInput}
+          isDisabledInput={isDisabledInput}
           isLoading={loading}
 
           moveBookCategorie={this.moveBookCategorie}

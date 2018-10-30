@@ -8,12 +8,13 @@ import BookCase from '../../utils/BookCase';
 import Loading from '../../utils/Loading';
 import SearchTip from './SearchTip';
 
-const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, isDisabled, actionSearchTip, isOpenSearchTip }) => {
+const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip }) => {
+    
     return (
-        <section className="bookshelf">
+        <section className="search">
 
             <div className="fild-search-help">
-                <input className="search-books" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabled} />
+                <input className="search-books" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabledInput} />
                 <SearchTip actionSearchTip={ actionSearchTip } isOpen={ isOpenSearchTip }></SearchTip>
             </div>
 

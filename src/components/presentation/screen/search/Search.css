@@ -1,8 +1,10 @@
 
 /* main page */
   
-  .bookshelf {
+  .search {
     padding: 0 2% 10%;
+    position: sticky;
+    width: 100%;
   }
   
   @media (min-width: 600px) {
@@ -13,7 +15,8 @@
 
   .fild-search-help {
     display: flex;
-    align-items: center;  
+    align-items: center;
+    justify-content: center;  
     margin: 2% 0% 2% 0%;
 
   }
@@ -25,6 +28,7 @@
     background-image: url('../../utils/icons/search.svg');
     background-repeat: no-repeat;
     background-position: 20px center;
+    align-content: center;
     background-size: 1.2em;
     font-size: 1.2em;
     border: 0;

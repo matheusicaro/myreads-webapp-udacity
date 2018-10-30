@@ -3,6 +3,8 @@ import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import Clear from 'material-ui/svg-icons/content/clear';
+import FlatButton from 'material-ui/FlatButton';
+import Arrow from 'material-ui/svg-icons/action/help';
 
 import './SearchTip.css'
 
@@ -14,21 +16,24 @@ const SearchTip = (props) => {
   return (
     <div>
 
-      <RaisedButton
-        label="O que pesquisar ?"
+      <FlatButton
+        label="O que pesquisar"
+        labelPosition="before"
+        primary={true}
         onClick={handleToggle}
-        labelStyle={styles.button}
-        style={styles.rasedButton}
+        icon={<Arrow
+        />}
       />
 
       <Drawer width={'40%'} openSecondary={true} open={isOpen} >
 
         <div className="title">
           <IconButton tooltip="Fechar">
-            <Clear onClick={handleToggle} color='rgba(48, 48, 48)'/>
+            <Clear onClick={handleToggle} color='rgba(48, 48, 48)' />
           </IconButton>
 
           <h1 className="title-h1"> DICAS PARA PESQUISAR </h1>
+
         </div>
 
         <div style={styles.div} >
