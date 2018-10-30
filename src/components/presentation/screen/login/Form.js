@@ -33,10 +33,10 @@ class Form extends Component {
 
 		this.setState({
 			isLogin: !this.state.isLogin,
-			user:{
-				name:'',
-				email:'',
-				pass:'',
+			user: {
+				name: '',
+				email: '',
+				pass: '',
 			}
 		})
 	}
@@ -55,23 +55,24 @@ class Form extends Component {
 	changeInput = () => {
 		this.setState(currentState => ({
 			isLogin: !currentState.isLogin,
-			user:{
-					name:'',
-					email:'',
-					pass:'',
-				}
+			user: {
+				name: '',
+				email: '',
+				pass: '',
+			}
 		}))
 	}
 
 	render() {
-		const { user, isLogin } = this.state
+		const { user, isLogin } = this.state;
+		const { errorAcess } = this.props;
 
 		return (
 			<div className="login-wrap">
 				<div className="login-html">
 
 					<div className="buttons-sign-in-up" >
-						<button onClick={this.changeInput} >{ (isLogin) ? 'me inscrever?' : 'Efetuar Login' }</button>
+						<button onClick={this.changeInput} >{(isLogin) ? 'me inscrever?' : 'Efetuar Login'}</button>
 					</div>
 
 					<div className="hr"></div>
@@ -91,6 +92,7 @@ class Form extends Component {
 										name="e-mail"
 										value={user.login}
 										onChange={this.inputData}
+										required={true}
 									/>
 								</div>
 
@@ -103,8 +105,11 @@ class Form extends Component {
 										name="password"
 										value={user.pass}
 										onChange={this.inputData}
+										required={true}
 									/>
 								</div>
+
+								{ errorAcess && <label className="label" style={{color: '#7d0d01'}}> {errorAcess} </label> }
 
 								<div className="hr"></div>
 
@@ -128,6 +133,7 @@ class Form extends Component {
 										name="Name"
 										value={user.name}
 										onChange={this.inputData}
+										required={true}
 									/>
 								</div>
 
@@ -140,6 +146,7 @@ class Form extends Component {
 										name="e-mail"
 										value={user.email}
 										onChange={this.inputData}
+										required={true}
 									/>
 								</div>
 
@@ -152,8 +159,11 @@ class Form extends Component {
 										name="password"
 										value={user.pass}
 										onChange={this.inputData}
+										required={true}
 									/>
 								</div>
+
+								{ errorAcess && <label className="label" style={{color: '#7d0d01'}}> {errorAcess} </label> }
 
 								<div className="hr"></div>
 
