@@ -29,6 +29,7 @@
 }
 
 .header-social {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center        
@@ -50,5 +51,6 @@
 .powered {
     color: rgb(0, 151, 167) !important;
     padding: 0% 3% 0% 0%;
+    font-size: 80%;
 }
 

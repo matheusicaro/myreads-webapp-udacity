@@ -24,7 +24,7 @@ const Home = ({ books, moveBookCategorie }) =>{
   })
 
   return (     
-          <section className="bookshelf">
+          <section className="home">
             <h2 className="bookshelf-title">Currently Reading</h2>         
             <BookCase styles={styles} books={ booksCurrentlyReading } moveBookCategorie={ moveBookCategorie }></BookCase>
             
