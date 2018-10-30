@@ -1,4 +1,11 @@
 body, html {
     width: 100%;
     height: 100%;
+    background-image: url(../src/img/wallpaper-page.jpg)
+}
+
+#root {
+    position: absolute;
+    width: 100%;
+    height: initial !important;
 }
