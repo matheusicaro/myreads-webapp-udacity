@@ -13,53 +13,53 @@ import LoginContainer from './components/container/login/LoginContainer'
 import HomeContainer from './components/container/home/HomeContainer';
 import SearchContainer from './components/container/search/SearchContainer';
 
-import Testes from './code-testes/Testes'
-
 class App extends Component {
 
   constructor() {
     super()
     this.state = {
-      auth: true
+      auth: false
     }
   }
 
   logon = (auth) => {
 
-    if(auth) this.setState({ auth })
+    if (auth) this.setState({ auth })
   }
 
   render() {
     const { auth } = this.state;
 
     return (
-      <BrowserRouter>        
+      <BrowserRouter>
         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <div className="backgroung-img"> TEEEEEEEEEEEEEEEEESTE</div>
-          <div className="app">
-            {auth && (
-              <main className='main'>
+          <div>
+           
+            <div className="app">
+              {auth && (
+                <main className='main'>
+                  <div className="backgroung-img"></div>
 
-                <header>
-                  <Header> </Header>
-                </header>
+                  <header>
+                    <Header> </Header>
+                  </header>
 
-                <section>
-                  <Route exact path='/' component={HomeContainer} />
-                  <Route exact path='/search-books' component={SearchContainer} />
-                  <Route exact path='/testes' component={Testes} />
-                </section>
+                  <section>
+                    <Route exact path='/' component={HomeContainer} />
+                    <Route exact path='/search-books' component={SearchContainer} />
+                  </section>
 
-              </main>
+                </main>
               )
-            }
+              }
 
-            {!auth && (
-              <Route exact path='/' render={() =>
-                <LoginContainer isLogged={this.logon}> </LoginContainer>
-              }></Route>
-            )
-            }
+              {!auth && (
+                <Route exact path='/' render={() =>
+                  <LoginContainer isLogged={this.logon}> </LoginContainer>
+                }></Route>
+              )
+              }
+            </div>
           </div>
         </MuiThemeProvider>
       </BrowserRouter>
