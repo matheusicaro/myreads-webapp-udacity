@@ -1,3 +1,15 @@
+/*
+* DESCRIPTION
+*
+* Component responsible for the logic of the data passed
+* in the visualization component 'Home'. Only responsible
+* for controlling all the books received by the api in 
+* your state.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React, { Component } from 'react'
 
 import Home from '../../presentation/screen/home/Home'

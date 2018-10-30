@@ -1,7 +1,22 @@
+/*
+* DESCRIPTION
+*
+* Component responsible for the logic of the data passed
+* in the visualization component 'Login'. All error information 
+* is passed by this component, which also includes the users
+* registered in the state of the component.
+* 
+* TODO: An integration with a database (Firebase) will be implemented in
+*       the future for the storage of the registered users and data of the 
+*       books and shelves.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React, { Component } from 'react'
 
 import Login from '../../presentation/screen/login/Login'
-
 
 class LoginContainer extends Component {
     
@@ -12,7 +27,6 @@ class LoginContainer extends Component {
             errorAcess:''
         }
     }
-
 
     logon = (user) =>{
         const { users } = this.state;
@@ -53,8 +67,6 @@ class LoginContainer extends Component {
         }
 
     }
-
-
 
     render() {
         const {errorAcess} = this.state;

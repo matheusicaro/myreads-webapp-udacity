@@ -1,5 +1,19 @@
+/*
+* DESCRIPTION
+*
+* Component responsible for the logic of the data passed
+* in the visualization component 'Search'. The data is updated 
+* before the call in the api for a performasse in the front end,
+* soon after the update, in the last life cycle of the 
+* React update, the call is made in the api, and in case of an
+* error is informed to the user if no, the user did not notice
+* a communication delay.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import { search, update } from '../../../api/BooksAPI'
 import { verifyReturnUpdate } from '../utils/VerifyReturnBooksAPI'
@@ -27,8 +41,8 @@ class SearchContainer extends Component {
   search = () => {
     const { query } = this.state;
 
-    this.setState({ loading: true,  isDisabledInput:true });
-    
+    this.setState({ loading: true, isDisabledInput: true });
+
     search(query).then(result => {
 
       if (!result.length > 0) result = false;
@@ -66,23 +80,25 @@ class SearchContainer extends Component {
     }))
   }
 
-  isOpenSearchTip = (isOpen) =>{
-    this.setState({isOpenSearchTip: isOpen})
+  isOpenSearchTip = (isOpen) => {
+    this.setState({ isOpenSearchTip: isOpen })
   }
 
   componentDidUpdate() {
 
     const { isUpdate } = this.state.updateBooks;
 
+    // PERFORMS THE UPDATE IN THE BOOK'S API WITH A NEW CATEGORY.
     if (isUpdate) {
 
       const { book, newCategorieBook } = this.state.updateBooks;
 
       update(book, newCategorieBook).then((result) => {
 
-        // TRATAMENTO PARA UPDATE === FAIL, POIS API SEMPRE RETORNA 200. ANALISE ATRAVÉS DO RESULT
+        // UPDATE TREATMENT === FAIL, BECAUSE API ALWAYS RETURNS 200. ANALYZE THROUGH RESULT
         if (result) {
           let updateState = verifyReturnUpdate(result, book);
+
           if (updateState) {
             this.setState(currentState => ({
               books: [book, ...currentState.books]
@@ -97,7 +113,8 @@ class SearchContainer extends Component {
 
       })
 
-      // NÃO USEI SETSTATE PARA NAO CHAMAR OS METODOS DO CICLO DE VIDA DO REACT POIS ESTA VARIAVEL NÃO NECESSITA 
+      // DO NOT USE SETSTATE NOT TO CALL THE METHODS OF THE REACT LIFE 
+      // CYCLE AS THIS REPRODUCTIVE VARIABLE DOES NOT NEED 
       this.state.updateBooks.isUpdate = false;
     }
   }
@@ -107,18 +124,18 @@ class SearchContainer extends Component {
     const { isDisabledInput, loading, isOpenSearchTip } = this.state;
 
     return (
-       <Search
-          books={books}
-          isDisabledInput={isDisabledInput}
-          isLoading={loading}
+      <Search
+        books={books}
+        isDisabledInput={isDisabledInput}
+        isLoading={loading}
 
-          moveBookCategorie={this.moveBookCategorie}
-          searchQuery={this.searchQuery}
-          onKeyPress={this.searchBooks}
+        moveBookCategorie={this.moveBookCategorie}
+        query={this.searchQuery}
+        onKeyPress={this.searchBooks}
 
-          isOpenSearchTip={isOpenSearchTip}
-          actionSearchTip={this.isOpenSearchTip}
-        >
+        isOpenSearchTip={isOpenSearchTip}
+        actionSearchTip={this.isOpenSearchTip}
+      >
       </Search>
     )
   }

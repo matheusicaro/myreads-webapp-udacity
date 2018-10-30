@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
-import Grid from '@material-ui/core/Grid';
-import DropDownMenu from 'material-ui/DropDownMenu';
+/*
+* DESCRIPTION
+*
+* This component is responsible for set up a page that contains information
+* about the application and a registration and access form on the page.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
 
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import './Login.css'
 
-import Form from './Form'
+import FormContainer from '../../../container/login/FormContainer'
 
 const Login = (props) => {
 
@@ -23,7 +31,7 @@ const Login = (props) => {
     <div className="slider">
       <div className="load">
         <div className="menu-login">
-          <Form create={create} logon={login} errorAcess={errorAcess}></Form>
+          <FormContainer create={create} logon={login} errorAcess={errorAcess}></FormContainer>
         </div>
       </div>
     </div >
@@ -31,3 +39,9 @@ const Login = (props) => {
 }
 
 export default Login
+
+Login.propTypes = {
+
+  createUser: PropTypes.func.isRequired,
+  logon: PropTypes.func.isRequired,
+};

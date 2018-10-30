@@ -1,8 +1,17 @@
+/*
+* DESCRIPTION
+*
+* this component is responsible for mounting the application header, 
+* so it contains all navigation styles and buttons.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 import Arrow from 'material-ui/svg-icons/navigation/arrow-forward';
-import IconMenu from 'material-ui/IconMenu';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
@@ -21,8 +30,6 @@ const Header = () => {
       <MenuItem primaryText="Apps" />
     </Menu>
   )
-
-
 
   return (
     <div className='header'>
@@ -45,7 +52,6 @@ const Header = () => {
         </Link>
 
         <div className="button-hover"><IconButton onClick={options} tooltip="Editar Profile"> <Icon icon={ICONS.USER} color='rgb(0, 151, 167)' /></IconButton></div>
-
 
         <Link to='/search-books' >
           <FlatButton

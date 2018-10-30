@@ -1,6 +1,17 @@
+/*
+* DESCRIPTION
+*
+* This component is responsible to demonstrate a search page, 
+* which contains a field to search for books (API query), and demonstrations 
+* visually constructed by another component 'CaseBook', which is a shelf of 
+* books for exhibition.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 import './Search.css';
 
@@ -8,13 +19,13 @@ import BookCase from '../../utils/BookCase';
 import Loading from '../../utils/Loading';
 import SearchTip from './SearchTip';
 
-const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip }) => {
+const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip }) => {
     
     return (
         <section className="search">
 
             <div className="fild-search-help">
-                <input className="search-books" placeholder="busque um livro..." onChange={searchQuery} onKeyPress={onKeyPress} disabled={isDisabledInput} />
+                <input className="search-books" placeholder="busque um livro..." onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
                 <SearchTip actionSearchTip={ actionSearchTip } isOpen={ isOpenSearchTip }></SearchTip>
             </div>
 
@@ -42,6 +53,18 @@ const Search = ({ books, searchQuery, onKeyPress, moveBookCategorie, isLoading, 
 }
 
 export default Search
+
+SearchTip.propTypes = {
+
+    query: PropTypes.func,
+    onKeyPress: PropTypes.func,
+    moveBookCategorie: PropTypes.func,
+    isLoading: PropTypes.bool,
+    isDisabledInput: PropTypes.func,
+    actionSearchTip: PropTypes.func.isRequired,
+    books: PropTypes.array,
+  };
+  
 
 const styles = {
 

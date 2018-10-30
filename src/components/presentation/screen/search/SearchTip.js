@@ -1,10 +1,21 @@
+/*
+* DESCRIPTION
+*
+* This component is responsible for demonstrating information on how to perform the research of books, 
+* is activated by a click controlled by 'isOpen'.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
-import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import Clear from 'material-ui/svg-icons/content/clear';
 import FlatButton from 'material-ui/FlatButton';
 import Arrow from 'material-ui/svg-icons/action/help';
+
+import PropTypes from 'prop-types';
 
 import './SearchTip.css'
 
@@ -41,9 +52,10 @@ const SearchTip = (props) => {
           Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como "An", "Ba", por exemplo.
 
           <ul>
-            {itensSearch.map((topics, index) => (
-              <li key={index} style={styles.li}>  {topics} </li>
-            ))
+            {
+              itensSearch.map((topics, index) => (
+                <li key={index} style={styles.li}>  {topics} </li>
+              ))
             }
           </ul>
 
@@ -55,6 +67,14 @@ const SearchTip = (props) => {
 }
 
 export default SearchTip
+
+SearchTip.propTypes = {
+
+  actionSearchTip: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+};
+
+
 
 const itensSearch = [
   ['Android, Art, Artificial Intelligence, Astronomy, Austen'],

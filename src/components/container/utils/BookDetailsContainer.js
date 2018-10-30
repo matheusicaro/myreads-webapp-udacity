@@ -1,3 +1,13 @@
+/*
+* DESCRIPTION
+*
+* Component responsible for the logic of the data passed
+* in the visualization component 'book details'.
+*
+* Author: Matheus Icaro - matheusicaro2@hotmail.com
+*
+*/
+
 import React, { Component } from 'react';
 
 import BookDetails from '../../presentation/utils/BookDetails'
