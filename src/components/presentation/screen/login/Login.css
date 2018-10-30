@@ -8,6 +8,7 @@
     width: 100%;
     height: 100vh;
     animation: slide 40s infinite;
+    position: fixed;
 }
 
 @keyframes slide{
@@ -25,7 +26,6 @@
 .menu-login {
     width: 25%;
     position: absolute;
-    left: 75%;
-    top: 10%;
+    right: 0%;
 }
 

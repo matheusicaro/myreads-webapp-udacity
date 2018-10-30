@@ -8,7 +8,8 @@ class LoginContainer extends Component {
     constructor() {
         super()
         this.state = {
-            users: []
+            users: [],
+            errorAcess:''
         }
     }
 
@@ -22,12 +23,12 @@ class LoginContainer extends Component {
                     if(userdb.pass === user.pass)
                         this.props.isLogged(true)
                     else
-                        window.alert("password errado")
+                        this.setState({errorAcess: "E-mail ou senha inválidos!"})
                 else
-                    window.alert("usuario não cadastrado")
+                        this.setState({errorAcess: "Usuario não encontrado!"})
             })
         }else{
-            window.alert("nenhum usuario no banco")
+            this.setState({errorAcess: "Usuario não encontrado!"})
         }
     }
 
@@ -41,13 +42,14 @@ class LoginContainer extends Component {
         }
 
         if(logins.indexOf(user.email) > -1)
-            window.alert("ja contem esse usuario")
+            this.setState({errorAcess: "Este e-mail já encontra-se cadastrado!"})
         else{
             users.push(user);
             this.setState({
-                users
+                users,
+                errorAcess: ''
             })
-            window.alert("SUCESSO ADICIONADO")
+            window.alert("CADASTRO EFETUADO COM SUCESSO!")
         }
 
     }
@@ -55,10 +57,11 @@ class LoginContainer extends Component {
 
 
     render() {
-
+        const {errorAcess} = this.state;
+        
         return (
             <div>
-                <Login logon={ this.logon } createUser={ this.createUser}> </Login>
+                <Login logon={ this.logon } createUser={ this.createUser} errorAcess={errorAcess}> </Login>
             </div>
         )
     }

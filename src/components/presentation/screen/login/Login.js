@@ -9,6 +9,7 @@ import Form from './Form'
 
 const Login = (props) => {
 
+  const {errorAcess} = props;
 
   const create = (user) => {
     props.createUser(user)
@@ -22,7 +23,7 @@ const Login = (props) => {
     <div className="slider">
       <div className="load">
         <div className="menu-login">
-          <Form create={create} logon={login}></Form>
+          <Form create={create} logon={login} errorAcess={errorAcess}></Form>
         </div>
       </div>
     </div >
