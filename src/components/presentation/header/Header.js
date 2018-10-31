@@ -46,7 +46,7 @@ const Header = (props) => {
     <div className='header'>
 
       <div className="header-social">
-        <div className="powered"> © 2018, by Matheus Ícaro</div>
+        <div className="powered"> © Copyright 2018, Matheus Ícaro</div>
         <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit } href={url.git}> <Icon icon={ICONS.GITHUB} color='rgb(0, 151, 167)' /> </IconButton></div>
         <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit } href={url.linkedin}> <Icon icon={ICONS.LINKEDIN2} color='rgb(0, 151, 167)' /> </IconButton></div>
         <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit }> <Icon icon={ICONS.FACEBOOK} color='rgb(0, 151, 167)' /> </IconButton></div>
