@@ -41,6 +41,22 @@
     border-radius: 5px;
 }
 
+.buttons-translate img {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.button-usa {
+    color: #303030;
+    border-radius: 5px;
+}
+
 .header-navegate {
     align-items: center;
     display: flex;

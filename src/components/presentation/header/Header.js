@@ -20,9 +20,12 @@ import { ICONS } from './icons/icons'
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
 
-  const options = () =>(
+  const {language} = props;
+  console.log(language)
+
+  const options = () => (
     <Menu>
       <MenuItem primaryText="Maps" />
       <MenuItem primaryText="Books" />
@@ -31,14 +34,22 @@ const Header = () => {
     </Menu>
   )
 
+  const changeToBr = () =>{
+    props.changeLanguage("PT")
+  }
+
+  const changeToEn = () =>{
+    props.changeLanguage("EN")
+  }
+
   return (
     <div className='header'>
 
       <div className="header-social">
         <div className="powered"> © 2018, by Matheus Ícaro</div>
-        <div className="button-hover"><IconButton tooltip="Código Repositorio" href={url.git}> <Icon icon={ICONS.GITHUB} color='rgb(0, 151, 167)' /> </IconButton></div>
-        <div className="button-hover"><IconButton tooltip="Linkedin Matheus" href={url.linkedin}> <Icon icon={ICONS.LINKEDIN2} color='rgb(0, 151, 167)' /> </IconButton></div>
-        <div className="button-hover"><IconButton tooltip="Facebook Matheus" href={url.facebook}> <Icon icon={ICONS.FACEBOOK} color='rgb(0, 151, 167)' /> </IconButton></div>
+        <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit } href={url.git}> <Icon icon={ICONS.GITHUB} color='rgb(0, 151, 167)' /> </IconButton></div>
+        <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit } href={url.linkedin}> <Icon icon={ICONS.LINKEDIN2} color='rgb(0, 151, 167)' /> </IconButton></div>
+        <div className="button-hover"><IconButton tooltip={ (language === 'PT') ? PT.buttonGit : EN.buttonGit }> <Icon icon={ICONS.FACEBOOK} color='rgb(0, 151, 167)' /> </IconButton></div>
       </div>
 
       <div className="tittle">
@@ -46,6 +57,11 @@ const Header = () => {
       </div>
 
       <div className="header-navegate">
+
+        <div className="buttons-translate">
+          <FlatButton onClick={changeToBr} label="PT" labelPosition="before" primary={true} style={styles.translate}/>
+          <FlatButton onClick={changeToEn} label="EN" labelPosition="before" primary={true} style={styles.translate}/>
+        </div>
 
         <Link to='/'>
           <div className="button-hover"><IconButton> <Icon icon={ICONS.HOME} color='rgb(0, 151, 167)' /> </IconButton></div>
@@ -69,10 +85,34 @@ const Header = () => {
 }
 
 export default Header
+  
+const PT = {
+    buttonGit: 'Código Repositorio',
+    buttonLinkedin: 'Linkedin Matheus',
+    buttonFacebook: 'Facebook Matheus',
+
+    profile: 'Editar Profile',
+    searchBooks: 'Adicionar Livros'
+}
+const EN = {
+    buttonGit: 'TTTT',
+    buttonLinkedin: 'EEE ',
+    buttonFacebook: 'AAAAA ',
+
+    profile: 'SSSSS ',
+    searchBooks: 'BBBBB ',
+}
+
 
 const url = {
   git: "https://github.com/matheusicaro/my-reads-udacity",
   facebook: "https://www.facebook.com/matheus.icaro.5",
   linkedin: "https://www.linkedin.com/in/matheusicaro",
 
+}
+
+const styles = {
+  translate:{
+    minWidth: '0',
+  }
 }

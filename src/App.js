@@ -18,7 +18,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      auth: true
+      auth: true,
+      language: 'PT',
     }
   }
 
@@ -27,8 +28,12 @@ class App extends Component {
     if (auth) this.setState({ auth })
   }
 
+  changeLanguage = (language) =>{
+    this.setState({ language })
+  }
+
   render() {
-    const { auth } = this.state;
+    const { auth, language } = this.state;
 
     return (
       <BrowserRouter>
@@ -41,7 +46,7 @@ class App extends Component {
                   <div className="backgroung-img"></div>
 
                   <header>
-                    <Header> </Header>
+                    <Header language={language} changeLanguage={this.changeLanguage}> </Header>
                   </header>
 
                   <section>
