@@ -18,16 +18,19 @@ import './Search.css';
 import BookCase from '../../utils/BookCase';
 import Loading from '../../utils/Loading';
 import SearchTip from './SearchTip';
+import searchGif from './img/how-seach.gif'
+
 
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip }) => {
-    
+
     return (
         <section className="search">
 
             <div className="fild-search-help">
                 <input className="search-books" placeholder="busque um livro..." onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
-                <SearchTip actionSearchTip={ actionSearchTip } isOpen={ isOpenSearchTip }></SearchTip>
+                <SearchTip actionSearchTip={actionSearchTip} isOpen={isOpenSearchTip}></SearchTip>
             </div>
+
 
             {isLoading && <Loading></Loading>}
 
@@ -37,13 +40,13 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                         <BookCase
                             styles={styles}
                             books={books}
-                            moveBookCategorie={ moveBookCategorie }
+                            moveBookCategorie={moveBookCategorie}
                             styleChild={'grid-column : 1/5'}
                         ></BookCase>
                     }
                     {!books &&
-                        <div style={{color:'red'}}>
-                            GIFF QUE DEMONSTRA LIVROSS
+                        <div className="img-gif">
+                            <img src={searchGif} alt="How to Search" />
                         </div>
                     }
                 </section>
@@ -63,8 +66,8 @@ SearchTip.propTypes = {
     isDisabledInput: PropTypes.func,
     actionSearchTip: PropTypes.func.isRequired,
     books: PropTypes.array,
-  };
-  
+};
+
 
 const styles = {
 
