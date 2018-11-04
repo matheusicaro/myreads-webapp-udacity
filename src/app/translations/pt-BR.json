@@ -1,16 +1,27 @@
 {
     "pt-BR": {
-        
         "header": {
             "socialGit": "Repositorio no Github",
             "socialLinkedin": "Matheus no Linkedin",
             "socialFacebook": "Matheus no Facebook",
-            
             "title": "Minhas Leituras",
-
             "home": "Acessar a página principal",
             "profile": "Editar Perfil",
             "addBooks": "Adicionar Livros"
+        },
+        "home": {
+            "titleCurrently": "Lendo Atualmente",
+            "titleWant": "Quero ler",
+            "titleRead": "Ler",
+            "bookDetails": {
+                "btnClose": "Fechar",
+                "btnDetails": "Detalhes",
+                "authors": "Autor: ",
+                "categories": "Categoria: ",
+                "language": "Idioma: ",
+                "publishedIn": "Publicado em: ",
+                "buy": "Clique para comprar"
+            }
         }
     }
 }

@@ -16,8 +16,8 @@ import '../styles/components/Book.css'
 import BookDetailsContainer from './BookDetailsContainer'
 import BookAdd from './BookAdd';
 
-const Book = ({ book, moveBookCategorie }) => {
-
+const Book = ({ book, moveBookCategorie, language }) => {
+    
     const { imageLinks } = book;
 
     const moveBook = (newCategorieBook) => {
@@ -31,8 +31,8 @@ const Book = ({ book, moveBookCategorie }) => {
             </div>
 
             <div className="book-top">
-                <BookDetailsContainer book={book} > </BookDetailsContainer>
-                <BookAdd moveBook={moveBook}></BookAdd>
+                <BookDetailsContainer book={book} language={language} /> 
+                <BookAdd moveBook={moveBook} language={language} />
             </div>
         </div>
     )

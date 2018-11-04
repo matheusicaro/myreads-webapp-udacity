@@ -17,7 +17,7 @@ import PropTypes from 'prop-types';
 
 import Book from './Book'
 
-const BookCase = ({ books, moveBookCategorie, styles, classes }) => {
+const BookCase = ({ books, moveBookCategorie, styles, classes, language }) => {
 
   let section = false;
   if( styles && styles.hasOwnProperty('section'))
@@ -31,7 +31,7 @@ const BookCase = ({ books, moveBookCategorie, styles, classes }) => {
         {books.map((book, index) => (
 
           <li style={stylesDefault.li} key={index}>
-            <Book book={book} moveBookCategorie={moveBookCategorie}> </Book>
+            <Book book={book} moveBookCategorie={moveBookCategorie} language={language}> </Book>
           </li>
 
         ))}

@@ -17,7 +17,6 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 
 // Import languages
-
 import * as translations from '../translations'
 
 // Import Components

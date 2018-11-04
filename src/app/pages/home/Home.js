@@ -13,9 +13,14 @@ import PropTypes from 'prop-types'
 
 import '../../styles/pages/Home.css';
 
+// Import languages
+import * as translations from '../../translations'
+
 import BookCase from '../../components/BookCase';
 
-const Home = ({ books, moveBookCategorie }) => {
+const Home = ({ books, moveBookCategorie, language }) => {
+
+  const { home } = translations[language];
 
   if (books === '')
     return ''
@@ -32,14 +37,14 @@ const Home = ({ books, moveBookCategorie }) => {
 
   return (
     <section className="home">
-      <div className="bookshelf-title">Currently Reading</div>
-      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie}></BookCase>
+      <div className="bookshelf-title">{ home.titleCurrently }</div>
+      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
 
-      <div className="bookshelf-title">Want To Read</div>
-      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie}></BookCase>
+      <div className="bookshelf-title">{ home.titleWant }</div>
+      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
 
-      <div className="bookshelf-title">Read</div>
-      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie}></BookCase>
+      <div className="bookshelf-title">{ home.titleRead }</div>
+      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
     </section>
   )
 }

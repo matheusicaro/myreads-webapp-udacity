@@ -16,12 +16,13 @@ import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 
 const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageLinks, authors,
-  infoLink, categories, description, language, publishedDate }) => {
+  infoLink, categories, description, bookLanguage, publishedDate, language }) => {
 
+    console.log(language)
 
   const actions = [
     <FlatButton
-      label="Close"
+      label={language.btnClose}
       primary={true}
       onClick={onRequestClose}
     />,
@@ -29,7 +30,7 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
 
   return (
     <div className='details'>
-      <RaisedButton label='Details' onClick={handleOpen} style={styles.rasedButton} labelColor={styles.rasedButton.labelColor} />
+      <RaisedButton label={language.btnDetails} onClick={handleOpen} style={styles.rasedButton} labelColor={styles.rasedButton.labelColor} />
       <Dialog
         title={title}
         actions={actions}
@@ -51,11 +52,11 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
         </article>
 
         <aside style={styles.infoAtributes.root}>
-          <div style={styles.infoAtributes.atribute }><b> Authors:</b> {authors} </div>
-          <div style={styles.infoAtributes.atribute }><b> Categories:</b> {categories} </div>
-          <div style={styles.infoAtributes.atribute }><b> Language:</b>  {language.toUpperCase()}</div>
-          <div style={styles.infoAtributes.atribute }><b> Published in:</b>  {publishedDate} </div>
-          <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}>Clique para comprar </a></div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.authors }</b> {authors} </div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.categories }</b> {categories} </div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.publishedIn }</b>  {publishedDate} </div>
+          <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}>{ language.buy }</a></div>
         </aside>
 
       </Dialog>

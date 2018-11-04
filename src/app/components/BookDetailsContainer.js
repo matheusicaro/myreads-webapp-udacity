@@ -27,9 +27,7 @@ export default class BookDetailsContainer extends Component {
 
 
     render() {
-        const { title, subtitle, imageLinks, authors,
-            infoLink, categories,
-            description, language, publishedDate } = this.props.book;
+        const { book, language } = this.props;
         const { open } = this.state;
 
         return (
@@ -39,15 +37,17 @@ export default class BookDetailsContainer extends Component {
                 open={open}
                 onRequestClose={this.handleClose}
                 
-                title={title}
-                subtitle={subtitle}
-                imageLinks={imageLinks}
-                authors={authors}
-                infoLink={infoLink}
-                categories= {categories}
-                description= {description}
-                language= {language}
-                publishedDate= {publishedDate}
+                title={book.title}
+                subtitle={book.subtitle}
+                imageLinks={book.imageLinks}
+                authors={book.authors}
+                infoLink={book.infoLink}
+                categories= {book.categories}
+                description= {book.description}
+                bookLanguage= {book.language}
+                publishedDate= {book.publishedDate}
+
+                language={language}
             >
             </BookDetails>
         );

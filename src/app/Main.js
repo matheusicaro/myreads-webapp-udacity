@@ -17,17 +17,17 @@ import Background from './media/images/default-background.jpg'
 
 const Main = () => {
 
-  const isAuthorized = ({changeLanguage, state}) => (
+  const isAuthorized = ({ changeLanguage, state }) => (
     <section>
       <div style={style.backgroungImage} ></div>
-      <Header changeLanguage={changeLanguage} language={state.language}></Header>
-      <Route exact path='/' component={HomeContainer} />
-      <Route exact path='/search' component={SearchContainer} />
+      <Header changeLanguage={changeLanguage} language={state.language} />
+      <Route exact path='/' render={() => <HomeContainer language={state.language} />} ></Route>
+      <Route exact path='/search' render={() => <SearchContainer language={state.language} />} ></Route>
     </section>
   )
 
   const notAuthorized = (context) => (
-    <Route exact path='/' render={() => <LoginContainer isLogged={context.logon}> </LoginContainer>}></Route>
+    <Route exact path='/' render={() => <LoginContainer isLogged={context.logon} />} ></Route>
   )
 
   return (

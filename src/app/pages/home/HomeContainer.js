@@ -41,10 +41,12 @@ class HomeContainer extends Component {
 
     render() {
         const { books, loading } = this.state;
+        const { language } = this.props;
+
         return (
             <div>
                 { loading && <Loading></Loading> }
-                { !loading && <Home books={books} moveBookCategorie={this.moveBookCategorie}>  </Home> }
+                { !loading && <Home books={books} moveBookCategorie={this.moveBookCategorie} language={language}>  </Home> }
             </div>
         )
     }
