@@ -17,13 +17,13 @@ import Arrow from 'material-ui/svg-icons/action/help';
 
 import PropTypes from 'prop-types';
 
-import './DrawerMenu.css'
+import '../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 
   const { isOpen, menuDrawer} = props;
   const handleToggle = () => props.actionSearchTip(!isOpen);
-  console.log(props)
+
   return (
     <div>
 

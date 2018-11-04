@@ -17,10 +17,10 @@ import MenuItem from 'material-ui/MenuItem';
 
 import IconButton from 'material-ui/IconButton';
 
-import Icon from '../componentes/Icon'
-import { ICONS } from '../componentes/IconsSvg'
+import Icon from './Icon'
+import { ICONS } from './IconsSvg'
 
-import './Header.css';
+import '../styles/components/Header.css';
 
 const Header = (props) => {
 

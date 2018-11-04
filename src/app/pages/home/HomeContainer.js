@@ -15,7 +15,7 @@ import React, { Component } from 'react'
 import Home from './Home'
 
 import { getAll, update } from '../../api/BooksAPI'
-import Loading from '../../componentes/Loading';
+import Loading from '../../components/Loading';
 
 class HomeContainer extends Component {
 

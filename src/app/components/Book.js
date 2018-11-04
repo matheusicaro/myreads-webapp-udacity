@@ -11,7 +11,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import './Book.css'
+import '../styles/components/Book.css'
 
 import BookDetailsContainer from './BookDetailsContainer'
 import BookAdd from './BookAdd';

@@ -5,8 +5,8 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import Header from './pages/Header'
-import PagesContainer from './pages/PagesContainer'
+import Header from './components/Header'
+import PagesContainer from './components/PagesContainer'
 import LoginContainer from './pages/login/LoginContainer'
 
 import Background from './media/images/default-background.jpg'

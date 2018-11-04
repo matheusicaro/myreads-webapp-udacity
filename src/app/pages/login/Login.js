@@ -11,7 +11,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Login.css'
+import '../../styles/pages/Login.css'
 
 import FormContainer from './FormContainer'
 
