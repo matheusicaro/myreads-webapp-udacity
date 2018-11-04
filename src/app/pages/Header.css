@@ -1,0 +1,138 @@
+.header {
+    margin: 0% 0% 5% 0%;
+    background: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    height: 150px;
+}
+
+.header-social {
+    display: grid;
+    align-self: center;
+    grid-gap: 5%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 151, 167) !important;
+    width: 30%;
+    margin-left: 10%;
+}
+
+.header-social-buttons{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.header-social-copyright {
+    font: menu !important;
+    margin: 2% 0% 1% 0%;
+    text-align: end;
+}
+
+.header-title {
+    color: rgb(0, 151, 167) !important;
+    align-self: center;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+}
+
+.header-navegate {
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr;
+    align-self: center;
+    text-align: center;
+}
+
+.header-navegate-home-login {
+    display: flex;
+    align-items: center;
+}
+
+.header-navegate-search {
+    align-self: center;
+}
+
+.b-hover:hover {
+    color: #303030;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+.IconButton {
+    -webkit-margin-after: 0%;
+    margin-block-end: 0%;
+    -webkit-margin-before: 0em;
+    margin-block-start: 0em;
+}
+
+@media only screen and (max-width: 420px) {
+
+    .header-social-buttons {
+        justify-content: center !important;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        display: block;
+        height: 100%;
+    }
+
+    .header-social {
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2%;
+        padding: 1% 0% 0% 0%;
+        margin-left: 0% !important;
+    }
+
+    .header-title {
+        width: 100% !important;
+        font-size: 34px !important;
+    }
+
+    h2 {
+        margin-block-start: 0.6em !important;
+        margin-block-end: 0.5em !important;
+    }
+
+    .header-navegate {
+        width: 100% !important;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .header-navegate-translate {
+        display: flex !important;
+    }
+
+    .header-navegate-search {
+        grid-column-start: 111;
+    }
+}
+
+@media only screen and (max-width: 1200px){ 
+
+    .header-title {
+        width: 75%;
+        font-size: 55px;
+    }
+
+    .header-social {    
+        width: 53%;
+        margin-left: 0% !important;
+    }
+
+    .header-navegate {
+        width: 55%;
+    }
+}
+
+
+

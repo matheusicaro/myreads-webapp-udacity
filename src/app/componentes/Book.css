@@ -1,0 +1,15 @@
+
+.book {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+  }
+
+.book-top {
+  display: flex;
+  align-items: center;
+}
+
+.cover img {
+  height: 150px;
+}
