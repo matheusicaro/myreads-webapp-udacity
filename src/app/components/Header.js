@@ -25,7 +25,6 @@ import '../styles/components/Header.css';
 const Header = (props) => {
 
   const { language } = props;
-  console.log(language)
 
   const options = () => (
     <Menu>

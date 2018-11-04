@@ -21,7 +21,6 @@ const Book = ({ book, moveBookCategorie }) => {
     const { imageLinks } = book;
 
     const moveBook = (newCategorieBook) => {
-        console.log(newCategorieBook)
         moveBookCategorie(book, newCategorieBook)
     }
 

@@ -19,8 +19,6 @@ import Book from './Book'
 
 const BookCase = ({ books, moveBookCategorie, styles, classes }) => {
 
-  console.log(classes)
-
   let section = false;
   if( styles && styles.hasOwnProperty('section'))
     section = true;
