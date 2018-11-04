@@ -21,7 +21,23 @@
         "language": "Language: ",
         "publishedIn": "Published in: ",
         "buy": "Click to buy"
-    }
+      }
+    },
+    "search": {
+      "inputPlaceHolder": "Type a category, name, or initials to find a book ...",
+      "btnWhatToSearch": "What to search",
+      "tittleMenuDrawer": "Search Tips",
+      "textMenuDrawer": "Search for books based on the categories below, or you can just type your initials as 'An', 'Ba', for example.",
+      "btnCloseMenuDrawer": "Close",
+      "bookDetails": {
+        "btnClose": "Close",
+        "btnDetails": "Details",
+        "authors": "Author:",
+        "categories": "Category:",
+        "language": "Language:",
+        "publishedIn": "Published in:",
+        "buy": "Click to buy"
+      }
     }
   }
 }

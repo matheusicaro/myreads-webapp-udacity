@@ -120,6 +120,7 @@ class SearchContainer extends Component {
   }
 
   render() {
+    const { language } = this.props;
     const books = (this.state.books) ? (this.state.books) : (false);
     const { isDisabledInput, loading, isOpenSearchTip } = this.state;
 
@@ -135,8 +136,10 @@ class SearchContainer extends Component {
 
 
         isOpenSearchTip={isOpenSearchTip}
-        contentsMenuDrawer={menuDrawer}
+        contentsMenuDrawer={topicsMenuDrawer}
         actionSearchTip={this.isOpenSearchTip}
+
+        language={language}
       >
       </Search>
     )
@@ -145,12 +148,7 @@ class SearchContainer extends Component {
 
 export default SearchContainer
 
-const menuDrawer = {
-
-  button: 'O que pesquisar',
-  tittle: 'Dicas para Pesquisar',
-  text: 'Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como "An", "Ba", por exemplo.',
-  topics: [
+const topicsMenuDrawer =  [
     ['Android, Art, Artificial Intelligence, Astronomy, Austen'],
     ['Baseball, Basketball, Bhagat, Biography, Brief, Business'],
     ['Camus, Cervantes, Christie, Classics, Comics, Cook, Cricket, Cycling'],
@@ -161,5 +159,4 @@ const menuDrawer = {
     ['Negotiate, Painting, Philosophy, Photography, Poetry, Production, Programming'],
     ['React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming'],
     ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development'],
-  ],
-}
+]

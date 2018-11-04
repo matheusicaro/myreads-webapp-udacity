@@ -15,22 +15,31 @@ import PropTypes from 'prop-types'
 
 import '../../styles/pages/Search.css';
 
+
+// Import languages
+import * as translations from '../../translations'
+
+// Import Components
 import BookCase from '../../components/BookCase';
 import Loading from '../../components/Loading';
 import DrawerMenu from '../../components/DrawerMenu';
+
 import searchGif from '../../media/gifs/search-help.gif'
 
-const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer }) => {
+const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer, language }) => {
+
+    const { search } = translations[language];
 
     return (
         <section className="search">
 
             <div className="search-help">
-                <input placeholder="busque um livro..." onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
+                <input placeholder={ search.inputPlaceHolder } onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
                 <DrawerMenu 
                     actionSearchTip={actionSearchTip} 
                     isOpen={isOpenSearchTip}
-                    menuDrawer={contentsMenuDrawer}
+                    topicsMenuDrawer={contentsMenuDrawer}
+                    language={search}
                 ></DrawerMenu>
             </div>
 
@@ -43,7 +52,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                             classes='search-book-case'
                             books={books}
                             moveBookCategorie={moveBookCategorie}
-                            styleChild={'grid-column : 1/5'}
+                            language={search.bookDetails}
                         ></BookCase>
                     }
                     {!books &&
@@ -68,4 +77,5 @@ DrawerMenu.propTypes = {
     isDisabledInput: PropTypes.func,
     actionSearchTip: PropTypes.func.isRequired,
     books: PropTypes.array,
+    contentsMenuDrawer: PropTypes.array,
 };

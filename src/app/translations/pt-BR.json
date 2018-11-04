@@ -22,6 +22,22 @@
                 "publishedIn": "Publicado em: ",
                 "buy": "Clique para comprar"
             }
+        },
+        "search":{
+            "inputPlaceHolder" : "Digite uma categoria, nome, ou inicias para encontrar um livro...",
+            "btnWhatToSearch": "O que pesquisar",
+            "tittleMenuDrawer": "Dicas para Pesquisar",
+            "textMenuDrawer": "Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como 'An', 'Ba', por exemplo.",
+            "btnCloseMenuDrawer" : "Fechar",
+            "bookDetails": {
+                "btnClose": "Fechar",
+                "btnDetails": "Detalhes",
+                "authors": "Autor: ",
+                "categories": "Categoria: ",
+                "language": "Idioma: ",
+                "publishedIn": "Publicado em: ",
+                "buy": "Clique para comprar"
+            }
         }
     }
 }

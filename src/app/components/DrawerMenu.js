@@ -21,14 +21,14 @@ import '../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 
-  const { isOpen, menuDrawer} = props;
+  const { isOpen, topicsMenuDrawer, language } = props;
   const handleToggle = () => props.actionSearchTip(!isOpen);
 
   return (
     <div>
 
       <FlatButton
-        label={menuDrawer.button}
+        label={language.btnWhatToSearch}
         labelPosition="before"
         primary={true}
         onClick={handleToggle}
@@ -39,21 +39,21 @@ const SearchTip = (props) => {
       <Drawer width={'40%'} openSecondary={true} open={isOpen} >
 
         <div className="menu-title">
-          <IconButton tooltip="Fechar">
+          <IconButton tooltip={language.btnCloseMenuDrawer}>
             <Clear onClick={handleToggle} color='rgba(48, 48, 48)' />
           </IconButton>
 
-          <h1> {menuDrawer.tittle} </h1>
+          <h1> {language.tittleMenuDrawer} </h1>
 
         </div>
 
         <div className="menu-body">
 
-          {menuDrawer.text}
+          {language.textMenuDrawer}
 
           <ul>
             {
-              menuDrawer.topics.map((topics, index) => (
+              topicsMenuDrawer.map((topics, index) => (
                 <li key={index} style={styles.li}>  {topics} </li>
               ))
             }
