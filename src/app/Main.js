@@ -17,10 +17,10 @@ import Background from './media/images/default-background.jpg'
 
 const Main = () => {
 
-  const isAuthorized = (
+  const isAuthorized = ({changeLanguage, state}) => (
     <section>
       <div style={style.backgroungImage} ></div>
-      <Header></Header>
+      <Header changeLanguage={changeLanguage} language={state.language}></Header>
       <Route exact path='/' component={HomeContainer} />
       <Route exact path='/search' component={SearchContainer} />
     </section>
@@ -33,7 +33,7 @@ const Main = () => {
   return (
     <MyContext.Consumer>
       {(context) => (
-        (context.state.auth) ? isAuthorized : notAuthorized(context)
+        (context.state.auth) ? isAuthorized(context) : notAuthorized(context)
       )}
     </MyContext.Consumer>
   );

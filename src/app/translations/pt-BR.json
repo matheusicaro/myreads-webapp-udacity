@@ -1,0 +1,16 @@
+{
+    "pt-BR": {
+        
+        "header": {
+            "socialGit": "Repositorio no Github",
+            "socialLinkedin": "Matheus no Linkedin",
+            "socialFacebook": "Matheus no Facebook",
+            
+            "title": "Minhas Leituras",
+
+            "home": "Acessar a página principal",
+            "profile": "Editar Perfil",
+            "addBooks": "Adicionar Livros"
+        }
+    }
+}

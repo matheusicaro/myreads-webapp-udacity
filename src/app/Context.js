@@ -7,18 +7,18 @@ export const MyContext = React.createContext()
 export class MyProvider extends Component {
   state = {
     auth: true,
-    language: '',
+    language: 'pt-BR',
   }
 
   logon = (auth) => {
     if (auth) this.setState({ auth })
   }
 
-  changeLanguage = (e) => {
-    this.setState({
-      language: e.target.dataset.language
-    })
+  changeLanguage = (value) => {
 
+    this.setState({
+      language: value
+    })
   }
 
   render() {

@@ -1,0 +1,15 @@
+{
+  "en-US": {
+    "header": {
+      "socialGit": "Repository on Github",
+      "socialLinkedin": "Matheus on Linkedin",
+      "socialFacebook": "Matheus on Facebook",
+
+      "title": "My Reads",
+      
+      "home": "Access main page",
+      "profile": "Edit Profile",
+      "addBooks": "Add books"
+    }
+  }
+}
