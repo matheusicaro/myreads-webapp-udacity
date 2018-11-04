@@ -11,9 +11,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Home.css';
+import '../../styles/pages/Home.css';
 
-import BookCase from '../../componentes/BookCase';
+import BookCase from '../../components/BookCase';
 
 const Home = ({ books, moveBookCategorie }) => {
 
@@ -33,13 +33,13 @@ const Home = ({ books, moveBookCategorie }) => {
   return (
     <section className="home">
       <div className="bookshelf-title">Currently Reading</div>
-      <BookCase classes="book-case" styles={styles} books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie}></BookCase>
+      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie}></BookCase>
 
       <div className="bookshelf-title">Want To Read</div>
-      <BookCase classes="book-case" styles={styles} books={booksWantToRead} moveBookCategorie={moveBookCategorie}></BookCase>
+      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie}></BookCase>
 
       <div className="bookshelf-title">Read</div>
-      <BookCase classes="book-case" styles={styles} books={booksRead} moveBookCategorie={moveBookCategorie}></BookCase>
+      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie}></BookCase>
     </section>
   )
 }
@@ -52,27 +52,3 @@ Home.propTypes = {
   books: PropTypes.array,
 
 };
-
-const styles = {
-
-  section: {
-    textAlign: 'center',
-    overflowX: 'auto',
-    marginTop: '4%',
-  },
-
-  ol: {
-    listStyleType: 'none',
-    padding: '0',
-    margin: '0',
-
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'nowrap',
-  },
-
-  li: {
-    padding: '0% 4% 4% 0%',
-    textAlign: 'left',
-  }
-}

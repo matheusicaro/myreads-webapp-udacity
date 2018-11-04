@@ -13,11 +13,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Search.css';
+import '../../styles/pages/Search.css';
 
-import BookCase from '../../componentes/BookCase';
-import Loading from '../../componentes/Loading';
-import DrawerMenu from '../../componentes/DrawerMenu';
+import BookCase from '../../components/BookCase';
+import Loading from '../../components/Loading';
+import DrawerMenu from '../../components/DrawerMenu';
 import searchGif from '../../media/gifs/search-help.gif'
 
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer }) => {
@@ -40,7 +40,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                 <section id="casesbook">
                     {books &&
                         <BookCase
-                            styles={styles}
+                            classes='search-book-case'
                             books={books}
                             moveBookCategorie={moveBookCategorie}
                             styleChild={'grid-column : 1/5'}
@@ -69,28 +69,3 @@ DrawerMenu.propTypes = {
     actionSearchTip: PropTypes.func.isRequired,
     books: PropTypes.array,
 };
-
-
-const styles = {
-
-    section: {
-        textAlign: 'center',
-        overflowX: 'auto',
-        marginTop: '4%',
-    },
-
-    ol: {
-        listStyleType: 'none',
-        padding: '0',
-        margin: '0',
-
-        display: 'flex',
-        justifyContent: 'center',
-        flexFlow: 'wrap',
-    },
-
-    li: {
-        padding: '0% 4% 4% 0%',
-        textAlign: 'left',
-    }
-}
