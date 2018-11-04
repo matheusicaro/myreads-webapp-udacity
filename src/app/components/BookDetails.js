@@ -18,8 +18,6 @@ import PropTypes from 'prop-types';
 const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageLinks, authors,
   infoLink, categories, description, bookLanguage, publishedDate, language }) => {
 
-    console.log(language)
-
   const actions = [
     <FlatButton
       label={language.btnClose}

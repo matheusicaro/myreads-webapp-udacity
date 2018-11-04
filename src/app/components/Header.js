@@ -22,6 +22,7 @@ import * as translations from '../translations'
 // Import Components
 import Icon from './Icon'
 import { ICONS } from './IconsSvg'
+import LanguagesBtn from './LanguagesBtn'
 
 import '../styles/components/Header.css';
 
@@ -37,15 +38,6 @@ const Header = (props) => {
       <MenuItem primaryText="Apps" />
     </Menu>
   )
-
-  const changeToBr = () => {
-    
-    props.changeLanguage("pt-BR")
-  }
-
-  const changeToEn = () => {
-    props.changeLanguage("en-US")
-  }
 
   return (
     <div className='header'>
@@ -65,13 +57,8 @@ const Header = (props) => {
 
       <div className="header-navegate">
 
-        <div className="header-navegate-translate">
-          <FlatButton onClick={changeToBr} label="pt-BR" labelPosition="before" primary={true} style={styles.translate} />
-          <FlatButton onClick={changeToEn} label="en-US" labelPosition="before" primary={true} style={styles.translate} />
-        </div>
-
         <div className="header-navegate-home-login ">
-          <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={header.profile}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
+          <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={header.home}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
           <span className="b-hover IconButton"> <IconButton onClick={options} tooltip={header.profile}><Icon icon={ICONS.USER} color={styles.color} /></IconButton></span>
         </div>
 
@@ -82,6 +69,9 @@ const Header = (props) => {
         </div>
 
       </div>
+      
+      <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
+
     </div>
   )
 }
@@ -98,5 +88,6 @@ const styles = {
   translate: {
     minWidth: '0',
   },
+
   color: 'rgb(0, 151, 167)'
 }

@@ -7,7 +7,11 @@
             "title": "Minhas Leituras",
             "home": "Acessar a página principal",
             "profile": "Editar Perfil",
-            "addBooks": "Adicionar Livros"
+            "addBooks": "Adicionar Livros",
+            "buttonLanguage" : {
+                "BR": "mudar para português",
+                "EN": "mudar para inglês"
+            }
         },
         "home": {
             "titleCurrently": "Lendo Atualmente",

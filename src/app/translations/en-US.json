@@ -7,7 +7,11 @@
       "title": "My Reads",
       "home": "Access main page",
       "profile": "Edit Profile",
-      "addBooks": "Add books"
+      "addBooks": "Add books",
+      "buttonLanguage": {
+        "BR": "change to Portuguese",
+        "EN": "change to English"
+      }
     },
     "home": {
       "titleCurrently": "Currently Reading",
