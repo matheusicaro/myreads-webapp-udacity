@@ -9,6 +9,7 @@
 */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import BookDetails from './BookDetails'
 
@@ -53,3 +54,20 @@ export default class BookDetailsContainer extends Component {
         );
     }
 }
+
+BookDetails.propTypes = {
+
+    handleOpen: PropTypes.func,
+    onRequestClose: PropTypes.func,
+    open: PropTypes.bool.isRequired,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    imageLinks: PropTypes.object.isRequired,
+    authors: PropTypes.array,
+    infoLink: PropTypes.string,
+    categories: PropTypes.array,
+    description: PropTypes.string,
+    bookLanguage: PropTypes.string,
+    language: PropTypes.object.isRequired,
+    publishedDate: PropTypes.string,
+  };

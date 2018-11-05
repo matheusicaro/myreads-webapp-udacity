@@ -76,7 +76,7 @@ BookDetails.propTypes = {
   infoLink: PropTypes.string,
   categories: PropTypes.array,
   description: PropTypes.string,
-  language: PropTypes.string,
+  language: PropTypes.object.isRequired,
   publishedDate: PropTypes.string,
 
 };
