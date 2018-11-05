@@ -29,7 +29,6 @@ import searchGif from '../../media/gifs/search-help.gif'
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer, language }) => {
 
     const { search } = translations[language];
-
     return (
         <section className="search">
 
@@ -52,7 +51,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                             classes='search-book-case'
                             books={books}
                             moveBookCategorie={moveBookCategorie}
-                            language={search.bookDetails}
+                            language={search.book}
                         ></BookCase>
                     }
                     {!books &&

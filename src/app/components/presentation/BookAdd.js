@@ -21,7 +21,7 @@ import PropTypes from 'prop-types';
  * Simple Icon Menus demonstrating some of the layouts possible using the `anchorOrigin` and
  * `targetOrigin` properties.
  */
-const BookAdd = ({ moveBook }) => {
+const BookAdd = ({ moveBook, language }) => {
 
   const click = (event) => {
 
@@ -42,10 +42,10 @@ const BookAdd = ({ moveBook }) => {
       targetOrigin={styles.iconMenu}
       onItemClick={click}
     >
-      <MenuItem id="teste" primaryText="move to Currently Reading"/>
-      <MenuItem primaryText="move to Want to Read" />
-      <MenuItem primaryText="move to Read" />
-      <MenuItem primaryText="Remove" />
+      <MenuItem id="teste" primaryText={ language.currently }/>
+      <MenuItem primaryText={ language.want } />
+      <MenuItem primaryText={ language.read } />
+      <MenuItem primaryText={ language.remove } />
     </IconMenu>
   );
 }

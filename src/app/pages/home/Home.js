@@ -46,6 +46,8 @@ const Home = ({ books, moveBookCategorie, language }) => {
 
   }
 
+  console.log(home)
+
   return (
     <section className="home">
       <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />
@@ -53,17 +55,17 @@ const Home = ({ books, moveBookCategorie, language }) => {
 
 
       <div className="bookshelf-title">{ home.titleCurrently }</div>
-      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
+      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
 
       <FlatButton label={ home.titleCurrently } primary={true} onClick={ scrollMove } style={{color:"black"}} />
       <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />
       <FlatButton label={ home.titleRead } primary={true} onClick={ scrollMove } style={{color:"black"}} />
 
       <div className="bookshelf-title">{ home.titleWant }</div>
-      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
+      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
 
       <div className="bookshelf-title">{ home.titleRead }</div>
-      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={home.bookDetails}></BookCase>
+      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
       
       <FlatButton label={ home.titleCurrently } primary={true} onClick={ scrollMove } style={{color:"black"}} />
       <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />

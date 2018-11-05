@@ -8,7 +8,7 @@
             "home": "Acessar a página principal",
             "profile": "Editar Perfil",
             "addBooks": "Adicionar Livros",
-            "buttonLanguage" : {
+            "buttonLanguage": {
                 "BR": "mudar para português",
                 "EN": "mudar para inglês"
             }
@@ -17,30 +17,46 @@
             "titleCurrently": "Lendo Atualmente",
             "titleWant": "Quero ler",
             "titleRead": "Ler",
-            "bookDetails": {
-                "btnClose": "Fechar",
-                "btnDetails": "Detalhes",
-                "authors": "Autor: ",
-                "categories": "Categoria: ",
-                "language": "Idioma: ",
-                "publishedIn": "Publicado em: ",
-                "buy": "Clique para comprar"
+            "book": {
+                "bookAdd": {
+                    "currently": "mover para Leitura atual",
+                    "want": "mover para Deseja Ler",
+                    "read": "mover para Ler",
+                    "remove": "remover"
+                },
+                "bookDetails": {
+                    "btnClose": "Fechar",
+                    "btnDetails": "Detalhes",
+                    "authors": "Autor: ",
+                    "categories": "Categoria: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado em: ",
+                    "buy": "Clique para comprar"
+                }
             }
         },
-        "search":{
-            "inputPlaceHolder" : "Digite uma categoria, nome, ou inicias para encontrar um livro...",
+        "search": {
+            "inputPlaceHolder": "Digite uma categoria, nome, ou inicias para encontrar um livro...",
             "btnWhatToSearch": "O que pesquisar",
             "tittleMenuDrawer": "Dicas para Pesquisar",
             "textMenuDrawer": "Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como 'An', 'Ba', por exemplo.",
-            "btnCloseMenuDrawer" : "Fechar",
-            "bookDetails": {
-                "btnClose": "Fechar",
-                "btnDetails": "Detalhes",
-                "authors": "Autor: ",
-                "categories": "Categoria: ",
-                "language": "Idioma: ",
-                "publishedIn": "Publicado em: ",
-                "buy": "Clique para comprar"
+            "btnCloseMenuDrawer": "Fechar",
+            "book": {
+                "bookAdd": {
+                    "currently": "mover para Leitura atual",
+                    "want": "mover para Deseja Ler",
+                    "red": "mover para Ler",
+                    "remove": "remover"
+                },
+                "bookDetails": {
+                    "btnClose": "Fechar",
+                    "btnDetails": "Detalhes",
+                    "authors": "Autor: ",
+                    "categories": "Categoria: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado em: ",
+                    "buy": "Clique para comprar"
+                }
             }
         }
     }

@@ -17,14 +17,22 @@
       "titleCurrently": "Currently Reading",
       "titleWant": "Want To Read",
       "titleRead": "Read",
-      "bookDetails": {
-        "btnClose": "Close",
-        "btnDetails": "Details",
-        "authors": "Author: ",
-        "categories": "Categorie: ",
-        "language": "Language: ",
-        "publishedIn": "Published in: ",
-        "buy": "Click to buy"
+      "book": {
+        "bookAdd": {
+          "currently": "move to Currently Reading",
+          "want": "move to Want to Read",
+          "read": "move to Read",
+          "remove": "remove"
+        },
+        "bookDetails": {
+          "btnClose": "Close",
+          "btnDetails": "Details",
+          "authors": "Author:",
+          "categories": "Category:",
+          "language": "Language:",
+          "publishedIn": "Published in:",
+          "buy": "Click to buy"
+        }
       }
     },
     "search": {
@@ -33,14 +41,22 @@
       "tittleMenuDrawer": "Search Tips",
       "textMenuDrawer": "Search for books based on the categories below, or you can just type your initials as 'An', 'Ba', for example.",
       "btnCloseMenuDrawer": "Close",
-      "bookDetails": {
-        "btnClose": "Close",
-        "btnDetails": "Details",
-        "authors": "Author:",
-        "categories": "Category:",
-        "language": "Language:",
-        "publishedIn": "Published in:",
-        "buy": "Click to buy"
+      "book": {
+        "bookAdd": {
+          "currently": "move to Currently Reading",
+          "want": "move to Want to Read",
+          "read": "move to Read",
+          "remove": "remove"
+        },
+        "bookDetails": {
+          "btnClose": "Close",
+          "btnDetails": "Details",
+          "authors": "Author:",
+          "categories": "Category:",
+          "language": "Language:",
+          "publishedIn": "Published in:",
+          "buy": "Click to buy"
+        }
       }
     }
   }
