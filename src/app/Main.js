@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 // Import Context
 import { MyContext } from './Context'
 
-import Header from './components/Header'
+import Header from './components/presentation/Header'
 
 // Import pages
 import HomeContainer from '../app/pages/home/HomeContainer'

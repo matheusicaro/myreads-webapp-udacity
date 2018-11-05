@@ -11,7 +11,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import BookDetails from './BookDetails'
+import BookDetails from '../presentation/BookDetails'
 
 export default class BookDetailsContainer extends Component {
     state = {

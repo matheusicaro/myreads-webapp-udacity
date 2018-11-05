@@ -17,7 +17,7 @@ import Arrow from 'material-ui/svg-icons/action/help';
 
 import PropTypes from 'prop-types';
 
-import '../styles/components/DrawerMenu.css'
+import '../../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 

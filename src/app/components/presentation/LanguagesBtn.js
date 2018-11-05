@@ -1,10 +1,10 @@
 import React from 'react'
 
 import IconButton from 'material-ui/IconButton';
-import Brazil from '../media/icons/brazil.svg'
-import USA from '../media/icons/usa.svg'
+import Brazil from '../../media/icons/brazil.svg'
+import USA from '../../media/icons/usa.svg'
 
-import '../styles/components/LanguagesBtn.css'
+import '../../styles/components/LanguagesBtn.css'
 
 const ButtonsTranslate = (props) => {
 

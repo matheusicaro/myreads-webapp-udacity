@@ -11,9 +11,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import '../styles/components/Book.css'
+import '../../styles/components/Book.css'
 
-import BookDetailsContainer from './BookDetailsContainer'
+import BookDetailsContainer from '../container/BookDetailsContainer'
 import BookAdd from './BookAdd';
 
 const Book = ({ book, moveBookCategorie, language }) => {

@@ -20,9 +20,9 @@ import '../../styles/pages/Search.css';
 import * as translations from '../../translations'
 
 // Import Components
-import BookCase from '../../components/BookCase';
-import Loading from '../../components/Loading';
-import DrawerMenu from '../../components/DrawerMenu';
+import BookCase from '../../components/presentation/BookCase';
+import Loading from '../../components/presentation/Loading';
+import DrawerMenu from '../../components/presentation/DrawerMenu';
 
 import searchGif from '../../media/gifs/search-help.gif'
 

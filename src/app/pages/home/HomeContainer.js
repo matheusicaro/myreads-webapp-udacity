@@ -15,16 +15,24 @@ import React, { Component } from 'react'
 import Home from './Home'
 
 import { getAll, update } from '../../api/BooksAPI'
-import Loading from '../../components/Loading';
+import Loading from '../../components/presentation/Loading';
 
 class HomeContainer extends Component {
 
     constructor() {
         super();
-        this.state = { books: '', loading: true }
+        this.state = { 
+            books: '', 
+            loading: true,
+            updateBooks: {
+                book: '',
+                newCategorieBook: '',
+                isUpdate: false,
+              },
+        }
         
         getAll().then(result => {
-            setTimeout(()=> this.setState({ books: result, loading: false}), 3000)
+            setTimeout(()=> this.setState({ books: result, loading: false}), 1000)
         })
     }
 
@@ -38,6 +46,25 @@ class HomeContainer extends Component {
             })
         })
     }
+
+    moveBookCategorie = (book, newCategorieBook) => {
+
+        const { books } = this.state;
+    
+        const index = books.indexOf(book);
+        books.splice(index, 1);
+        const newBooks = books;
+    
+        this.setState(currentState => ({
+          books: newBooks,
+          updateBooks: {
+            book,
+            newCategorieBook,
+            isUpdate: !currentState.updateBooks.isUpdate
+          }
+        }))
+      }
+
 
     render() {
         const { books, loading } = this.state;

@@ -17,14 +17,14 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 
 // Import languages
-import * as translations from '../translations'
+import * as translations from '../../translations'
 
 // Import Components
 import Icon from './Icon'
-import { ICONS } from './IconsSvg'
+import { ICONS } from '../../media/icons/IconsSvg'
 import LanguagesBtn from './LanguagesBtn'
 
-import '../styles/components/Header.css';
+import '../../styles/components/Header.css';
 
 const Header = (props) => {
 

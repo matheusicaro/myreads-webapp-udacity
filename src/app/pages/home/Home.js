@@ -16,7 +16,7 @@ import '../../styles/pages/Home.css';
 // Import languages
 import * as translations from '../../translations'
 
-import BookCase from '../../components/BookCase';
+import BookCase from '../../components/presentation/BookCase';
 import FlatButton from 'material-ui/FlatButton';
 
 const Home = ({ books, moveBookCategorie, language }) => {
