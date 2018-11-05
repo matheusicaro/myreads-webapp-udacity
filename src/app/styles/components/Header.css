@@ -1,3 +1,31 @@
+@media only screen and (max-width: 900px) { 
+  
+    .header-menu {
+      display: block !important;
+    }
+}
+
+.header-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin: 2% 0% 2% 0%;
+
+    position: fixed;
+    left: 5%;
+    bottom: 95%;
+}
+
+.header-menuBtn-navegate,
+.header-menuBtn-navegate-home-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menuBtn-buttons {
+    padding: 0px 0px 20px 0px !important;
+}
+
 .header {
     background: black;
     height: 100%;

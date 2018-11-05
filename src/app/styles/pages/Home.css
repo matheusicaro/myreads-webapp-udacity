@@ -23,8 +23,12 @@
 
 @media only screen and (max-width: 500px) {
   
+  .topics {
+    padding: 15% 0% 0% 0% !important;
+  }
+
   .bookshelf-title {
-    padding: 15% 0% 1% 0% !important;
+    padding: 7% 0% 1% 0% !important;
     font-size: 30px !important;
   }
 
@@ -41,8 +45,12 @@
     padding: 5% 2% 10% !important;
   }
 
+  .topics {
+    padding: 10% 0% 0% 0% !important;
+  }
+
   .bookshelf-title {
-    padding: 10% 0% 1% 0% !important;
+    padding: 5% 0% 1% 0% !important;
     font-size: 35px !important;
   }
 
@@ -54,8 +62,12 @@
     padding: 0 2% 10%;
   }
 
+  .topics {
+    padding: 10% 0% 0% 0% !important;
+  }
+
   .bookshelf-title {
-    padding: 10% 0% 1% 0% !important;
+    padding: 5% 0% 1% 0% !important;
     font-size: 40px;
   }
 }

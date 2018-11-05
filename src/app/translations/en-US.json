@@ -11,7 +11,11 @@
       "buttonLanguage": {
         "BR": "change to Portuguese",
         "EN": "change to English"
-      }
+      },
+
+      "tittleMenuDrawer": "Menu",
+      "btnCloseMenuDrawer": "Close"
+
     },
     "home": {
       "titleCurrently": "Currently Reading",

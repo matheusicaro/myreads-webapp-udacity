@@ -12,7 +12,10 @@ import React from 'react';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
-import MoreVertIcon from 'material-ui/svg-icons/content/add-circle';
+
+
+import AddCicle from 'material-ui/svg-icons/content/add-circle';
+import ArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down';
 
 import PropTypes from 'prop-types';
 
@@ -21,7 +24,7 @@ import PropTypes from 'prop-types';
  * Simple Icon Menus demonstrating some of the layouts possible using the `anchorOrigin` and
  * `targetOrigin` properties.
  */
-const BookAdd = ({ moveBook, language }) => {
+const BookAdd = ({ moveBook, language, page }) => {
 
   const click = (event) => {
 
@@ -37,12 +40,12 @@ const BookAdd = ({ moveBook, language }) => {
 
   return (
     <IconMenu
-      iconButtonElement={<IconButton iconStyle={styles.iconButton}><MoreVertIcon /></IconButton>}
+  iconButtonElement={<IconButton iconStyle={styles.iconButton}> { (page==='search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
       anchorOrigin={styles.iconMenu}
       targetOrigin={styles.iconMenu}
       onItemClick={click}
     >
-      <MenuItem id="teste" primaryText={ language.currently }/>
+      <MenuItem primaryText={ language.currently }/>
       <MenuItem primaryText={ language.want } />
       <MenuItem primaryText={ language.read } />
       <MenuItem primaryText={ language.remove } />

@@ -15,7 +15,6 @@ import PropTypes from 'prop-types'
 
 import '../../styles/pages/Search.css';
 
-
 // Import languages
 import * as translations from '../../translations'
 
@@ -23,12 +22,12 @@ import * as translations from '../../translations'
 import BookCase from '../../components/presentation/BookCase';
 import Loading from '../../components/presentation/Loading';
 import DrawerMenu from '../../components/presentation/DrawerMenu';
-
+import Arrow from 'material-ui/svg-icons/action/help';
 import searchGif from '../../media/gifs/search-help.gif'
 
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer, language }) => {
+    const { search } = translations[language];     console.log(search)
 
-    const { search } = translations[language];
     return (
         <section className="search">
 
@@ -39,6 +38,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                     isOpen={isOpenSearchTip}
                     topicsMenuDrawer={contentsMenuDrawer}
                     language={search}
+                    icon={<Arrow/>}
                 ></DrawerMenu>
             </div>
 
@@ -52,6 +52,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                             books={books}
                             moveBookCategorie={moveBookCategorie}
                             language={search.book}
+                            page='search'
                         ></BookCase>
                     }
                     {!books &&

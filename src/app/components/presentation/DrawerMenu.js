@@ -13,7 +13,6 @@ import Drawer from 'material-ui/Drawer';
 import IconButton from 'material-ui/IconButton';
 import Clear from 'material-ui/svg-icons/content/clear';
 import FlatButton from 'material-ui/FlatButton';
-import Arrow from 'material-ui/svg-icons/action/help';
 
 import PropTypes from 'prop-types';
 
@@ -21,19 +20,18 @@ import '../../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 
-  const { isOpen, topicsMenuDrawer, language } = props;
+  const { isOpen, topicsMenuDrawer, language, icon } = props;
   const handleToggle = () => props.actionSearchTip(!isOpen);
 
   return (
     <div>
 
       <FlatButton
-        label={language.btnWhatToSearch}
+        label={(language.btnWhatToSearch) ? language.btnWhatToSearch : ''}
         labelPosition="before"
         primary={true}
         onClick={handleToggle}
-        icon={<Arrow
-        />}
+        icon={icon}
       />
 
       <Drawer width={'40%'} openSecondary={true} open={isOpen} >
@@ -49,15 +47,19 @@ const SearchTip = (props) => {
 
         <div className="menu-body">
 
-          {language.textMenuDrawer}
+          {(language.textMenuDrawer) ? language.textMenuDrawer : ''}
 
-          <ul>
-            {
-              topicsMenuDrawer.map((topics, index) => (
-                <li key={index} style={styles.li}>  {topics} </li>
-              ))
-            }
-          </ul>
+          {
+            Array.isArray(topicsMenuDrawer) ? (
+              <ul>
+                { topicsMenuDrawer.map((topics, index) => (
+                    <li key={index} style={styles.li}>  {topics} </li>
+                ))}
+              </ul>
+            
+            ) : (topicsMenuDrawer)
+          }
+
 
         </div>
       </Drawer>

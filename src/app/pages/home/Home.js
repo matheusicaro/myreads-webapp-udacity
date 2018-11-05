@@ -36,39 +36,45 @@ const Home = ({ books, moveBookCategorie, language }) => {
     else if (element.shelf === 'read') booksRead.push(element);
   })
 
-  const scrollMove = (event) =>{
+  const scrollMove = (event) => {
     const topic = event.target.textContent;
     const height = (document.body.scrollHeight) / 3;
 
-    if(topic === 'Quero ler' || topic === 'Want To Read') window.scroll(0, (height) );
-    else if(topic === 'Read' || topic === 'Ler') window.scroll(0,(height*3));
-    else if(topic === 'Currently Reading' || topic === 'Lendo Atualmente') window.scroll(0,(height/2));
+    if (topic === 'Quero ler' || topic === 'Want To Read') window.scroll(0, (height));
+    else if (topic === 'Read' || topic === 'Ler') window.scroll(0, (height * 3));
+    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente') window.scroll(0, (height / 2));
 
   }
 
-  console.log(home)
-
   return (
     <section className="home">
-      <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />
-      <FlatButton label={ home.titleRead } primary={true} onClick={ scrollMove } style={{color:"black"}} />
 
+      <div className="topics">
+        <FlatButton label={`> ${home.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={home.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={home.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+      </div>
 
-      <div className="bookshelf-title">{ home.titleCurrently }</div>
+      <div className="bookshelf-title">{home.titleCurrently}</div>
       <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
 
-      <FlatButton label={ home.titleCurrently } primary={true} onClick={ scrollMove } style={{color:"black"}} />
-      <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />
-      <FlatButton label={ home.titleRead } primary={true} onClick={ scrollMove } style={{color:"black"}} />
+      <div className="topics">
+        <FlatButton label={home.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${home.titleWant}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={home.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+      </div>
 
-      <div className="bookshelf-title">{ home.titleWant }</div>
+      <div className="bookshelf-title">{home.titleWant}</div>
       <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
 
-      <div className="bookshelf-title">{ home.titleRead }</div>
+      <div className="topics">
+        <FlatButton label={home.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={home.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${home.titleRead}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+      </div>
+
+      <div className="bookshelf-title">{home.titleRead}</div>
       <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
-      
-      <FlatButton label={ home.titleCurrently } primary={true} onClick={ scrollMove } style={{color:"black"}} />
-      <FlatButton label={ home.titleWant } primary={true} onClick={ scrollMove } style={{color:"black"}} />
 
     </section>
   )

@@ -11,7 +11,10 @@
             "buttonLanguage": {
                 "BR": "mudar para português",
                 "EN": "mudar para inglês"
-            }
+            },
+            
+            "tittleMenuDrawer": "Menu",
+            "btnCloseMenuDrawer": "Fechar"
         },
         "home": {
             "titleCurrently": "Lendo Atualmente",
@@ -45,7 +48,7 @@
                 "bookAdd": {
                     "currently": "mover para Leitura atual",
                     "want": "mover para Deseja Ler",
-                    "red": "mover para Ler",
+                    "read": "mover para Ler",
                     "remove": "remover"
                 },
                 "bookDetails": {

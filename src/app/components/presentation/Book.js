@@ -16,7 +16,7 @@ import '../../styles/components/Book.css'
 import BookDetailsContainer from '../container/BookDetailsContainer'
 import BookAdd from './BookAdd';
 
-const Book = ({ book, moveBookCategorie, language }) => {
+const Book = ({ book, moveBookCategorie, language, page }) => {
     
     const { imageLinks } = book;
 
@@ -32,7 +32,7 @@ const Book = ({ book, moveBookCategorie, language }) => {
 
             <div className="book-top">
                 <BookDetailsContainer book={book} language={language.bookDetails} /> 
-                <BookAdd moveBook={moveBook} language={language.bookAdd} />
+                <BookAdd moveBook={moveBook} language={language.bookAdd} page={page} />
             </div>
         </div>
     )

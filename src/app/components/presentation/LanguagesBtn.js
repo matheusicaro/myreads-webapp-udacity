@@ -16,7 +16,7 @@ const ButtonsTranslate = (props) => {
         props.changeLanguage("en-US")
     }
 
-    const { button } = props;
+    const { button, label } = props;
 
     return (
         <div className="languages-btn">

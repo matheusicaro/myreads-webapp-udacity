@@ -12,31 +12,52 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 import Arrow from 'material-ui/svg-icons/navigation/arrow-forward';
-import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
-
-// Import languages
-import * as translations from '../../translations'
 
 // Import Components
 import Icon from './Icon'
 import { ICONS } from '../../media/icons/IconsSvg'
 import LanguagesBtn from './LanguagesBtn'
+import DrawerMenu from '../../components/presentation/DrawerMenu';
+import Menu from 'material-ui/svg-icons/navigation/menu';
+import Home from 'material-ui/svg-icons/action/home';
+import User from 'material-ui/svg-icons/action/account-box';
 
 import '../../styles/components/Header.css';
 
 const Header = (props) => {
 
-  const { header } = translations[props.language];
+  const header = props.language;
+  const { actionSearchTip, isOpenSearchTip } = props
 
-  const options = (
-    <Menu>
-      <MenuItem primaryText="Maps" />
-      <MenuItem primaryText="Books" />
-      <MenuItem primaryText="Flights" />
-      <MenuItem primaryText="Apps" />
-    </Menu>
+  const headerMenuNavegate = (
+    <React.Fragment>
+      <div className="header-menuBtn-navegate">
+
+        <div className="header-menuBtn-navegate-search">
+          <div className="header-menuBtn-buttons">
+            <Link to='/'>
+              <FlatButton label={'   Página principal'} labelPosition="after" primary={true} icon={<Home />} />
+            </Link>
+          </div>
+          <div className="header-menuBtn-buttons">
+            <Link to='/user-profile'>
+              <FlatButton label={'   EDITAR PERFIL'} labelPosition="after" primary={true} icon={<User />} />
+            </Link>
+          </div>
+          <div className="header-menuBtn-buttons">
+            <Link to='/search'>
+              <FlatButton label={header.addBooks} labelPosition="before" primary={true} icon={<Arrow />} />
+            </Link>
+          </div>
+
+        </div>
+
+        <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
+      </div>
+    </React.Fragment >
+
   )
 
   return (
@@ -55,6 +76,8 @@ const Header = (props) => {
 
       <div className="header-title"><h2> {header.title} </h2></div>
 
+
+
       <div className="header-navegate">
 
         <div className="header-navegate-home-login ">
@@ -69,8 +92,19 @@ const Header = (props) => {
         </div>
 
       </div>
-      
+
       <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
+
+      <div className="header-menu-button">
+        <DrawerMenu
+          topicsMenuDrawer={headerMenuNavegate}
+
+          actionSearchTip={actionSearchTip}
+          isOpen={isOpenSearchTip}
+          language={header}
+          icon={<Menu />}
+        ></DrawerMenu>
+      </div>
 
     </div>
   )
