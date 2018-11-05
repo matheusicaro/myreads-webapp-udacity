@@ -1,5 +1,4 @@
 .header {
-    margin: 0% 0% 5% 0%;
     background: black;
     height: 100%;
     width: 100%;
@@ -15,7 +14,6 @@
     justify-content: center;
     color: rgb(0, 151, 167) !important;
     width: 30%;
-    margin-left: 10%;
 }
 
 .header-social-buttons{
@@ -40,7 +38,7 @@
 
 .header-navegate {
     display: grid;
-    grid-template-columns: 1fr 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
     align-self: center;
     text-align: center;
 }
@@ -69,13 +67,9 @@
 
 @media only screen and (max-width: 420px) {
 
-    .header-social-buttons {
+    /* .header-social-buttons {
         justify-content: center !important;
-    }
-
-}
-
-@media only screen and (max-width: 1000px) {
+    } */
 
     .header {
         display: block;
@@ -93,7 +87,7 @@
 
     .header-title {
         width: 100% !important;
-        font-size: 34px !important;
+        font-size: 20px !important;
     }
 
     h2 {
@@ -113,15 +107,60 @@
     }
 
     .header-navegate-search {
-        grid-column-start: 111;
+        grid-column-start: none;
+        margin-right: 15%;
+    }
+
+}
+
+@media only screen and (min-width: 420px)and (max-width: 1000px) {
+
+    .header {
+        display: block;
+        height: 100%;
+    }
+
+    .header-social {
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2%;
+        padding: 1% 0% 0% 0%;
+        margin-left: 0% !important;
+    }
+
+    .header-title {
+        width: 100% !important;
+        font-size: 30px !important;
+    }
+
+    h2 {
+        margin-block-start: 0.6em !important;
+        margin-block-end: 0.5em !important;
+    }
+
+    .header-navegate {
+        width: 100% !important;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .header-navegate-translate {
+        display: flex !important;
+    }
+
+    .header-navegate-search {
+        grid-column-start: none;
+        margin-right: 34%;
     }
 }
 
-@media only screen and (max-width: 1200px){ 
+@media only screen and (min-width: 1000px) and (max-width: 1200px){ 
 
     .header-title {
         width: 75%;
-        font-size: 55px;
+        font-size: 35px;
     }
 
     .header-social {    
@@ -132,7 +171,21 @@
     .header-navegate {
         width: 55%;
     }
+
+    .header-navegate-search {
+        justify-self: start;
+    }
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1500px){ 
 
+    .header-title {
+        width: 75%;
+        font-size: 50px;
+    }
+
+    .header-navegate-search {
+        justify-self: start;
+    }
+}
 
