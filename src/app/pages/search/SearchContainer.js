@@ -15,18 +15,20 @@
 
 import React, { Component } from 'react'
 
-import { search, update } from '../../api/BooksAPI'
-import { verifyReturnUpdate } from './VerifyReturnBooksAPI'
+import { search } from '../../api/BooksAPI'
+import UpdateMoveAPI from '../../api/utils/UpdateMoveAPI';
 
 import Search from './Search';
 
 class SearchContainer extends Component {
-
+ 
   constructor() {
-    super()
+    super()    
+    this.update = new UpdateMoveAPI();
     this.state = {
       query: '',
       books: '',
+      oldBooks:'',
       loading: false,
       isDisabledInput: false,
       isOpenSearchTip: false,
@@ -46,7 +48,7 @@ class SearchContainer extends Component {
     search(query).then(result => {
 
       if (!result.length > 0) result = false;
-      setTimeout(() => this.setState({ books: result, loading: false, isDisabledInput: false }), 3000)
+      setTimeout(() => this.setState({ books: result, loading: false, isDisabledInput: false }), 1000)
     })
   }
 
@@ -72,6 +74,7 @@ class SearchContainer extends Component {
 
     this.setState(currentState => ({
       books: newBooks,
+      oldBooks: books,
       updateBooks: {
         book,
         newCategorieBook,
@@ -84,39 +87,30 @@ class SearchContainer extends Component {
     this.setState({ isOpenSearchTip: isOpen })
   }
 
+  verifyReturnUpdate = (status) =>{
+
+    window.alert("FAZER POP-UP ERROR NA PAGINA")
+
+    // ERROR IN RETURN API
+    if(status !== 200) {
+      this.setState( currentState => ({ books: currentState.oldBooks }));
+      // TODO POP-UP
+    }
+
+    // DO NOT USE SETSTATE NOT TO CALL THE METHODS OF THE REACT LIFE 
+    // CYCLE AS THIS REPRODUCTIVE VARIABLE DOES NOT NEED 
+    this.state.updateBooks.isUpdate = false;
+  }
+
   componentDidUpdate() {
 
     const { isUpdate } = this.state.updateBooks;
 
-    // PERFORMS THE UPDATE IN THE BOOK'S API WITH A NEW CATEGORY.
     if (isUpdate) {
-
       const { book, newCategorieBook } = this.state.updateBooks;
-
-      update(book, newCategorieBook).then((result) => {
-
-        // UPDATE TREATMENT === FAIL, BECAUSE API ALWAYS RETURNS 200. ANALYZE THROUGH RESULT
-        if (result) {
-          let updateState = verifyReturnUpdate(result, book);
-
-          if (updateState) {
-            this.setState(currentState => ({
-              books: [book, ...currentState.books]
-            }))
-          }
-        } else {
-          window.alert('Error ao mudar o book de categoria');
-          this.setState(currentState => ({
-            books: [book, ...currentState.book]
-          }))
-        }
-
-      })
-
-      // DO NOT USE SETSTATE NOT TO CALL THE METHODS OF THE REACT LIFE 
-      // CYCLE AS THIS REPRODUCTIVE VARIABLE DOES NOT NEED 
-      this.state.updateBooks.isUpdate = false;
+      this.verifyReturnUpdate( this.update.move(book, newCategorieBook) );
     }
+
   }
 
   render() {
@@ -148,15 +142,15 @@ class SearchContainer extends Component {
 
 export default SearchContainer
 
-const topicsMenuDrawer =  [
-    ['Android, Art, Artificial Intelligence, Astronomy, Austen'],
-    ['Baseball, Basketball, Bhagat, Biography, Brief, Business'],
-    ['Camus, Cervantes, Christie, Classics, Comics, Cook, Cricket, Cycling'],
-    ['Desai, Design, Development, Digital Marketing, Drama, Drawing, Dumas'],
-    ['Education, Everything, Fantasy, Film, Finance, First, Fitness, Football, Future'],
-    ['Games, Gandhi, Homer, Horror, Hugo, Ibsen, iOS, Journey, Kafka, King'],
-    ['Lahiri, Larsson, Learn, Literary Fiction, Make, Manage, Marquez, Money, Mystery'],
-    ['Negotiate, Painting, Philosophy, Photography, Poetry, Production, Programming'],
-    ['React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming'],
-    ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development'],
+const topicsMenuDrawer = [
+  ['Android, Art, Artificial Intelligence, Astronomy, Austen'],
+  ['Baseball, Basketball, Bhagat, Biography, Brief, Business'],
+  ['Camus, Cervantes, Christie, Classics, Comics, Cook, Cricket, Cycling'],
+  ['Desai, Design, Development, Digital Marketing, Drama, Drawing, Dumas'],
+  ['Education, Everything, Fantasy, Film, Finance, First, Fitness, Football, Future'],
+  ['Games, Gandhi, Homer, Horror, Hugo, Ibsen, iOS, Journey, Kafka, King'],
+  ['Lahiri, Larsson, Learn, Literary Fiction, Make, Manage, Marquez, Money, Mystery'],
+  ['Negotiate, Painting, Philosophy, Photography, Poetry, Production, Programming'],
+  ['React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming'],
+  ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development'],
 ]
