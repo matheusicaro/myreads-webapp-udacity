@@ -21,15 +21,20 @@
   color: black;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   
   .topics {
+    margin: 7% 0% 0% 0% !important;
     padding: 15% 0% 0% 0% !important;
   }
 
+  .topics span {
+    font-size: 10px !important;
+  }
+
   .bookshelf-title {
-    padding: 7% 0% 1% 0% !important;
-    font-size: 30px !important;
+    padding: 3% 0% 3% 0% !important;
+    font-size: 25px !important;
   }
 
   .home-book-case {
@@ -39,23 +44,29 @@
 
 }
 
-@media only screen and (min-width: 500px) {
-
-  .home {
-    padding: 5% 2% 10% !important;
+@media only screen and (min-width: 600px) and (max-width: 900px){
+  
+  .topics {
+    margin: 7% 0% 0% 0% !important;
+    padding: 15% 0% 0% 0% !important;
   }
 
-  .topics {
-    padding: 10% 0% 0% 0% !important;
+  .topics span {
+    font-size: 10px !important;
   }
 
   .bookshelf-title {
-    padding: 5% 0% 1% 0% !important;
-    font-size: 35px !important;
+    padding: 7% 0% 3% 0% !important;
+    font-size: 40px !important;
+  }
+
+  .home-book-case {
+    justify-content: end !important;
+    padding: 5px 0px 0px 10px !important;
   }
 
 }
-  
+
 @media only screen and (min-width: 900px){ 
 
   .home {
@@ -63,7 +74,8 @@
   }
 
   .topics {
-    padding: 10% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+    padding: 15% 0% 0% 0% !important;
   }
 
   .bookshelf-title {
