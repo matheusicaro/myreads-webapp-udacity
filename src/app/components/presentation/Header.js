@@ -63,15 +63,16 @@ const Header = (props) => {
     <div className='header'>
 
 
-      
+
       <div className="header-menu-button">
-                <DrawerMenu
+        <DrawerMenu
           topicsMenuDrawer={headerMenuNavegate}
           openRigth={false}
           actionOpen={actionOpenMenu}
           isOpen={isOpenMenu}
           language={header}
           icon={<Menu />}
+          width={"60%"}
         ></DrawerMenu>
       </div>
 
