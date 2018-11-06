@@ -20,8 +20,8 @@ import '../../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 
-  const { isOpen, topicsMenuDrawer, language, icon } = props;
-  const handleToggle = () => props.actionSearchTip(!isOpen);
+  const { isOpen, topicsMenuDrawer, language, icon, openRigth } = props;
+  const handleToggle = () => props.actionOpen(!isOpen);
 
   return (
     <div>
@@ -34,7 +34,7 @@ const SearchTip = (props) => {
         icon={icon}
       />
 
-      <Drawer width={'40%'} openSecondary={true} open={isOpen} >
+      <Drawer width={'40%'} openSecondary={openRigth} open={isOpen} >
 
         <div className="menu-title">
           <IconButton tooltip={language.btnCloseMenuDrawer}>

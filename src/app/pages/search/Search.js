@@ -26,7 +26,10 @@ import Arrow from 'material-ui/svg-icons/action/help';
 import searchGif from '../../media/gifs/search-help.gif'
 
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer, language }) => {
-    const { search } = translations[language];     console.log(search)
+    const { search } = translations[language];
+
+
+
 
     return (
         <section className="search">
@@ -34,11 +37,12 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
             <div className="search-help">
                 <input placeholder={ search.inputPlaceHolder } onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
                 <DrawerMenu 
-                    actionSearchTip={actionSearchTip} 
+                    actionOpen={actionSearchTip} 
                     isOpen={isOpenSearchTip}
                     topicsMenuDrawer={contentsMenuDrawer}
                     language={search}
                     icon={<Arrow/>}
+                    openRigth={true}
                 ></DrawerMenu>
             </div>
 

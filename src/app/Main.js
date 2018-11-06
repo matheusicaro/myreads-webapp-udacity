@@ -17,14 +17,24 @@ import Background from './media/images/default-background.jpg'
 
 const Main = () => {
 
-  const isAuthorized = ({ changeLanguage, state }) => (
+  const isAuthorized = ({ changeLanguage, state, hideBackground}) => {
+
+    let styleHide = false;
+
+    // const hideBackground = (value) =>{
+    //   console.log(value);
+    //   (value) ? styleHide={display:'none'} : styleHide=false;
+    // }
+  
+    return (
     <section>
       <div style={style.backgroungImage} ></div>
-      <HeaderContainer changeLanguage={changeLanguage} language={state.language} />
-      <Route exact path='/' render={() => <HomeContainer language={state.language} />} ></Route>
+      <HeaderContainer changeLanguage={changeLanguage} language={state.language}  background={hideBackground}/>
+      <Route exact path='/' render={() => <HomeContainer language={state.language} styleHide={state.styleHide} />} ></Route>
       <Route exact path='/search' render={() => <SearchContainer language={state.language} />} ></Route>
     </section>
-  )
+    )
+  }
 
   const notAuthorized = (context) => (
     <Route exact path='/' render={() => <LoginContainer isLogged={context.logon} />} ></Route>

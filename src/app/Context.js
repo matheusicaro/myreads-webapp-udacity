@@ -8,6 +8,7 @@ export class MyProvider extends Component {
   state = {
     auth: true,
     language: 'pt-BR',
+    styleHide: {}
   }
 
   logon = (auth) => {
@@ -20,6 +21,10 @@ export class MyProvider extends Component {
       language: value
     })
   }
+  
+  hideBackground = (value) => {
+    (value) ? this.setState({ styleHide: {display: 'none'} }) : this.setState({ styleHide: {} });
+  }
 
   render() {
     return (
@@ -27,6 +32,7 @@ export class MyProvider extends Component {
         state: this.state,
         logon: this.logon,
         changeLanguage: this.changeLanguage,
+        hideBackground: this.hideBackground,
       }}>
 
         {this.props.children}

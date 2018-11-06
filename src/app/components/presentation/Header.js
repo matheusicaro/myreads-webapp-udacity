@@ -12,7 +12,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 import Arrow from 'material-ui/svg-icons/navigation/arrow-forward';
-import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 
 // Import Components
@@ -29,7 +28,7 @@ import '../../styles/components/Header.css';
 const Header = (props) => {
 
   const header = props.language;
-  const { actionSearchTip, isOpenSearchTip } = props
+  const { actionOpenMenu, isOpenMenu } = props
 
   const headerMenuNavegate = (
     <React.Fragment>
@@ -63,6 +62,21 @@ const Header = (props) => {
   return (
     <div className='header'>
 
+
+      
+      <div className="header-menu-button">
+                <DrawerMenu
+          topicsMenuDrawer={headerMenuNavegate}
+          openRigth={false}
+          actionOpen={actionOpenMenu}
+          isOpen={isOpenMenu}
+          language={header}
+          icon={<Menu />}
+        ></DrawerMenu>
+      </div>
+
+
+
       <div className="header-social">
 
         <h4 className="header-social-copyright"> © Copyright 2018, Matheus Ícaro </h4>
@@ -94,17 +108,6 @@ const Header = (props) => {
       </div>
 
       <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
-
-      <div className="header-menu-button">
-        <DrawerMenu
-          topicsMenuDrawer={headerMenuNavegate}
-
-          actionSearchTip={actionSearchTip}
-          isOpen={isOpenSearchTip}
-          language={header}
-          icon={<Menu />}
-        ></DrawerMenu>
-      </div>
 
     </div>
   )

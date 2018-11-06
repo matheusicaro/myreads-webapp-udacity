@@ -32,6 +32,7 @@ class HomeContainer extends Component {
                 newCategorieBook: '',
                 isUpdate: false,
             },
+            menuOpen:false,
         }
 
         getAll().then(result => {
@@ -86,12 +87,19 @@ class HomeContainer extends Component {
 
     render() {
         const { books, loading } = this.state;
-        const { language } = this.props;
+        const { language, styleHide } = this.props;
+
+        console.log(this.props)
 
         return (
             <React.Fragment>
                 {loading && <Loading></Loading>}
-                {!loading && <Home books={books} moveBookCategorie={this.moveBookCategorie} language={language}>  </Home>}
+                {!loading && <Home 
+                                books={books} 
+                                moveBookCategorie={this.moveBookCategorie} 
+                                language={language} 
+                                styleHide={styleHide}>  
+                            </Home>}
             </React.Fragment>
         )
     }

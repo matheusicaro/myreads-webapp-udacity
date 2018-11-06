@@ -19,7 +19,7 @@ import * as translations from '../../translations'
 import BookCase from '../../components/presentation/BookCase';
 import FlatButton from 'material-ui/FlatButton';
 
-const Home = ({ books, moveBookCategorie, language }) => {
+const Home = ({ books, moveBookCategorie, language, styleHide}) => {
 
   const { home } = translations[language];
 
@@ -47,7 +47,7 @@ const Home = ({ books, moveBookCategorie, language }) => {
   }
 
   return (
-    <section className="home">
+    <section className="home" style={ (styleHide) ? styleHide : {} }>
 
       <div className="topics">
         <FlatButton label={`> ${home.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />

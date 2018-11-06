@@ -25,28 +25,28 @@ class HeaderContainer extends Component {
     constructor() {
         super();
         this.state = {
-            isOpenSearchTip: false,
+            isOpenMenu: false,
         }
     }
 
-    isOpenSearchTip = (isOpen) => {
-        this.setState({ isOpenSearchTip: isOpen })
+    isOpenMenu = (isOpen) => {
+        this.props.background(isOpen);
+        this.setState({ isOpenMenu: isOpen })
     }
-
 
     render() {
         const { changeLanguage } = this.props;
-        const { isOpenSearchTip } = this.state
+        const { isOpenMenu } = this.state
         const { header } = translations[this.props.language];
 
         return (
 
             <Header
-                isOpenSearchTip={isOpenSearchTip}
-                actionSearchTip={this.isOpenSearchTip}
+                isOpenMenu={isOpenMenu}
+                actionOpenMenu={this.isOpenMenu}
                 changeLanguage={changeLanguage}
                 language={header}
-            >
+            >   
             </Header>
         )
     }
