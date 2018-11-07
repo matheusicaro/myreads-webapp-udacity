@@ -19,13 +19,6 @@ const Main = () => {
 
   const isAuthorized = ({ changeLanguage, state, hideBackground}) => {
 
-    let styleHide = false;
-
-    // const hideBackground = (value) =>{
-    //   console.log(value);
-    //   (value) ? styleHide={display:'none'} : styleHide=false;
-    // }
-  
     return (
     <section>
       <div style={style.backgroungImage} ></div>

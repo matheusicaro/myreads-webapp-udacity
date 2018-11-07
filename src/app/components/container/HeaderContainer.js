@@ -40,7 +40,6 @@ class HeaderContainer extends Component {
         const { header } = translations[this.props.language];
 
         return (
-
             <Header
                 isOpenMenu={isOpenMenu}
                 actionOpenMenu={this.isOpenMenu}

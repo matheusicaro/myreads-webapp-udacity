@@ -20,7 +20,7 @@ import '../../styles/components/DrawerMenu.css'
 
 const SearchTip = (props) => {
 
-  const { isOpen, topicsMenuDrawer, language, icon, openRigth, width } = props;
+  const { isOpen, topicsMenuDrawer, language, icon, openRigth, width, styleButton } = props;
   const handleToggle = () => props.actionOpen(!isOpen);
 
   return (
@@ -32,6 +32,8 @@ const SearchTip = (props) => {
         primary={true}
         onClick={handleToggle}
         icon={icon}
+        style={ (styleButton) ? styleButton.root : {}}
+        hoverColor={ (styleButton) ? styleButton.hover : {}}
       />
 
       <Drawer width={ (width) ? width : '40%'} openSecondary={openRigth} open={isOpen} >
@@ -42,7 +44,6 @@ const SearchTip = (props) => {
           </IconButton>
 
           <h1> {language.tittleMenuDrawer} </h1>
-
         </div>
 
         <div className="menu-body">
