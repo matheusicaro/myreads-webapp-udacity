@@ -7,9 +7,10 @@ import { MyContext } from './Context'
 import HeaderContainer from './components/container/HeaderContainer'
 
 // Import pages
-import HomeContainer from '../app/pages/home/HomeContainer'
-import SearchContainer from '../app/pages/search/SearchContainer'
-import LoginContainer from './pages/login/LoginContainer'
+import Home from '../app/pages/home/HomeContainer'
+import Search from '../app/pages/search/SearchContainer'
+import Login from './pages/login/LoginContainer'
+import User from './pages/user/UserContainer'
 
 
 
@@ -23,14 +24,16 @@ const Main = () => {
     <section>
       <div style={style.backgroungImage} ></div>
       <HeaderContainer changeLanguage={changeLanguage} language={state.language}  background={hideBackground}/>
-      <Route exact path='/' render={() => <HomeContainer language={state.language} styleHide={state.styleHide} />} ></Route>
-      <Route exact path='/search' render={() => <SearchContainer language={state.language} />} ></Route>
+      <Route exact path='/' render={() => <Home language={state.language} styleHide={state.styleHide} />} ></Route>
+      <Route exact path='/search' render={() => <Search language={state.language} />} ></Route>
+      <Route exact path='/user-profile' render={() => <User language={state.language} />} ></Route>
+
     </section>
     )
   }
 
   const notAuthorized = (context) => (
-    <Route exact path='/' render={() => <LoginContainer isLogged={context.logon} />} ></Route>
+    <Route exact path='/' render={() => <Login isLogged={context.logon} />} ></Route>
   )
 
   return (

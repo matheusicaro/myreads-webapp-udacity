@@ -99,7 +99,7 @@ const Header = (props) => {
 
         <div className="header-navegate-home-login ">
           <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={header.home}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
-          <span className="b-hover IconButton"> <IconButton tooltip={header.profile}><Icon icon={ICONS.USER} color={styles.color} /></IconButton></span>
+          <span className="b-hover IconButton"> <Link to='/user-profile'><IconButton tooltip={header.profile}><Icon icon={ICONS.USER} color={styles.color} /></IconButton></Link></span>
         </div>
 
         <div className="header-navegate-search">
