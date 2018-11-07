@@ -28,7 +28,10 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
 
   return (
     <div className='details'>
-      <RaisedButton label={language.btnDetails} onClick={handleOpen} style={styles.rasedButton} labelColor={styles.rasedButton.labelColor} />
+      <RaisedButton buttonStyle={{borderRadius:'7px'}} 
+                    label={language.btnDetails} onClick={handleOpen} 
+                    style={styles.rasedButton} labelColor={styles.rasedButton.labelColor}
+      />
       <Dialog
         title={title}
         actions={actions}
@@ -100,7 +103,8 @@ const styles = {
 
   rasedButton: {
     boxShadow: '0',
-    labelColor: 'rgb(0, 151, 167)'
+    labelColor: 'rgb(0, 151, 167)',
+    background:'transparent',
   },
 
   imgDescription: {

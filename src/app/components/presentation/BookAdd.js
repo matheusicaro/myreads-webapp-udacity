@@ -40,10 +40,11 @@ const BookAdd = ({ moveBook, language, page }) => {
 
   return (
     <IconMenu
-  iconButtonElement={<IconButton iconStyle={styles.iconButton}> { (page==='search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
+      iconButtonElement={<IconButton iconStyle={styles.iconButton}> { (page==='search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
       anchorOrigin={styles.iconMenu}
       targetOrigin={styles.iconMenu}
       onItemClick={click}
+      menuStyle={{style:{background:'red'}}}
     >
       <MenuItem primaryText={ language.currently }/>
       <MenuItem primaryText={ language.want } />
