@@ -89,8 +89,6 @@ class HomeContainer extends Component {
         const { books, loading } = this.state;
         const { language, styleHide } = this.props;
 
-        console.log(this.props)
-
         return (
             <React.Fragment>
                 {loading && <Loading></Loading>}
