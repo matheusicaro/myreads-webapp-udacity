@@ -12,6 +12,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FlatButton from 'material-ui/FlatButton';
 import Arrow from 'material-ui/svg-icons/navigation/arrow-forward';
+import Replay from 'material-ui/svg-icons/content/reply';
 import IconButton from 'material-ui/IconButton';
 
 // Import Components
@@ -47,14 +48,14 @@ const Header = (props) => {
           </div>
           <div className="header-menuBtn-buttons">
             <Link to='/search'>
-              <FlatButton label={header.addBooks} labelPosition="before" primary={true} icon={<Arrow />} />
+              <FlatButton label={header.addBooks} labelPosition="after" primary={true} icon={<Arrow />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
-              <FlatButton label={header.logout} onClick={( props.logout )} labelPosition="before" primary={true} icon={<Arrow />} />
+            <FlatButton label={header.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} />
           </div>
         </div>
-        
+
         <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
       </div>
     </React.Fragment >
@@ -64,9 +65,7 @@ const Header = (props) => {
   return (
     <div className='header'>
 
-
-
-      <div className="header-menu-button">
+      <div className="header-menu-btn">
         <DrawerMenu
           topicsMenuDrawer={headerMenuNavegate}
           openRigth={false}
@@ -75,29 +74,26 @@ const Header = (props) => {
           language={header}
           icon={<Menu />}
           width={"60%"}
-          styleButton={{ root:{background: '#0000008a', borderRadius: '25px'}, hover:'#000000' }}
-          
+          styleButton={{ root: { background: '#0000008a', borderRadius: '25px' }, hover: '#000000' }}
+
         ></DrawerMenu>
       </div>
-
-
 
       <div className="header-social">
 
         <h4 className="header-social-copyright"> © Copyright 2018, Matheus Ícaro </h4>
-        <div className="header-social-buttons ">
+        <div className="header-social-btn ">
           <span className="b-hover IconButton"><IconButton href={url.git} tooltip={header.socialGit}> <Icon icon={ICONS.GITHUB} color={styles.color} /> </IconButton></span>
           <span className="b-hover IconButton"><IconButton href={url.linkedin} tooltip={header.socialLinkedin}> <Icon icon={ICONS.LINKEDIN2} color={styles.color} /> </IconButton></span>
           <span className="b-hover IconButton"><IconButton href={url.facebook} tooltip={header.socialFacebook} > <Icon icon={ICONS.FACEBOOK} color={styles.color} /> </IconButton></span>
         </div>
-
       </div>
 
       <div className="header-title"><h2> {header.title} </h2></div>
 
-
-
       <div className="header-navegate">
+
+        <div className="header-navegate-languages"><LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} /></div>
 
         <div className="header-navegate-home-login ">
           <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={header.home}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
@@ -110,10 +106,9 @@ const Header = (props) => {
           </Link>
         </div>
 
+        <div className="header-navegate-logout"><FlatButton label={header.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} /></div>
       </div>
-
-      <span className="header-hide-btn"><LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} /></span>
-
+   
     </div>
   )
 }

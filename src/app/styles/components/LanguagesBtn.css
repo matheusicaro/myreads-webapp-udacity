@@ -1,9 +1,3 @@
-.languages-btn {
-    display: flex;
-    position: absolute;
-    right: 5%;
-}
-
 .b-hover:hover {
     color: #303030;
     background-color: #303030;

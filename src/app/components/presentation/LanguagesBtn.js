@@ -16,13 +16,15 @@ const ButtonsTranslate = (props) => {
         props.changeLanguage("en-US")
     }
 
-    const { button, label } = props;
+    const { button, style } = props;
 
     return (
-        <div className="languages-btn">
-            <div className="b-hover IconButton"> <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} /> </div>
-            <div className="b-hover IconButton"> <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} /> </div>
-        </div>
+        <React.Fragment>
+            <span style={{ display: 'flex' }}>
+                <div className="b-hover IconButton"> <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} /> </div>
+                <div className="b-hover IconButton"> <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} /> </div>
+            </span>
+        </React.Fragment>
     )
 }
 
@@ -30,6 +32,7 @@ export default ButtonsTranslate
 
 
 const styles = {
+
     icon: {
         brazil: {
             background: `url(${Brazil})`,
