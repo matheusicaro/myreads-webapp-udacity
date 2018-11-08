@@ -12,9 +12,7 @@ import Search from '../app/pages/search/SearchContainer'
 import Login from './pages/login/LoginContainer'
 import User from './pages/user/UserContainer'
 
-
-
-import Background from './media/images/default-background.jpg'
+import './styles/slide-background.css'
 
 const Main = () => {
 
@@ -22,7 +20,7 @@ const Main = () => {
 
     return (
     <section>
-      <div style={style.backgroungImage} ></div>
+      <div className="loader slider" style={style.backgroungImage} ></div>
       <HeaderContainer changeLanguage={changeLanguage} logout={logOut} language={state.language}  background={hideBackground}/>
       <Route exact path='/' render={() => <Home language={state.language} styleHide={state.styleHide} />} ></Route>
       <Route exact path='/search' render={() => <Search language={state.language} />} ></Route>
@@ -54,7 +52,6 @@ const style = {
     height: "100%",
     position: 'fixed',
     opacity: '0.2',
-    background: `url(${Background})`,
   }
 
 }

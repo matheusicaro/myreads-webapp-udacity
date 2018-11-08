@@ -11,30 +11,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../styles/pages/LoginForm.css'
+import '../../styles/pages/Login.css'
 
 const Form = (props) => {
 
 	const { isLogin, user, errorAcess } = props;
 
-	const changeInput = ()=>{
+	const changeInput = () => {
 		props.changeInput();
 	}
 
-	const inputData = (event)=>{
+	const inputData = (event) => {
 		props.inputData(event);
 	}
 
-	const createUser = (event)=>{
+	const createUser = (event) => {
 		props.createUser(event);
 	}
 
-	const login = (event)=>{
+	const login = (event) => {
 		props.login(event);
 	}
-	
-	return(
-			<div className = "login-wrap" >
+
+	return (
+		<div className="login-wrap" >
 			<div className="login-html">
 
 				<div className="buttons-sign-in-up" >
@@ -141,8 +141,8 @@ const Form = (props) => {
 					}
 				</div>
 			</div>
-			</div >
-		)
+		</div >
+	)
 }
 
 export default Form
@@ -156,4 +156,4 @@ Form.propTypes = {
 	inputData: PropTypes.func.isRequired,
 	createUser: PropTypes.func.isRequired,
 	login: PropTypes.func.isRequired,
-  };
+};

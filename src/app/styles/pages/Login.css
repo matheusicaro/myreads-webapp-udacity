@@ -1,31 +1,196 @@
-.load {
-    animation: slide 2s;
-}
-.slider{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    animation: slide 40s infinite;
-    position: fixed;
+.login {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  height: 80%;
+  width: 30%;
 }
 
-@keyframes slide{
-    0%{
-       background-image: url(../../media/images/login-1.jpg);
-    }
-    50%{
-        background-image: url(../../media/images/login-2.jpg);
-    }
-    100%{
-        background-image: url(../../media/images/login-3.jpg);
-    }
+@import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
+
+.root { 
+  font-family: 'Open Sans', 'sans-serif';
+  color: #cecece;
+  background: #222;
+  overflow: hidden;
+  background-image: url(../../media/images/book-home.jpg);
+  background-size: 100% 100%;
+  
+  width: 100%;
+  height: 100vh;
 }
 
-.menu-login {
-    width: 25%;
-    position: absolute;
-    right: 0%;
+.folder {
+
+  width: 60%;
+  top: 15%;
+  height: 70%;
+  position: absolute;
+  opacity: 0.9;
+  left: -5%;
+
+  background-size: inherit;
+  background-image: url(../../media/images/folder-home.png)
 }
 
+.folder p {
+  font-family: 'Spicy Rice', cursive;
+  font-family: 'Lobster', cursive;
+  color: black;
+
+  margin-left: 23%;
+  position: absolute;
+  display: block;
+	top: 2em;
+  width: 60%;
+  
+  font-size: 20px;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  
+}
+
+.folder-title {
+  margin-top: 8%;
+  animation-name: anim-1;
+}
+
+.folder-intro {
+  margin-top: 20%;
+  font-size: 20px !important;
+}
+
+.folder-topic-1 {
+  margin-top: 30%;
+  font-size: 20px !important;
+}
+
+.folder-topic-2 {
+  margin-top: 35%;
+  font-size: 20px !important;
+}
+
+.folder-topic-3 {
+  margin-top: 40%;
+  font-size: 20px !important;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+/* @keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+} */
+
+
+
+/*************************** FORMS CSS ****************************/
+
+
+/* body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+} */
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+
+button {
+	cursor: pointer;
+}
+
+.buttons-sign-in-up button {
+  border: none;
+  background: none;
+  color: #fff;
+  border-color: #1161ee;
+  font-size: 22px;
+  /* margin-right: 15px; */
+  /* padding-bottom: 5px; */
+  /* margin: 0 15px 10px 0; */
+  /* display: inline-block; */
+  /* border-bottom: 2px solid transparent; */
+}
+
+.login-wrap{
+  width:100%;
+  height: 100%;
+
+	/* margin:auto;
+	max-width:525px;
+	min-height:670px;
+  position:relative; */
+  
+	box-shadow:0 5px 50px 15px rgba(0,0,0,0.5), 0 15px 15px 0 rgba(0,0,0,0.19)
+}
+
+.login-html{
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  padding: 25% 10% 10% 10%;
+  background: rgba(40,57,101,.9);
+}
+
+.login-form .group{
+	margin-bottom:15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+  width: 60%;
+  /* justify-self: center; */
+  color: #fff;
+  display: block;
+  margin: 0% 0% 0% 20%;
+}
+
+.login-form .group .input,
+.login-form .group .button{
+  border: none;
+  padding: 8px 13px;
+  /* border-radius: 25px; */
+  background: rgba(255,255,255,.1);
+}
+
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+    margin: 0px 0px 10px 0px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+
+.hr{
+	height:2px;
+	margin: 30px 0 25px 0;
+	background:rgba(255,255,255,.2);
+}
