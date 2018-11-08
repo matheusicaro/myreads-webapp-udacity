@@ -37,12 +37,12 @@ const Header = (props) => {
         <div className="header-menuBtn-navegate-search">
           <div className="header-menuBtn-buttons">
             <Link to='/'>
-              <FlatButton label={'   Página principal'} labelPosition="after" primary={true} icon={<Home />} />
+              <FlatButton label={header.home} labelPosition="after" primary={true} icon={<Home />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
             <Link to='/user-profile'>
-              <FlatButton label={'   EDITAR PERFIL'} labelPosition="after" primary={true} icon={<User />} />
+              <FlatButton label={header.profile} labelPosition="after" primary={true} icon={<User />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
@@ -50,9 +50,11 @@ const Header = (props) => {
               <FlatButton label={header.addBooks} labelPosition="before" primary={true} icon={<Arrow />} />
             </Link>
           </div>
-
+          <div className="header-menuBtn-buttons">
+              <FlatButton label={header.logout} onClick={( props.logout )} labelPosition="before" primary={true} icon={<Arrow />} />
+          </div>
         </div>
-
+        
         <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
       </div>
     </React.Fragment >
@@ -110,7 +112,7 @@ const Header = (props) => {
 
       </div>
 
-      <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
+      <span className="header-hide-btn"><LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} /></span>
 
     </div>
   )

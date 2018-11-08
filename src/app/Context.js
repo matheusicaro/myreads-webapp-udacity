@@ -26,6 +26,10 @@ export class MyProvider extends Component {
     (value) ? this.setState({ styleHide: {display: 'none'} }) : this.setState({ styleHide: {} });
   }
 
+  logout = () =>{
+    this.setState({ auth: false})
+  }
+
   render() {
     return (
       <MyContext.Provider value={{
@@ -33,6 +37,7 @@ export class MyProvider extends Component {
         logon: this.logon,
         changeLanguage: this.changeLanguage,
         hideBackground: this.hideBackground,
+        logOut: this.logout,
       }}>
 
         {this.props.children}

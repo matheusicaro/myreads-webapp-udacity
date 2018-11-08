@@ -18,12 +18,12 @@ import Background from './media/images/default-background.jpg'
 
 const Main = () => {
 
-  const isAuthorized = ({ changeLanguage, state, hideBackground}) => {
+  const isAuthorized = ({ changeLanguage, logOut, state, hideBackground}) => {
 
     return (
     <section>
       <div style={style.backgroungImage} ></div>
-      <HeaderContainer changeLanguage={changeLanguage} language={state.language}  background={hideBackground}/>
+      <HeaderContainer changeLanguage={changeLanguage} logout={logOut} language={state.language}  background={hideBackground}/>
       <Route exact path='/' render={() => <Home language={state.language} styleHide={state.styleHide} />} ></Route>
       <Route exact path='/search' render={() => <Search language={state.language} />} ></Route>
       <Route exact path='/user-profile' render={() => <User language={state.language} />} ></Route>

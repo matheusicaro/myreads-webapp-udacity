@@ -35,7 +35,7 @@ class HeaderContainer extends Component {
     }
 
     render() {
-        const { changeLanguage } = this.props;
+        const { changeLanguage, logout } = this.props;
         const { isOpenMenu } = this.state
         const { header } = translations[this.props.language];
 
@@ -45,6 +45,7 @@ class HeaderContainer extends Component {
                 actionOpenMenu={this.isOpenMenu}
                 changeLanguage={changeLanguage}
                 language={header}
+                logout={logout}
             >   
             </Header>
         )
@@ -52,16 +53,3 @@ class HeaderContainer extends Component {
 }
 
 export default HeaderContainer
-
-const topicsMenuDrawer = [
-    ['Android, Art, Artificial Intelligence, Astronomy, Austen'],
-    ['Baseball, Basketball, Bhagat, Biography, Brief, Business'],
-    ['Camus, Cervantes, Christie, Classics, Comics, Cook, Cricket, Cycling'],
-    ['Desai, Design, Development, Digital Marketing, Drama, Drawing, Dumas'],
-    ['Education, Everything, Fantasy, Film, Finance, First, Fitness, Football, Future'],
-    ['Games, Gandhi, Homer, Horror, Hugo, Ibsen, iOS, Journey, Kafka, King'],
-    ['Lahiri, Larsson, Learn, Literary Fiction, Make, Manage, Marquez, Money, Mystery'],
-    ['Negotiate, Painting, Philosophy, Photography, Poetry, Production, Programming'],
-    ['React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming'],
-    ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development'],
-]
