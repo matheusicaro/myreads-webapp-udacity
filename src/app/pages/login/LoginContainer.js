@@ -68,12 +68,25 @@ class LoginContainer extends Component {
 
     }
 
+    stopAnimeted = () => {
+    
+		setTimeout(() => {
+          let element = document.getElementById("welcome");
+          element.classList.remove("zoomIn");
+		}, 2000)
+	}
+
     render() {
         const {errorAcess} = this.state;
         
         return (
             <div>
-                <Login logon={ this.logon } createUser={ this.createUser} errorAcess={errorAcess}> </Login>
+                <Login 
+                    logon={ this.logon } 
+                    createUser={ this.createUser} 
+                    errorAcess={errorAcess}
+                    stopAnimeted={this.stopAnimeted}    
+                > </Login>
             </div>
         )
     }

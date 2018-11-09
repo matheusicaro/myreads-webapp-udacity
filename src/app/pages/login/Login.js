@@ -12,11 +12,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import '../../styles/pages/Login.css'
+import 'animate.css'
 
 import FormContainer from './FormContainer'
+import backgroundImage from '../../media/images/book-home.jpg'
+
 const Login = (props) => {
 
-  const { errorAcess } = props;
+  const { errorAcess, stopAnimeted } = props;
 
   const create = (user) => {
     props.createUser(user)
@@ -26,21 +29,36 @@ const Login = (props) => {
     props.logon(user)
   }
 
+
   return (
     <div className="root">
 
-        <div className="folder">
-          <p class="folder-title">Bem Vindo à Minhas Leituras!</p>
-          <p class="folder-intro">Aqui você poderá ter sua biblioteca virtual e realizar tarefas como:</p>
-          <p class="folder-topic-1">* Buscar por livros na biblioteca...</p>
-          <p class="folder-topic-2">* Adicionar livros em sua prateleira...</p>
-          <p class="folder-topic-3">* Gerenciar suas leituras.</p>
-        </div>        
-        
-        <div className="login">
-          <FormContainer create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+      <img src={backgroundImage} alt="Background" width="100%" height="100%"/>
+
+      <div className="folder animated bounceInLeft delay-1s">
+
+        <div className="folder-text">
+          <div className="folder-text-title">
+            <p class="animated infinite flash slower" id="title">    MINHAS LEITURAS   </p>
+          </div>
+
+          <div className="folder-text-welcome">
+            <p class="animated zoomIn delay-4s"
+              onAnimationIterationCapture={stopAnimeted} id="welcome">    BEM VINDO   </p>
+          </div>
         </div>
 
+        <div className="folder-button">
+          <div className="folder-button-whats">
+            <FormContainer create={create} logon={login} errorAcess={errorAcess}> TESTANDO</FormContainer>
+          </div>
+
+          <div className="folder-button-access">
+            <FormContainer create={create} logon={login} errorAcess={errorAcess}> ACESSO </FormContainer>
+          </div>
+        </div>
+
+      </div >
     </div >
   )
 }
