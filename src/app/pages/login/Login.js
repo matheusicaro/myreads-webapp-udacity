@@ -35,7 +35,7 @@ const Login = (props) => {
 
       <img src={backgroundImage} alt="Background" width="100%" height="100%"/>
 
-      <div className="folder animated bounceInLeft delay-1s">
+      <div className="folder animated bounceInDown delay-1s">
 
         <div className="folder-text">
           <div className="folder-text-title">
