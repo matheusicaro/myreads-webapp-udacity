@@ -24,6 +24,8 @@ import Menu from 'material-ui/svg-icons/navigation/menu';
 import Home from 'material-ui/svg-icons/action/home';
 import User from 'material-ui/svg-icons/action/account-box';
 import Footer from './Footer'
+
+// Import Styles
 import '../../styles/components/Header.css';
 import '../../styles/components/Footer.css';
 

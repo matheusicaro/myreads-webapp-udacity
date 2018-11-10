@@ -10,12 +10,12 @@ import '../../styles/components/Header.css'
 
 const Footer = ({tooltipGit, tooltipLinkedin, tooltipFacebook, color }) => {
     return (
-        <div className="footer-social footer-social-xs">
-            <h4 className="footer-social-copyright footer-social-copyright-xs"> © Copyright 2018, Matheus Ícaro </h4>
-            <div className="footer-social-btn footer-social-btn-xs">
-                <span className="b-hover IconButton"><IconButton href={url.git} tooltip={tooltipGit}> <Icon icon={ICONS.GITHUB} color={color} /> </IconButton></span>
-                <span className="b-hover IconButton"><IconButton href={url.linkedin} tooltip={tooltipLinkedin}> <Icon icon={ICONS.LINKEDIN2} color={color} /> </IconButton></span>
-                <span className="b-hover IconButton"><IconButton href={url.facebook} tooltip={tooltipFacebook} > <Icon icon={ICONS.FACEBOOK} color={color} /> </IconButton></span>
+        <div className="footer-social footer-social-overwrite">
+            <h4 className="footer-social-copyright footer-social-copyright-overwrite"> © Copyright 2018, Matheus Ícaro </h4>
+            <div className="footer-social-btn footer-social-btn-overwrite">
+                <span className="b-hover b-hover-overwrite IconButton"><IconButton href={url.git} tooltip={tooltipGit}> <Icon icon={ICONS.GITHUB} color={color} /> </IconButton></span>
+                <span className="b-hover b-hover-overwrite IconButton"><IconButton href={url.linkedin} tooltip={tooltipLinkedin}> <Icon icon={ICONS.LINKEDIN2} color={color} /> </IconButton></span>
+                <span className="b-hover b-hover-overwrite IconButton"><IconButton href={url.facebook} tooltip={tooltipFacebook} > <Icon icon={ICONS.FACEBOOK} color={color} /> </IconButton></span>
             </div>
         </div>
     )

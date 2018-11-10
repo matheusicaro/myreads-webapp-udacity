@@ -21,8 +21,8 @@ const ButtonsTranslate = (props) => {
     return (
         <React.Fragment>
             <span style={{ display: 'flex' }}>
-                <div className="b-hover IconButton"> <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} /> </div>
-                <div className="b-hover IconButton"> <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} /> </div>
+                <div className="b-hover b-hover-overwrite IconButton"> <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} /> </div>
+                <div className="b-hover b-hover-overwrite IconButton"> <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} /> </div>
             </span>
         </React.Fragment>
     )

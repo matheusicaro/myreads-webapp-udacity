@@ -1,3 +1,222 @@
+@media only screen and (max-width: 1900px) {
+
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 0px) !important;
+  }
+  
+  .how-work,
+  .parchment-button-click,
+  .footer-social-copyright-overwrite {
+    font-size: calc(4.5vh - 10px) !important;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: calc(7vh - 0px) !important;
+  }
+  
+  .group,
+  .login-form,
+  .group, 
+  .label {
+    font-size: calc(4.5vh - 10px) !important;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1550px) {
+
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 5px) !important;
+  }
+  
+  .how-work,
+  .parchment-button-click {
+    font-size: calc(4.5vh - 15px) !important;
+  }
+
+  .footer-social-copyright-overwrite {
+    font-size: calc(4.5vh - 20px) !important;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: calc(7vh - 5px) !important;
+  }
+  
+  .group,
+  .login-form,
+  .group, 
+  .label {
+    font-size: calc(4.5vh - 15px) !important;
+  }
+
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1350px) {
+
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 10px) !important;
+  }
+  
+  .parchment-button-click {
+    font-size: calc(4.5vh - 20px) !important;
+  }
+
+  .footer-social-copyright-overwrite {
+    font-size: calc(4.5vh - 25px) !important;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: calc(7vh - 10px) !important;
+  }
+  
+  .group,
+  .login-form,
+  .group, 
+  .label {
+    font-size: calc(4.5vh - 20px) !important;
+  }
+
+}
+
+@media only screen and (min-width: 61px) and (max-width: 1005px) {
+
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 15px) !important;
+  }
+  
+  .how-work,
+  .parchment-button-click {
+    font-size: calc(4.5vh - 17px) !important;
+  }
+
+  .footer-social-copyright-overwrite {
+    display: none
+  }
+
+  .footer-social-overwrite {
+    display: contents;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: calc(7vh - 15px) !important;
+  }
+
+  .parchment-text-title {
+    text-align: initial;
+    margin: 0% 0% 0% 10% !important;
+  }
+  
+  .group,
+  .login-form,
+  .group, 
+  .label {
+    font-size: calc(4.5vh - 25px) !important;
+  }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1005px) {
+
+  .parchment-text-title {
+    text-align: initial;
+    margin: 0% 0% 0% 15%;
+  }
+}
+
+@media only screen and (min-width: 566px) and (max-width: 750px) {
+  
+  .how-work {
+    top: 30% !important;
+    font-size: calc(4.5vh - 20px) !important;
+  }
+
+  .parchment {
+    width: 55% !important;
+    height: 80% !important;
+    opacity: 0.8 !important;
+    left: -5% !important;
+    top: -8% !important;
+  }
+
+  .parchment-text-title,
+  .parchment-text-welcome{
+    font-size: calc(4.5vh - 0px) !important;
+    text-align: center;
+    margin: 0% 0% 0% 0% !important;
+  }
+
+  .parchment-button-click {
+    font-size: calc(4.5vh - 14px) !important;
+  }
+
+  .label {
+    font-size: calc(4.5vh - 13px) !important;
+  }
+
+  .login-html {
+    top: 28% !important; 
+  }
+
+  .parchment-secondary {
+    width: 65% !important;
+    left: 35% !important;
+  }
+
+}
+
+@media only screen and (min-width: 7px) and (max-width: 565px) {
+  
+  .how-work {
+    top: 22% !important;
+    font-size: calc(4.5vh - 13px) !important;
+  }
+  
+  .parchment-text-title {
+    font-size: calc(4.5vh - -30px) !important;
+  }
+
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - -20px) !important;
+  }
+
+  .login-button-close {
+    top: 18%;
+    top: 65% !important;
+    position: sticky;
+  }
+
+  .parchment-secondary {
+    width: 100% !important;
+    left: 0% !important;
+    background-size: 100% 100%;
+  }
+
+  .parchment {
+    width: 100% !important;
+    height: 98% !important;
+    opacity: 0.8 !important;
+    left: 0% !important;
+    top: -8% !important;
+    background-size: 80% 100%;
+  }
+
+  .parchment-button {
+    align-items: center;
+  }
+
+  .login-html {
+    top: 35% !important;
+  }
+
+  .footer-social-btn {
+    justify-content: center;
+  }
+}
+
 @import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
 
 .root { 
@@ -47,10 +266,11 @@
 
 .parchment-content {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
   height: 60%;
+  width: 65%;
   top: 20%;
   position: relative;
 }
@@ -69,7 +289,7 @@
   justify-items: center;
   grid-template-columns: 1fr 1fr;
   align-self: baseline;
-  width: 60%;
+  width: 90%;
   height: 100%;
   grid-gap: 3%;
 }
@@ -80,6 +300,12 @@
 }
 
 .parchment-button-click:hover {
+  font-size: 30px;
+}
+
+.how-work {
+  position: relative;
+  top: 20%;
   font-size: 30px;
 }
 
@@ -97,7 +323,8 @@ button {
   font-size: 60px;
 }
 
-.login-wrap{
+.login-wrap,
+.how-work {
   width: 50%;
   height: 60%;
 }
@@ -154,4 +381,38 @@ button {
 	height:2px;
 	margin: 30px 0 25px 0;
 	background:rgba(255,255,255,.2);
+}
+
+/******************************** OVERWRITE FOOTER STYLE ****************/
+
+.footer-social-overwrite {
+  width: 100% ;
+  color: black !important;
+  justify-items: center;
+}
+
+.footer-social-copyright-overwrite {
+  font-size: 20px;
+}
+
+.footer-social-copyright-overwrite:hover {
+  font-size: 20px !important;
+  border-radius: 4px;
+  background-color: #ffffff78;
+  padding: 2px 2px 2px 2px;
+}
+
+.b-hover-overwrite:hover {
+  background-color: transparent;
+  position: relative;
+  bottom: 10px;
+}
+
+.b-hover-overwrite:hover svg {
+  width: 25px;
+  height: 25px;
+} 
+
+.languagesBtn-overwrite:hover {
+  background-color: transparent !important;
 }
