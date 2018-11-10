@@ -1,9 +1,9 @@
 {
     "pt-BR": {
         "header": {
-            "socialGit": "Repositorio no Github",
-            "socialLinkedin": "Matheus no Linkedin",
-            "socialFacebook": "Matheus no Facebook",
+            "tooltipGit": "Repositorio no Github",
+            "tooltipLinkedin": "Matheus no Linkedin",
+            "tooltipFacebook": "Matheus no Facebook",
             "title": "Minhas Leituras",
             "home": "Acessar a Home",
             "profile": "Editar Perfil",

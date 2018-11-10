@@ -23,8 +23,9 @@ import DrawerMenu from '../../components/presentation/DrawerMenu';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import Home from 'material-ui/svg-icons/action/home';
 import User from 'material-ui/svg-icons/action/account-box';
-
+import Footer from './Footer'
 import '../../styles/components/Header.css';
+import '../../styles/components/Footer.css';
 
 const Header = (props) => {
 
@@ -79,15 +80,7 @@ const Header = (props) => {
         ></DrawerMenu>
       </div>
 
-      <div className="header-social">
-
-        <h4 className="header-social-copyright"> © Copyright 2018, Matheus Ícaro </h4>
-        <div className="header-social-btn ">
-          <span className="b-hover IconButton"><IconButton href={url.git} tooltip={header.socialGit}> <Icon icon={ICONS.GITHUB} color={styles.color} /> </IconButton></span>
-          <span className="b-hover IconButton"><IconButton href={url.linkedin} tooltip={header.socialLinkedin}> <Icon icon={ICONS.LINKEDIN2} color={styles.color} /> </IconButton></span>
-          <span className="b-hover IconButton"><IconButton href={url.facebook} tooltip={header.socialFacebook} > <Icon icon={ICONS.FACEBOOK} color={styles.color} /> </IconButton></span>
-        </div>
-      </div>
+      <Footer tooltipGit={header.tooltipGit} tooltipFacebook={header.tooltipFacebook} tooltipLinkedin={header.tooltipLinkedin} color={styles.color}></Footer>
 
       <div className="header-title"><h2> {header.title} </h2></div>
 
@@ -108,18 +101,12 @@ const Header = (props) => {
 
         <div className="header-navegate-logout"><FlatButton label={header.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} /></div>
       </div>
-   
+
     </div>
   )
 }
 
 export default Header
-
-const url = {
-  git: "https://github.com/matheusicaro/my-reads-udacity",
-  facebook: "https://www.facebook.com/matheus.icaro.5",
-  linkedin: "https://www.linkedin.com/in/matheusicaro",
-}
 
 const styles = {
   translate: {
