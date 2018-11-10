@@ -12,12 +12,6 @@
 */
 
 import React, { Component } from 'react'
-
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-
-import '../../styles/pages/Login.css'
-
 import Form from './Form'
 
 class FormContainer extends Component {
@@ -30,7 +24,6 @@ class FormContainer extends Component {
 				email: '',
 				pass: '',
 			},
-			open: false,
 			isLogin: true,
 		}
 	}
@@ -81,57 +74,22 @@ class FormContainer extends Component {
 		}))
 	}
 
-	handleOpen = () => {
-		this.setState({ open: true });
-	};
-
-	handleClose = () => {
-		this.setState({ open: false });
-	};
-
 	render() {
 
 		const { user, isLogin } = this.state;
-		const { errorAcess, word, style} = this.props;
-
-		const actions = [
-			<FlatButton
-				label="Cancel"
-				primary={true}
-				onClick={this.handleClose}
-			/>,
-			<FlatButton
-				label="Submit"
-				primary={true}
-				keyboardFocused={true}
-				onClick={this.handleClose}
-			/>,
-		];
+		const { errorAcess } = this.props;
 
 		return (
-			<div>
-				<span className="folder-button-click" onClick={this.handleOpen}>{word}</span>
-				<Dialog
-					title="Dialog With Actions"
-					actions={actions}
-					modal={false}
-					open={this.state.open}
-					onRequestClose={this.handleClose}
-				>
+			<Form
+				isLogin={isLogin}
+				user={user}
+				errorAcess={errorAcess}
 
-					<Form
-						isLogin={isLogin}
-						user={user}
-						errorAcess={errorAcess}
-
-						changeInput={this.changeInput}
-						inputData={this.inputData}
-						createUser={this.createUser}
-						login={this.login}
-					></Form>
-
-				</Dialog>
-			</div>
+				changeInput={this.changeInput}
+				inputData={this.inputData}
+				createUser={this.createUser}
+				login={this.login}
+			></Form>
 		);
 	}
 }

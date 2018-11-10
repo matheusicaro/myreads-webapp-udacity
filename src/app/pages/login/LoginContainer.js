@@ -24,7 +24,9 @@ class LoginContainer extends Component {
         super()
         this.state = {
             users: [],
-            errorAcess:''
+            errorAcess:'',
+            LoginForm: false,
+            HowWork: false,
         }
     }
 
@@ -69,15 +71,23 @@ class LoginContainer extends Component {
     }
 
     stopAnimeted = () => {
-    
 		setTimeout(() => {
           let element = document.getElementById("welcome");
           element.classList.remove("zoomIn");
 		}, 2000)
-	}
+    }
+    
+    openFild = (newFild) => {
+        if (this.state[newFild])
+            this.setState({ [newFild] : !this.state[newFild] }) 
+        else{
+            let currentFild = (newFild === 'LoginForm') ? ('HowWork'):('LoginForm')
+            this.setState({ [newFild] : !this.state[newFild], [currentFild]: false }) 
+        }
+    }
 
     render() {
-        const {errorAcess} = this.state;
+        const { errorAcess, LoginForm, HowWork} = this.state;
         
         return (
             <div>
@@ -85,7 +95,10 @@ class LoginContainer extends Component {
                     logon={ this.logon } 
                     createUser={ this.createUser} 
                     errorAcess={errorAcess}
-                    stopAnimeted={this.stopAnimeted}    
+                    stopAnimeted={this.stopAnimeted}
+                    LoginForm={LoginForm}
+                    HowWork={HowWork}
+                    open={this.openFild}
                 > </Login>
             </div>
         )

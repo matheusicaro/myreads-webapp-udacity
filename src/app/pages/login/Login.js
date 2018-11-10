@@ -15,11 +15,10 @@ import '../../styles/pages/Login.css'
 import 'animate.css'
 
 import FormContainer from './FormContainer'
-import image from '../../media/images/book-home.jpg'
 
 const Login = (props) => {
 
-  const { errorAcess, stopAnimeted } = props;
+  const { errorAcess, stopAnimeted, LoginForm, HowWork } = props;
 
   const create = (user) => {
     props.createUser(user)
@@ -29,34 +28,52 @@ const Login = (props) => {
     props.logon(user)
   }
 
+  const click = (event) => {
+    props.open(event.target.id)
+  }
+
   return (
     <div className="root">
 
       <div className="background-image"></div>
 
-
-      <div className="folder animated bounceInDown delay-1s">
-        <div className="folder-content">
-          <div className="folder-text-title">
+      <div className="parchment animated bounceInDown delay-1s">
+        <div className="parchment-content">
+          <div className="parchment-text-title">
             <span class="animated infinite flash slower" id="title">    MINHAS LEITURAS   </span>
           </div>
 
-          <div className="folder-text-welcome">
+          <div className="parchment-text-welcome">
             <span class="animated zoomIn delay-3s"
               onAnimationIterationCapture={stopAnimeted} id="welcome">    BEM VINDO   </span>
           </div>
 
-          <div className="folder-button animated zoomIn delay-5s">
-            <div className="folder-button-whats ">
-              <FormContainer word={'Como Funciona?'} create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+          <div className="parchment-button animated zoomIn delay-5s">
+
+            <div className="parchment-button-whats ">
+              <span className="parchment-button-click" onClick={click} id="HowWork">Como funciona?</span>
             </div>
 
-            <div className="folder-button-access">
-              <FormContainer word={'Acessar'} create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+            <div className="parchment-button-access">
+              <span className="parchment-button-click" onClick={click} id="LoginForm">Login</span>
             </div>
           </div>
         </div>
       </div >
+
+
+      {LoginForm && (
+        <div className="parchment-secondary animated bounceInDown">
+          <FormContainer create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+        </div>
+      )}
+
+      {HowWork && (
+        <div className="parchment-secondary animated bounceInDown">
+          <h1>TEEEEEEESTE</h1>
+        </div>
+      )}
+
     </div >
   )
 }
