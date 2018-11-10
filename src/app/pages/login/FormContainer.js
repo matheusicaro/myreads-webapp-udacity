@@ -16,6 +16,8 @@ import React, { Component } from 'react'
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
+import '../../styles/pages/Login.css'
+
 import Form from './Form'
 
 class FormContainer extends Component {
@@ -90,7 +92,7 @@ class FormContainer extends Component {
 	render() {
 
 		const { user, isLogin } = this.state;
-		const { errorAcess } = this.props;
+		const { errorAcess, word, style} = this.props;
 
 		const actions = [
 			<FlatButton
@@ -108,7 +110,7 @@ class FormContainer extends Component {
 
 		return (
 			<div>
-				<h1 onClick={this.handleOpen}> Acessar</h1>
+				<span className="folder-button-click" onClick={this.handleOpen}>{word}</span>
 				<Dialog
 					title="Dialog With Actions"
 					actions={actions}

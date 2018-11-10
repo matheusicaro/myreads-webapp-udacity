@@ -15,7 +15,7 @@ import '../../styles/pages/Login.css'
 import 'animate.css'
 
 import FormContainer from './FormContainer'
-import backgroundImage from '../../media/images/book-home.jpg'
+import image from '../../media/images/book-home.jpg'
 
 const Login = (props) => {
 
@@ -29,35 +29,33 @@ const Login = (props) => {
     props.logon(user)
   }
 
-
   return (
     <div className="root">
 
-      <img src={backgroundImage} alt="Background" width="100%" height="100%"/>
+      <div className="background-image"></div>
+
 
       <div className="folder animated bounceInDown delay-1s">
-
-        <div className="folder-text">
+        <div className="folder-content">
           <div className="folder-text-title">
-            <p class="animated infinite flash slower" id="title">    MINHAS LEITURAS   </p>
+            <span class="animated infinite flash slower" id="title">    MINHAS LEITURAS   </span>
           </div>
 
           <div className="folder-text-welcome">
-            <p class="animated zoomIn delay-4s"
-              onAnimationIterationCapture={stopAnimeted} id="welcome">    BEM VINDO   </p>
+            <span class="animated zoomIn delay-3s"
+              onAnimationIterationCapture={stopAnimeted} id="welcome">    BEM VINDO   </span>
+          </div>
+
+          <div className="folder-button animated zoomIn delay-5s">
+            <div className="folder-button-whats ">
+              <FormContainer word={'Como Funciona?'} create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+            </div>
+
+            <div className="folder-button-access">
+              <FormContainer word={'Acessar'} create={create} logon={login} errorAcess={errorAcess}></FormContainer>
+            </div>
           </div>
         </div>
-
-        <div className="folder-button">
-          <div className="folder-button-whats">
-            <FormContainer create={create} logon={login} errorAcess={errorAcess}> TESTANDO</FormContainer>
-          </div>
-
-          <div className="folder-button-access">
-            <FormContainer create={create} logon={login} errorAcess={errorAcess}> ACESSO </FormContainer>
-          </div>
-        </div>
-
       </div >
     </div >
   )
