@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
+
 @media only screen and (max-width: 1900px) {
 
   .parchment-text-title,
@@ -81,7 +83,7 @@
 
 }
 
-@media only screen and (min-width: 61px) and (max-width: 1005px) {
+@media only screen and (min-width: 701px) and (max-width: 1005px) {
 
   .parchment-text-title,
   .parchment-text-welcome {
@@ -168,20 +170,26 @@
 
 }
 
-@media only screen and (min-width: 7px) and (max-width: 565px) {
+@media only screen and (min-width: 371px) and (max-width: 565px) {
   
   .how-work {
     top: 22% !important;
-    font-size: calc(4.5vh - 13px) !important;
+    font-size: calc(4.5vh - 16px) !important;
   }
-  
+
+  .label {
+    font-size: calc(4.5vh - 10px) !important;
+  }
   .parchment-text-title {
-    font-size: calc(4.5vh - -30px) !important;
+    font-size: calc(4.5vh - -10px) !important;
+    margin: 0% 0% 0% 0% !important;
+    text-align: center;
   }
 
   .parchment-text-welcome {
-    font-size: calc(4.5vh - -20px) !important;
-  }
+    font-size: calc(4.5vh - 0px) !important;
+    margin: 15% 0% 0% 0% !important;
+    }
 
   .login-button-close {
     top: 18%;
@@ -204,8 +212,14 @@
     background-size: 80% 100%;
   }
 
+  .parchment-content {
+    width: 55%;
+  }
+
   .parchment-button {
     align-items: center;
+    width: 85%;
+    grid-gap: 0%;
   }
 
   .login-html {
@@ -215,9 +229,95 @@
   .footer-social-btn {
     justify-content: center;
   }
+
+  .login-button-close {
+    top: 69% !important;
+  }
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
+@media only screen and (min-width: 371px) and (max-width: 400px) {
+
+  .parchment-text-title {
+    font-size: calc(4.5vh - 0px) !important;
+  }
+
+  .how-work {
+    font-size: calc(4.5vh - 18px) !important;
+  }
+
+
+}
+
+@media only screen and (min-width: 7px) and (max-width: 370px) { 
+
+  .how-work {
+    font-size: calc(4.5vh - 12px) !important;
+  }
+  
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 2px) !important;
+  }
+  
+  .parchment {
+    background-size: 120% 100% !important;
+    left: 0% !important;
+    width: 100% !important;
+    height: 98% !important;
+  }
+
+  .parchment-secondary {
+    width: 140% !important;
+    height: 100% !important;
+    opacity: 1 !important;
+    left: -20% !important;
+    top: -8% !important;
+  }
+
+  .label,
+  .group {
+    font-size: calc(4.5vh - 14px) !important;
+  }
+
+  .login-form {
+    font-size: calc(4.5vh - 15px) !important;
+  }
+
+  .login-button-close {
+    position: sticky;
+    top: 77% !important;
+  }
+
+  .footer-social-btn {
+    justify-content: center;
+  }
+
+  .parchment-button-click {
+    font-size: calc(4.5vh - 9px) !important;
+  }
+
+}
+
+@media only screen and (min-width: 7px) and (max-width: 227px) {
+  
+  .how-work {
+    font-size: calc(4.5vh - 19px) !important;
+  }
+
+  .label {
+    font-size: calc(4.5vh - 14px) !important;
+  }
+
+  .parchment-text-title,
+  .parchment-text-welcome {
+    font-size: calc(4.5vh - 7px) !important;
+  }
+
+  .parchment-button-click {
+    font-size: calc(4.5vh - 9px) !important;
+  }
+
+}
 
 .root { 
   font-family: 'Spicy Rice', cursive;
