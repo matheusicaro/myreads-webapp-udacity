@@ -7,15 +7,16 @@
             "title": "Minhas Leituras",
             "home": "Acessar a Home",
             "profile": "Editar Perfil",
-            "logout" : "Sair",
+            "logout": "Sair",
             "addBooks": "Adicionar Livros",
             "buttonLanguage": {
                 "BR": "mudar para português",
                 "EN": "mudar para inglês"
             },
-            
-            "tittleMenuDrawer": "Menu",
-            "btnCloseMenuDrawer": "Fechar"
+            "drawerMenu": {
+                "tittle": "Menu",
+                "btnClose": "Fechar"
+            }
         },
         "home": {
             "titleCurrently": "Lendo Atualmente",
@@ -41,10 +42,12 @@
         },
         "search": {
             "inputPlaceHolder": "Digite uma categoria, nome, ou inicias para encontrar um livro...",
-            "btnWhatToSearch": "O que pesquisar",
-            "tittleMenuDrawer": "Dicas para Pesquisar",
-            "textMenuDrawer": "Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como 'An', 'Ba', por exemplo.",
-            "btnCloseMenuDrawer": "Fechar",
+            "drawerMenu": {
+                "btnWhatToSearch": "O que pesquisar",
+                "tittle": "Dicas para Pesquisar",
+                "text": "Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como 'An', 'Ba', por exemplo.",
+                "btnClose": "Fechar"
+            },
             "book": {
                 "bookAdd": {
                     "currently": "mover para Leitura atual",
@@ -61,6 +64,30 @@
                     "publishedIn": "Publicado em: ",
                     "buy": "Clique para comprar"
                 }
+            }
+        },
+        "login": {
+            "title": "Minhas Leituras",
+            "welcome": "Bem Vindo!",
+            "howWork": "Como funciona?",
+            "login": "entrar",
+            "contentHowWork": [
+                "Minhas Leituras é um aplicativo de estante de livros que permite selecionar e categorizar os livros que leu, está lendo no momento ou deseja ler.",
+                "Este projeto foi proposto pelo curso de React realizado pela Udacity em Outubro de 2018.", 
+                "O projeto enfatiza o uso do React e para mais detalhes tecnicos do aplicativo, verifique o repositorio no Github abaixo."
+            ],
+            "tooltipGit": "Repositorio no Github",
+            "tooltipLinkedin": "Matheus no Linkedin",
+            "tooltipFacebook": "Matheus no Facebook",
+            "tooltipClose": "Fechar",
+            "formLogin": {
+                "inscribeClick": "> me inscrever?",
+                "loginClick": "< Efetuar Login",
+                "labelPassword": "Senha",
+                "labelEmail": "Seu e-mail",
+                "labelName": "Seu nome",
+                "btnRegister": "Me inscrever",
+                "btnLogin": "Logar"
             }
         }
     }

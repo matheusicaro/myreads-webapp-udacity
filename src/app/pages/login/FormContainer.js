@@ -77,14 +77,15 @@ class FormContainer extends Component {
 	render() {
 
 		const { user, isLogin } = this.state;
-		const { errorAcess } = this.props;
+		const { errorAcess, language } = this.props;
 
 		return (
 			<Form
 				isLogin={isLogin}
 				user={user}
 				errorAcess={errorAcess}
-
+				language={language}
+				
 				changeInput={this.changeInput}
 				inputData={this.inputData}
 				createUser={this.createUser}

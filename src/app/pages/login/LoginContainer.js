@@ -88,17 +88,18 @@ class LoginContainer extends Component {
 
     render() {
         const { errorAcess, LoginForm, HowWork} = this.state;
-        
+        const { language } = this.props;
         return (
             <div>
                 <Login 
                     logon={ this.logon } 
                     createUser={ this.createUser} 
-                    errorAcess={errorAcess}
                     stopAnimeted={this.stopAnimeted}
+                    open={this.openFild}
+                    errorAcess={errorAcess}
                     LoginForm={LoginForm}
                     HowWork={HowWork}
-                    open={this.openFild}
+                    language={language}
                 > </Login>
             </div>
         )

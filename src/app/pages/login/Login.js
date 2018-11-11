@@ -26,7 +26,7 @@ import LanguagesBtn from '../../components/presentation/LanguagesBtn'
 
 const Login = (props) => {
 
-  const { errorAcess, stopAnimeted, LoginForm, HowWork } = props;
+  const { errorAcess, stopAnimeted, LoginForm, HowWork, language } = props;
 
   const create = (user) => {
     props.createUser(user)
@@ -61,26 +61,26 @@ const Login = (props) => {
           </span>
 
           <div className="parchment-text-title">
-            <span class="animated infinite flash slower" id="title">    MINHAS LEITURAS   </span>
+            <span class="animated infinite flash slower" id="title"> { language.title } </span>
           </div>
 
           <div className="parchment-text-welcome">
             <span class="animated zoomIn delay-3s"
-              onAnimationIterationCapture={stopAnimeted} id="welcome">    BEM VINDO   </span>
+              onAnimationIterationCapture={stopAnimeted} id="welcome">  { language.welcome } </span>
           </div>
 
           <div className="parchment-button animated zoomIn delay-5s">
 
             <div className="parchment-button-whats ">
-              <span className="parchment-button-click" onClick={click} id="HowWork">Como funciona?</span>
+              <span className="parchment-button-click" onClick={click} id="HowWork"> { language.howWork } </span>
             </div>
 
             <div className="parchment-button-access">
-              <span className="parchment-button-click" onClick={click} id="LoginForm">Login</span>
+              <span className="parchment-button-click" onClick={click} id="LoginForm"> { language.login } </span>
             </div>
           </div>
 
-          <Footer tooltipGit={'header.tooltipGit'} tooltipFacebook={'header.tooltipFacebook'} tooltipLinkedin={'header.tooltipLinkedin'} color={'styles.color'}></Footer>
+          <Footer tooltipGit={language.tooltipGit} tooltipFacebook={language.tooltipFacebook} tooltipLinkedin={language.tooltipLinkedin} color={'styles.color'}></Footer>
         </div>
       </div >
 
@@ -88,22 +88,21 @@ const Login = (props) => {
       {LoginForm && (
         <div className="parchment-secondary animated bounceInDown">
 
-          <FormContainer create={create} logon={login} errorAcess={errorAcess}></FormContainer>
-          <div className="login-button-close"><IconButton onClick={closeLoginForm} tooltip={'tooltipGit'}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></div>
+          <FormContainer create={create} logon={login} errorAcess={errorAcess} language={language.formLogin}></FormContainer>
 
+          <div className="login-button-close"><IconButton onClick={closeLoginForm} tooltip={language.tooltipClose}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></div>
         </div>
       )}
 
       {HowWork && (
         <div className="parchment-secondary animated bounceInDown">
           <div className="how-work">
-            <p>Minhas Leituras é um aplicativo de estante de livros que permite selecionar e categorizar os livros que leu, está lendo no momento ou deseja ler.</p>
-            <p> Este projeto foi proposto pelo curso de **React** realizado pela **Udacity** em Outubro de 2018.</p>
-            <p>O projeto enfatiza o uso do React e para mais detalhes tecnicos do aplicativo, verifique o seu repositorio.</p>
 
-            <Footer tooltipGit={'header.tooltipGit'} tooltipFacebook={'header.tooltipFacebook'} tooltipLinkedin={'header.tooltipLinkedin'} color={'styles.color'}></Footer>
+            { language.contentHowWork.map(element => <p> {element} </p> ) }
 
-            <span><IconButton onClick={closeHowWork} tooltip={'tooltipGit'}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></span>
+            <Footer tooltipGit={language.tooltipGit} tooltipFacebook={language.tooltipFacebook} tooltipLinkedin={language.tooltipLinkedin} color={'styles.color'}></Footer>
+
+            <span><IconButton onClick={closeHowWork} tooltip={language.tooltipClose}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></span>
           </div>
         </div>
       )}

@@ -15,7 +15,7 @@ import '../../styles/pages/Login.css'
 
 const Form = (props) => {
 
-	const { isLogin, user, errorAcess } = props;
+	const { isLogin, user, errorAcess, language } = props;
 
 	const changeInput = () => {
 		props.changeInput();
@@ -38,7 +38,7 @@ const Form = (props) => {
 			<div className="login-html">
 
 				<div className="buttons-sign-in-up" >
-					<button onClick={changeInput} >{(isLogin) ? 'me inscrever?' : 'Efetuar Login'}</button>
+					<button onClick={changeInput} >{(isLogin) ? language.inscribeClick : language.loginClick }</button>
 				</div>
 
 				<div className="hr"></div>
@@ -50,12 +50,12 @@ const Form = (props) => {
 
 						<form className="Component" onSubmit={login}>
 							<div className="group">
-								<label className="label">E-mail</label>
+								<label className="label">{language.labelEmail}</label>
 								<input
 									className="input"
 									type="text"
 									id="email"
-									name="e-mail"
+									name="email"
 									value={user.login}
 									onChange={inputData}
 									required={true}
@@ -63,7 +63,7 @@ const Form = (props) => {
 							</div>
 
 							<div className="group">
-								<label className="label"> Password</label>
+								<label className="label"> {language.labelPassword}</label>
 								<input
 									className="input"
 									type="password"
@@ -80,7 +80,7 @@ const Form = (props) => {
 							<div className="hr"></div>
 
 							<div className="group">
-								<button type="submit" className="button"> Login </button>
+								<button type="submit" className="button"> {language.btnLogin} </button>
 							</div>
 
 						</form>
@@ -91,12 +91,12 @@ const Form = (props) => {
 						<form className="Component" onSubmit={createUser}>
 
 							<div className="group">
-								<label className="label">Name</label>
+								<label className="label">{language.labelName}</label>
 								<input
 									className="input"
 									type="text"
 									id="name"
-									name="Name"
+									name="name"
 									value={user.name}
 									onChange={inputData}
 									required={true}
@@ -104,12 +104,12 @@ const Form = (props) => {
 							</div>
 
 							<div className="group">
-								<label className="label">E-mail</label>
+								<label className="label">{language.labelEmail}</label>
 								<input
 									className="input"
 									type="text"
 									id="email"
-									name="e-mail"
+									name="email"
 									value={user.email}
 									onChange={inputData}
 									required={true}
@@ -117,7 +117,7 @@ const Form = (props) => {
 							</div>
 
 							<div className="group">
-								<label className="label"> Password</label>
+								<label className="label"> {language.labelPassword}</label>
 								<input
 									className="input"
 									type="password"
@@ -134,7 +134,7 @@ const Form = (props) => {
 							<div className="hr"></div>
 
 							<div className="group">
-								<button type="submit" className="button" > Inscrever </button>
+								<button type="submit" className="button" > {language.btnRegister} </button>
 							</div>
 
 						</form>
