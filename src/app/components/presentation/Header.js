@@ -30,8 +30,8 @@ import '../../styles/components/Header.css';
 import '../../styles/components/Footer.css';
 
 const Header = (props) => {
-
-  const header = props.language;
+  
+  const { language } = props;
   const { actionOpenMenu, isOpenMenu } = props
 
   const headerMenuNavegate = (
@@ -41,25 +41,25 @@ const Header = (props) => {
         <div className="header-menuBtn-navegate-search">
           <div className="header-menuBtn-buttons">
             <Link to='/'>
-              <FlatButton label={header.home} labelPosition="after" primary={true} icon={<Home />} />
+              <FlatButton label={language.home} labelPosition="after" primary={true} icon={<Home />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
             <Link to='/user-profile'>
-              <FlatButton label={header.profile} labelPosition="after" primary={true} icon={<User />} />
+              <FlatButton label={language.profile} labelPosition="after" primary={true} icon={<User />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
             <Link to='/search'>
-              <FlatButton label={header.addBooks} labelPosition="after" primary={true} icon={<Arrow />} />
+              <FlatButton label={language.addBooks} labelPosition="after" primary={true} icon={<Arrow />} />
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
-            <FlatButton label={header.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} />
+            <FlatButton label={language.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} />
           </div>
         </div>
 
-        <LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} />
+        <LanguagesBtn changeLanguage={props.changeLanguage} button={language.buttonLanguage} />
       </div>
     </React.Fragment >
 
@@ -74,7 +74,7 @@ const Header = (props) => {
           openRigth={false}
           actionOpen={actionOpenMenu}
           isOpen={isOpenMenu}
-          language={header}
+          language={language.drawerMenu}
           icon={<Menu />}
           width={"60%"}
           styleButton={{ root: { background: '#0000008a', borderRadius: '25px' }, hover: '#000000' }}
@@ -82,26 +82,26 @@ const Header = (props) => {
         ></DrawerMenu>
       </div>
 
-      <Footer tooltipGit={header.tooltipGit} tooltipFacebook={header.tooltipFacebook} tooltipLinkedin={header.tooltipLinkedin} color={styles.color}></Footer>
+      <Footer tooltipGit={language.tooltipGit} tooltipFacebook={language.tooltipFacebook} tooltipLinkedin={language.tooltipLinkedin} color={styles.color}></Footer>
 
-      <div className="header-title"><h2> {header.title} </h2></div>
+      <div className="header-title"><h2> {language.title} </h2></div>
 
       <div className="header-navegate">
 
-        <div className="header-navegate-languages"><LanguagesBtn changeLanguage={props.changeLanguage} button={header.buttonLanguage} /></div>
+        <div className="header-navegate-languages"><LanguagesBtn changeLanguage={props.changeLanguage} button={language.buttonLanguage} /></div>
 
         <div className="header-navegate-home-login ">
-          <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={header.home}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
-          <span className="b-hover IconButton"> <Link to='/user-profile'><IconButton tooltip={header.profile}><Icon icon={ICONS.USER} color={styles.color} /></IconButton></Link></span>
+          <span className="b-hover IconButton"> <Link to='/'><IconButton tooltip={language.home}> <Icon icon={ICONS.HOME} color={styles.color} /> </IconButton></Link></span>
+          <span className="b-hover IconButton"> <Link to='/user-profile'><IconButton tooltip={language.profile}><Icon icon={ICONS.USER} color={styles.color} /></IconButton></Link></span>
         </div>
 
         <div className="header-navegate-search">
           <Link to='/search' className="add-books">
-            <FlatButton label={header.addBooks} labelPosition="before" primary={true} icon={<Arrow />} />
+            <FlatButton label={language.addBooks} labelPosition="before" primary={true} icon={<Arrow />} />
           </Link>
         </div>
 
-        <div className="header-navegate-logout"><FlatButton label={header.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} /></div>
+        <div className="header-navegate-logout"><FlatButton label={language.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} /></div>
       </div>
 
     </div>

@@ -39,16 +39,16 @@ const SearchTip = (props) => {
       <Drawer width={ (width) ? width : '40%'} openSecondary={openRigth} open={isOpen} >
 
         <div className="menu-title">
-          <IconButton tooltip={language.btnCloseMenuDrawer}>
+          <IconButton tooltip={language.btnClose}>
             <Clear onClick={handleToggle} color='rgba(48, 48, 48)' />
           </IconButton>
 
-          <h1> {language.tittleMenuDrawer} </h1>
+          <h1> {language.tittle} </h1>
         </div>
 
         <div className="menu-body">
 
-          {(language.textMenuDrawer) ? language.textMenuDrawer : ''}
+          {(language.text) ? language.text : ''}
 
           {
             Array.isArray(topicsMenuDrawer) ? (
@@ -60,8 +60,6 @@ const SearchTip = (props) => {
             
             ) : (topicsMenuDrawer)
           }
-
-
         </div>
       </Drawer>
 

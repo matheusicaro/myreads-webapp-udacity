@@ -35,16 +35,15 @@ class HeaderContainer extends Component {
     }
 
     render() {
-        const { changeLanguage, logout } = this.props;
+        const { changeLanguage, logout, language } = this.props;
         const { isOpenMenu } = this.state
-        const { header } = translations[this.props.language];
 
         return (
             <Header
                 isOpenMenu={isOpenMenu}
                 actionOpenMenu={this.isOpenMenu}
                 changeLanguage={changeLanguage}
-                language={header}
+                language={language}
                 logout={logout}
             >   
             </Header>

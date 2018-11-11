@@ -12,27 +12,33 @@ import Search from '../app/pages/search/SearchContainer'
 import Login from './pages/login/LoginContainer'
 import User from './pages/user/UserContainer'
 
+// Import Languages
+import * as translations from './translations'
+
 import './styles/slide-background.css'
 
 const Main = () => {
 
   const isAuthorized = ({ changeLanguage, logOut, state, hideBackground}) => {
 
+    const { home, search, header, userProfile } = translations[state.language];
+
     return (
     <section>
       <div className="loader slider" style={style.backgroungImage} ></div>
-      <HeaderContainer changeLanguage={changeLanguage} logout={logOut} language={state.language}  background={hideBackground}/>
-      <Route exact path='/' render={() => <Home language={state.language} styleHide={state.styleHide} />} ></Route>
-      <Route exact path='/search' render={() => <Search language={state.language} />} ></Route>
-      <Route exact path='/user-profile' render={() => <User language={state.language} />} ></Route>
+      <HeaderContainer changeLanguage={changeLanguage} logout={logOut} language={header}  background={hideBackground}/>
+      <Route exact path='/' render={() => <Home language={home} styleHide={state.styleHide} />} ></Route>
+      <Route exact path='/search' render={() => <Search language={search} />} ></Route>
+      <Route exact path='/user-profile' render={() => <User language={userProfile} />} ></Route>
 
     </section>
     )
   }
 
-  const notAuthorized = (context) => (
-    <Route exact path='/' render={() => <Login isLogged={context.logon} />} ></Route>
-  )
+  const notAuthorized = ({logon, state}) => {
+    const { login } = translations[state.language];
+    return <Route exact path='/' render={() => <Login isLogged={logon} language={login} />} ></Route>
+  }
 
   return (
     <MyContext.Consumer>

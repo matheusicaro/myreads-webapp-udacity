@@ -13,16 +13,11 @@ import PropTypes from 'prop-types'
 
 import '../../styles/pages/Home.css';
 
-// Import languages
-import * as translations from '../../translations'
-
 import BookCase from '../../components/presentation/BookCase';
 import FlatButton from 'material-ui/FlatButton';
 
 const Home = ({ books, moveBookCategorie, language, styleHide}) => {
-
-  const { home } = translations[language];
-
+  
   if (books === '')
     return ''
 
@@ -50,31 +45,31 @@ const Home = ({ books, moveBookCategorie, language, styleHide}) => {
     <section className="home" style={ (styleHide) ? styleHide : {} }>
 
       <div className="topics">
-        <FlatButton label={`> ${home.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={home.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={home.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${language.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
       </div>
 
-      <div className="bookshelf-title">{home.titleCurrently}</div>
-      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
+      <div className="bookshelf-title">{language.titleCurrently}</div>
+      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
 
       <div className="topics">
-        <FlatButton label={home.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={`> ${home.titleWant}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={home.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${language.titleWant}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
       </div>
 
-      <div className="bookshelf-title">{home.titleWant}</div>
-      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
+      <div className="bookshelf-title">{language.titleWant}</div>
+      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
 
       <div className="topics">
-        <FlatButton label={home.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={home.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={`> ${home.titleRead}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${language.titleRead}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
       </div>
 
-      <div className="bookshelf-title">{home.titleRead}</div>
-      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={home.book}></BookCase>
+      <div className="bookshelf-title">{language.titleRead}</div>
+      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
 
     </section>
   )

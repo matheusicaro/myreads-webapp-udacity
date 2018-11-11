@@ -15,9 +15,6 @@ import PropTypes from 'prop-types'
 
 import '../../styles/pages/Search.css';
 
-// Import languages
-import * as translations from '../../translations'
-
 // Import Components
 import BookCase from '../../components/presentation/BookCase';
 import Loading from '../../components/presentation/Loading';
@@ -26,21 +23,17 @@ import Arrow from 'material-ui/svg-icons/action/help';
 import searchGif from '../../media/gifs/search-help.gif'
 
 const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisabledInput, actionSearchTip, isOpenSearchTip, contentsMenuDrawer, language }) => {
-    const { search } = translations[language];
-
-
-
 
     return (
         <section className="search">
 
             <div className="search-help">
-                <input placeholder={ search.inputPlaceHolder } onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
+                <input placeholder={ language.inputPlaceHolder } onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
                 <DrawerMenu 
                     actionOpen={actionSearchTip} 
                     isOpen={isOpenSearchTip}
                     topicsMenuDrawer={contentsMenuDrawer}
-                    language={search}
+                    language={language.drawerMenu}
                     icon={<Arrow/>}
                     openRigth={true}
                 ></DrawerMenu>
@@ -55,7 +48,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
                             classes='search-book-case'
                             books={books}
                             moveBookCategorie={moveBookCategorie}
-                            language={search.book}
+                            language={language.book}
                             page='search'
                         ></BookCase>
                     }
