@@ -93,6 +93,15 @@
                 "btnRegister": "Me inscrever",
                 "btnLogin": "Logar"
             }
+        },
+        "userProfile": {
+            "intro": "Está página está em construção, assim que possivel será implementado funcionalidades como:",
+            "topics": [
+                "Edição do perfil, dados, foto de perfil, entre outros...",
+                "A estante de cada livro será salvo em banco de dados, provalvemente no Firebase, com isto, cada usuario poderá guardar o seu perfil.",
+                "Altentição com redes sociais.",
+                "Entre outras novidades..."
+            ]
         }
     }
 }

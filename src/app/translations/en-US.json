@@ -93,6 +93,15 @@
         "btnRegister": "Sign me up",
         "btnLogin": "Login"
       }
+    },
+    "userProfile": {
+      "intro": "This page is under construction, so it is possible to implement functionalities such as:",
+      "topics": [
+        "Editing profile, data, profile photo, among others ...",
+        "The bookcase of each book will be saved in database, probably in Firebase, with this, each user can save his profile.",
+        "Alternation with social networks.",
+        "Among other news ..."
+      ]
     }
   }
 }
