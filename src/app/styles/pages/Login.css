@@ -1,323 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
 
-@media only screen and (max-width: 1900px) {
 
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 0px) !important;
-  }
-  
-  .how-work,
-  .parchment-button-click,
-  .footer-social-copyright-overwrite {
-    font-size: calc(4.5vh - 10px) !important;
-  }
-
-  .buttons-sign-in-up button {
-    font-size: calc(7vh - 0px) !important;
-  }
-  
-  .group,
-  .login-form,
-  .group, 
-  .label {
-    font-size: calc(4.5vh - 10px) !important;
-  }
-
+/* svg,
+path {
+    fill: black !important;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1550px) {
+span {
+    color: black !important;
+} */
 
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 5px) !important;
-  }
-  
-  .how-work,
-  .parchment-button-click {
-    font-size: calc(4.5vh - 15px) !important;
-  }
-
-  .footer-social-copyright-overwrite {
-    font-size: calc(4.5vh - 20px) !important;
-  }
-
-  .buttons-sign-in-up button {
-    font-size: calc(7vh - 5px) !important;
-  }
-  
-  .group,
-  .login-form,
-  .group, 
-  .label {
-    font-size: calc(4.5vh - 15px) !important;
-  }
-
-}
-
-@media only screen and (min-width: 1150px) and (max-width: 1350px) {
-
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 10px) !important;
-  }
-  
-  .parchment-button-click {
-    font-size: calc(4.5vh - 20px) !important;
-  }
-
-  .footer-social-copyright-overwrite {
-    font-size: calc(4.5vh - 25px) !important;
-  }
-
-  .buttons-sign-in-up button {
-    font-size: calc(7vh - 10px) !important;
-  }
-  
-  .group,
-  .login-form,
-  .group, 
-  .label {
-    font-size: calc(4.5vh - 20px) !important;
-  }
-
-}
-
-@media only screen and (min-width: 701px) and (max-width: 1005px) {
-
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 15px) !important;
-  }
-  
-  .how-work,
-  .parchment-button-click {
-    font-size: calc(4.5vh - 17px) !important;
-  }
-
-  .footer-social-copyright-overwrite {
-    display: none
-  }
-
-  .footer-social-overwrite {
-    display: contents;
-  }
-
-  .buttons-sign-in-up button {
-    font-size: calc(7vh - 15px) !important;
-  }
-
-  .parchment-text-title {
-    text-align: initial;
-    margin: 0% 0% 0% 10% !important;
-  }
-  
-  .group,
-  .login-form,
-  .group, 
-  .label {
-    font-size: calc(4.5vh - 25px) !important;
-  }
-
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1005px) {
-
-  .parchment-text-title {
-    text-align: initial;
-    margin: 0% 0% 0% 15%;
-  }
-}
-
-@media only screen and (min-width: 566px) and (max-width: 750px) {
-  
-  .how-work {
-    top: 30% !important;
-    font-size: calc(4.5vh - 20px) !important;
-  }
-
-  .parchment {
-    width: 55% !important;
-    height: 80% !important;
-    opacity: 0.8 !important;
-    left: -5% !important;
-    top: -8% !important;
-  }
-
-  .parchment-text-title,
-  .parchment-text-welcome{
-    font-size: calc(4.5vh - 0px) !important;
-    text-align: center;
-    margin: 0% 0% 0% 0% !important;
-  }
-
-  .parchment-button-click {
-    font-size: calc(4.5vh - 14px) !important;
-  }
-
-  .label {
-    font-size: calc(4.5vh - 13px) !important;
-  }
-
-  .login-html {
-    top: 28% !important; 
-  }
-
-  .parchment-secondary {
-    width: 65% !important;
-    left: 35% !important;
-  }
-
-}
-
-@media only screen and (min-width: 371px) and (max-width: 565px) {
-  
-  .how-work {
-    top: 22% !important;
-    font-size: calc(4.5vh - 16px) !important;
-  }
-
-  .label {
-    font-size: calc(4.5vh - 10px) !important;
-  }
-  .parchment-text-title {
-    font-size: calc(4.5vh - -10px) !important;
-    margin: 0% 0% 0% 0% !important;
-    text-align: center;
-  }
-
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 0px) !important;
-    margin: 15% 0% 0% 0% !important;
-    }
-
-  .login-button-close {
-    top: 18%;
-    top: 65% !important;
-    position: sticky;
-  }
-
-  .parchment-secondary {
-    width: 100% !important;
-    left: 0% !important;
-    background-size: 100% 100%;
-  }
-
-  .parchment {
-    width: 100% !important;
-    height: 98% !important;
-    opacity: 0.8 !important;
-    left: 0% !important;
-    top: -8% !important;
-    background-size: 80% 100%;
-  }
-
-  .parchment-content {
-    width: 55%;
-  }
-
-  .parchment-button {
-    align-items: center;
-    width: 85%;
-    grid-gap: 0%;
-  }
-
-  .login-html {
-    top: 35% !important;
-  }
-
-  .footer-social-btn {
-    justify-content: center;
-  }
-
-  .login-button-close {
-    top: 69% !important;
-  }
-}
-
-@media only screen and (min-width: 371px) and (max-width: 400px) {
-
-  .parchment-text-title {
-    font-size: calc(4.5vh - 0px) !important;
-  }
-
-  .how-work {
-    font-size: calc(4.5vh - 18px) !important;
-  }
-
-
-}
-
-@media only screen and (min-width: 7px) and (max-width: 370px) { 
-
-  .how-work {
-    font-size: calc(4.5vh - 12px) !important;
-  }
-  
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 2px) !important;
-  }
-  
-  .parchment {
-    background-size: 120% 100% !important;
-    left: 0% !important;
-    width: 100% !important;
-    height: 98% !important;
-  }
-
-  .parchment-secondary {
-    width: 140% !important;
-    height: 100% !important;
-    opacity: 1 !important;
-    left: -20% !important;
-    top: -8% !important;
-  }
-
-  .label,
-  .group {
-    font-size: calc(4.5vh - 14px) !important;
-  }
-
-  .login-form {
-    font-size: calc(4.5vh - 15px) !important;
-  }
-
-  .login-button-close {
-    position: sticky;
-    top: 77% !important;
-  }
-
-  .footer-social-btn {
-    justify-content: center;
-  }
-
-  .parchment-button-click {
-    font-size: calc(4.5vh - 9px) !important;
-  }
-
-}
-
-@media only screen and (min-width: 7px) and (max-width: 227px) {
-  
-  .how-work {
-    font-size: calc(4.5vh - 19px) !important;
-  }
-
-  .label {
-    font-size: calc(4.5vh - 14px) !important;
-  }
-
-  .parchment-text-title,
-  .parchment-text-welcome {
-    font-size: calc(4.5vh - 7px) !important;
-  }
-
-  .parchment-button-click {
-    font-size: calc(4.5vh - 9px) !important;
-  }
-
-}
 
 .root { 
   font-family: 'Spicy Rice', cursive;
@@ -349,19 +41,21 @@
 }
 
 .parchment-secondary {
-  width: 50%;
+  width: 75%;
   height: 100%;
   opacity: 1;
-  left: 40%;
-  top: -10%;
+  left: 35%;
+  top: -15%;
+  display: flex;
+  flex-direction: column;
 }
 
 .parchment {
-  width: 35%;
-  height: 60%;
+  width: 55%;
+  height: 70%;
   opacity: 0.8;
-  left: 9%;
-  top: -5%;
+  left: 0%;
+  top: -7%;
 }
 
 .parchment-content {
@@ -370,13 +64,13 @@
   justify-items: center;
   align-items: center;
   height: 60%;
-  width: 65%;
+  width: 40%;
   top: 20%;
   position: relative;
 }
 
 .parchment-text-title {
-  font-size: 40px;
+  font-size: 60px;
   align-self: end;
 }
 
@@ -388,7 +82,7 @@
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
-  align-self: baseline;
+  align-items: center;
   width: 90%;
   height: 100%;
   grid-gap: 3%;
@@ -402,13 +96,13 @@
 .parchment-button-click:hover {
   font-size: 30px;
 }
-
 .how-work {
-  position: relative;
-  top: 20%;
-  font-size: 30px;
+  font-size: 33px;
+  width: 40%;
+  height: 60%;
+  margin: 10% 0% 0% 0%;
+  color: #ba2c2c;
 }
-
 /*************************** FORMS STYLES ****************************/
 
 button {
@@ -418,26 +112,28 @@ button {
 
 .buttons-sign-in-up button {
   background: none;
-  color: #060606;
+  color: #ba2c2c;
   border: none;
   font-size: 60px;
 }
 
-.login-wrap,
-.how-work {
+.login-wrap {
   width: 50%;
   height: 60%;
+  margin: 15% 0% 0% 0%;
 }
 
 .login-html{
   width: 100%;
   height: 100%;
-  position: relative;
-  top: 40%;
 }
 
 .login-form .group{
 	margin-bottom:15px;
+}
+
+.group button {
+  font-size: 30px,
 }
 
 .login-form .group .label,
@@ -458,12 +154,12 @@ button {
   background: rgba(255,255,255,.3);
 }
 
-.login-form .group .label{
-  color: #080202;
+.login-form .group .label {
+  color: #ba2c2c;
   font-size: 40px;
 }
 .login-form .group .button{
-  background: #141619b8;
+  background: #ba2c2c;
   border-radius: 6px;
 }
 
@@ -493,6 +189,7 @@ button {
 
 .footer-social-copyright-overwrite {
   font-size: 20px;
+  color:  black
 }
 
 .footer-social-copyright-overwrite:hover {
@@ -500,6 +197,8 @@ button {
   border-radius: 4px;
   background-color: #ffffff78;
   padding: 2px 2px 2px 2px;
+  color:  black
+
 }
 
 .b-hover-overwrite:hover {
@@ -515,4 +214,294 @@ button {
 
 .languagesBtn-overwrite:hover {
   background-color: transparent !important;
+}
+
+/******************************** DEVICES RESPONSIBLES ****************/
+
+@media only screen and (min-width: 768px) and (max-width: 1600px) {
+
+  .parchment {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    left: 0%;
+    top: -10%;
+  }
+
+  .parchment-secondary {
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: -10%;
+  }
+
+  .parchment-text-title {
+    font-size: 115px;
+  }
+
+  .parchment-text-welcome {
+    font-size: 60px;
+  }
+
+  .parchment-button-click {
+    font-size: 50px;
+  }
+
+  .footer-social-copyright-overwrite {
+    font-size: 25px ;
+  }
+
+  .languagesBtn-overwrite button {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .footer-social-btn-overwrite svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .b-hover-overwrite {
+    margin-right: 20px;
+  }
+
+  .how-work {
+    margin: 25% 0% 0% 0% !important;
+    font-size: 40px !important;
+  }
+
+  .login-wrap {
+    margin: 30% 0% 0% 0% !important;
+  }
+
+  .login-wrap hr {
+    height: 2px !important;
+    background: rgba(11, 11, 11, 0.74) !important;
+  }
+
+  .login-button-close svg {
+    margin: 300% 0% 0% 0%;
+    width: 40px !important;
+    height: 40px !important;
+    background: #000000ed;
+    fill: #cecaca;
+    border-radius: 10px;
+    padding: 50%;
+  }
+
+  .login-html {
+    font-size: 40px !important;
+  }
+
+  .group label {
+    font-size: 70px !important;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1023px) {
+
+  .parchment-text-title {
+    font-size: 90px;
+  }
+
+  .parchment-text-welcome {
+    font-size: 38px;
+  }
+
+  .parchment-button-click {
+    font-size: 40px;
+  }
+
+  .footer-social-copyright-overwrite {
+    display: none
+  }
+
+  .footer-social-overwrite {
+    display: flex !important;
+    margin: 5% 0% 0% 0%;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: 50px;
+  }
+
+  .how-work {
+    margin: 25% 0% 0% 0% !important;
+    font-size: 30px !important;
+  }
+
+  .login-button-close svg {
+    margin: 260% 0% 0% 0% !important;
+    background: #000000ed;
+    fill: #cecaca;
+    border-radius: 10px;
+    padding: 50%;
+  }
+
+  .login-html {
+    font-size: 25px !important;
+  }
+
+  .group label {
+    font-size: 40px !important;
+  }
+
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+
+  .parchment {
+    width: 100%;
+    height: 100%;
+    background-size: 125% 100%;
+    background-position-x: -25px;
+    background-position-y: 35px;
+  }
+
+  .parchment-content {
+    width: 37% !important;
+    top: 20% !important;
+    position: relative !important;
+  }
+
+  .parchment-secondary {
+    width: 110%;
+    height: 90%;
+    left: -11%;
+    top: -10%;
+  }
+
+  .parchment-text-title {
+    font-size: 50px;
+  }
+
+  .parchment-text-welcome {
+    font-size: 35px;
+  }
+
+  .parchment-button-click {
+    font-size: 20px;
+  }
+
+  .footer-social-copyright-overwrite {
+    display: none
+  }
+
+  .footer-social-overwrite {
+    display: flex;
+    align-self: center;
+  }
+
+  .languagesBtn-overwrite button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: 30px !important;
+  }
+
+  .how-work {
+    margin: 22% 0% 0% 0% !important;
+    font-size: 19px !important;
+  }
+
+  .login-html {
+    font-size: 18px !important;
+  }
+
+  .group label {
+    font-size: 20px !important;
+  }
+
+  .login-button-close svg {
+    margin: 120% 0% 0% 0% !important;
+    background: #000000ed;
+    fill: #cecaca;
+    border-radius: 10px;
+    padding: 50%;
+  }
+
+  .login-wrap {
+    margin: 31% 0% 0% 0%;
+  }
+
+}
+
+@media only screen and (max-width: 399px) {
+
+  .parchment { 
+    width: 100%;
+    height: 100%;
+    background-size: 125% 100%;
+    background-position-x: -25px;
+    background-position-y: 35px;
+  }
+
+  .parchment-secondary { 
+    top: -17% !important;
+    height: 170% !important;
+    width: 200% !important;
+    left: -8% !important;
+  }
+
+  .parchment-text-title {
+    font-size: 100px;
+  }
+
+  .parchment-text-welcome { 
+    font-size: 60px;
+  }
+
+  .parchment-button-click {
+    font-size: 40px;
+  }
+
+  .footer-social-overwrite a {
+    margin: 0px 25px 0px 0px !important;
+  }
+
+  .footer-social-btn-overwrite svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .languagesBtn-overwrite button {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .buttons-sign-in-up button { 
+    font-size: 40px !important;
+  }
+
+  .how-work { 
+    margin: 35% 0% 0% 0% !important;
+    font-size: 30px !important;
+  }
+
+  .login-html { 
+    font-size: 30px !important;
+  }
+
+   .group label {
+    font-size: 45px !important;
+  }
+
+  .login-button-close svg { 
+    margin: 220% 0% 0% 0% !important;
+    width: 41px;
+    height: 41px;
+    background: #000000ed;
+    fill: #cecaca;
+    border-radius: 10px;
+    padding: 50%;
+  }
+
+  .login-wrap {
+    margin: 35% 0% 0% 0%;
+  }
+
 }

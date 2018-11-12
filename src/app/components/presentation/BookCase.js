@@ -57,7 +57,7 @@ const stylesDefault = {
     textAlign: 'center',
     overflowX: 'auto',
     marginTop: '4%',
-
+    margin: '5% 5% 15% 5%',
     position: 'relative',
   },
 

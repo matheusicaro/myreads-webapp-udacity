@@ -16,8 +16,8 @@ import '../../styles/pages/Home.css';
 import BookCase from '../../components/presentation/BookCase';
 import FlatButton from 'material-ui/FlatButton';
 
-const Home = ({ books, moveBookCategorie, language, styleHide}) => {
-  
+const Home = ({ books, moveBookCategorie, language, styleHide }) => {
+
   if (books === '')
     return ''
 
@@ -36,13 +36,13 @@ const Home = ({ books, moveBookCategorie, language, styleHide}) => {
     const height = (document.body.scrollHeight) / 3;
 
     if (topic === 'Quero ler' || topic === 'Want To Read') window.scroll(0, (height));
-    else if (topic === 'Read' || topic === 'Ler') window.scroll(0, (height * 3));
-    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente') window.scroll(0, (height / 2));
+    else if (topic === 'Read' || topic === 'Ler') window.scroll(0, (height * 3.5));
+    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente') window.scroll(0, (height / 2.5));
 
   }
 
   return (
-    <section className="home" style={ (styleHide) ? styleHide : {} }>
+    <section className="home" style={(styleHide) ? styleHide : {}}>
 
       <div className="topics">
         <FlatButton label={`> ${language.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
@@ -51,7 +51,7 @@ const Home = ({ books, moveBookCategorie, language, styleHide}) => {
       </div>
 
       <div className="bookshelf-title">{language.titleCurrently}</div>
-      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
+      <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCase}></BookCase>
 
       <div className="topics">
         <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
@@ -60,16 +60,16 @@ const Home = ({ books, moveBookCategorie, language, styleHide}) => {
       </div>
 
       <div className="bookshelf-title">{language.titleWant}</div>
-      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
+      <BookCase classes="home-book-case" books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCase}></BookCase>
+
+      <div className="bookshelf-title">{language.titleRead}</div>
+      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCaseLast}></BookCase>
 
       <div className="topics">
-        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black", margin: "5% 5% 0% 0% !important" }} />
         <FlatButton label={language.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
         <FlatButton label={`> ${language.titleRead}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
       </div>
-
-      <div className="bookshelf-title">{language.titleRead}</div>
-      <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={language.book}></BookCase>
 
     </section>
   )
@@ -83,3 +83,24 @@ Home.propTypes = {
   books: PropTypes.array,
 
 };
+
+const styles = {
+  bookCase: {
+    section: {
+      textAlign: 'center',
+      overflowX: 'auto',
+      marginTop: '4%',
+      margin: '5% 5% 15% 5%',
+      position: 'relative',
+    }
+  },
+  bookCaseLast: {
+    section: {
+      textAlign: 'center',
+      overflowX: 'auto',
+      marginTop: '4%',
+      margin: '5% 5% 0% 5%',
+      position: 'relative',
+    }
+  }
+}

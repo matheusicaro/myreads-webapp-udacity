@@ -1,3 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
+
+svg,
+path {
+    fill: #b21412;
+}
+
+span {
+    color: #b21412 !important;
+}
+
 .b-hover:hover {
     color: #303030;
     background-color: #303030;
@@ -15,8 +26,8 @@
     background: black;
     height: 100%;
     width: 100%;
-    display: flex;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
 }
 
 .header-menu-btn {
@@ -76,11 +87,17 @@
 }
 
 .header-title {
-    color: rgb(0, 151, 167) !important;
+    font-family: 'Spicy Rice', cursive;
+    font-family: 'Lobster', cursive;
+    color: #b21412 !important;
     align-self: center;
     width: 100%;
     font-size: 80px;
     text-align: center;
+}
+
+.footer-social-copyright-overwrite {
+    color: #b21412 !important;
 }
 
 @media only screen and (max-width: 280px) {
@@ -94,7 +111,7 @@
     .footer-social-copyright-overwrite {
         position: absolute;
         top: 13%;
-        color: black;
+        color: #b21412 !important;
     }
 
 }
@@ -125,7 +142,7 @@
 
     .footer-social-copyright-overwrite {
         position: '';
-        color: 0;
+        color: #b21412;
         margin: -5% 0% 0% 5% !important;
         font-size: 9px !important;
         text-align: start;
@@ -184,6 +201,7 @@
     }
 
     .footer-social-copyright-overwrite {
+        color: #b21412;
         margin: -5% 0% 0% 5% !important;
         text-align: start;
     }

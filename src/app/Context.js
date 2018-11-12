@@ -8,7 +8,8 @@ export class MyProvider extends Component {
   state = {
     auth: true,
     language: 'pt-BR',
-    styleHide: {}
+    styleHide: {},
+    loading: false,
   }
 
   logon = (auth) => {
@@ -26,8 +27,8 @@ export class MyProvider extends Component {
     (value) ? this.setState({ styleHide: {display: 'none'} }) : this.setState({ styleHide: {} });
   }
 
-  logout = () =>{
-    this.setState({ auth: false})
+  logout = () => {
+    this.setState({ auth: false })
   }
 
   render() {

@@ -30,7 +30,7 @@ import '../../styles/components/Header.css';
 import '../../styles/components/Footer.css';
 
 const Header = (props) => {
-  
+
   const { language } = props;
   const { actionOpenMenu, isOpenMenu } = props
 
@@ -55,7 +55,9 @@ const Header = (props) => {
             </Link>
           </div>
           <div className="header-menuBtn-buttons">
-            <FlatButton label={language.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} />
+            <Link to='/'>
+              <FlatButton label={language.logout} onClick={(props.logout)} labelPosition="after" primary={true} icon={<Replay />} />
+            </Link>
           </div>
         </div>
 
@@ -76,7 +78,7 @@ const Header = (props) => {
           isOpen={isOpenMenu}
           language={language.drawerMenu}
           icon={<Menu />}
-          width={"60%"}
+          width={"80%"}
           styleButton={{ root: { background: '#0000008a', borderRadius: '25px' }, hover: '#000000' }}
 
         ></DrawerMenu>
@@ -115,5 +117,5 @@ const styles = {
     minWidth: '0',
   },
 
-  color: 'rgb(0, 151, 167)'
+  color: '#b21412'
 }

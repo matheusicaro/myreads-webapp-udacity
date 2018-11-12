@@ -50,7 +50,7 @@ const BookAdd = ({ moveBook, language, page }) => {
       onItemClick={click}
       menuStyle={{style:{background:'red'}}}
     > 
-      <MenuItem id="TEST" value="TEST" primaryText={ language.currently }/>
+      <MenuItem primaryText={ language.currently }/>
       <MenuItem primaryText={ language.want } />
       <MenuItem primaryText={ language.read } />
       <MenuItem primaryText={ language.remove } />
@@ -67,7 +67,7 @@ BookAdd.propTypes = {
 const styles = {
 
   iconButton: {
-    color: 'rgb(0, 151, 167)',
+    color: '#b21412',
   },
 
   iconMenu: {

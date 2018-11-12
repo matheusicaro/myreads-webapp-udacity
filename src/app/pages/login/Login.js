@@ -102,7 +102,7 @@ const Login = (props) => {
 
             <Footer tooltipGit={language.tooltipGit} tooltipFacebook={language.tooltipFacebook} tooltipLinkedin={language.tooltipLinkedin} color={'styles.color'}></Footer>
 
-            <span><IconButton onClick={closeHowWork} tooltip={language.tooltipClose}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></span>
+          <div className="login-button-close"><IconButton onClick={closeHowWork} tooltip={language.tooltipClose}> <Icon icon={ICONS.CLOSE} color={'color'} /> </IconButton></div>
           </div>
         </div>
       )}

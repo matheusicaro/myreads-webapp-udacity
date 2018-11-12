@@ -40,7 +40,7 @@ const SearchTip = (props) => {
 
         <div className="menu-title">
           <IconButton tooltip={language.btnClose}>
-            <Clear onClick={handleToggle} color='rgba(48, 48, 48)' />
+            <Clear onClick={handleToggle} color='#b21412' />
           </IconButton>
 
           <h1> {language.tittle} </h1>
@@ -98,7 +98,7 @@ const styles = {
     height: '36px',
     lineHeight: '36px',
     minWidth: '88px',
-    color: 'rgb(0, 151, 167)',
+    color: '#b21412',
     transition: 'all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
     borderRadius: '2px',
     userSelect: 'none',

@@ -32,7 +32,7 @@ const Book = ({ book, moveBookCategorie, language, page }) => {
 
             <div className="book-top">
                 <BookDetailsContainer book={book} language={language.bookDetails} /> 
-                <BookAdd moveBook={moveBook} language={language.bookAdd} page={page} />
+                <BookAdd class="teste" moveBook={moveBook} language={language.bookAdd} page={page} />
             </div>
         </div>
     )

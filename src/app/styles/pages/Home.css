@@ -13,19 +13,19 @@
 }
   
 .bookshelf-title {
-  border-bottom: 10px solid rgb(0, 151, 167);
+  border-bottom: 10px solid #b21412;
   padding: 2%;
   text-align: center;
   font-family: Roboto, sans-serif;
   font-size: 40px;
-  color: black;
+  color: #b21412;
 }
 
 @media only screen and (max-width: 600px) {
   
   .topics {
     margin: 7% 0% 0% 0% !important;
-    padding: 15% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
   }
 
   .topics span {
@@ -48,7 +48,7 @@
   
   .topics {
     margin: 7% 0% 0% 0% !important;
-    padding: 15% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
   }
 
   .topics span {
@@ -75,7 +75,7 @@
 
   .topics {
     margin: 0% 0% 0% 0% !important;
-    padding: 15% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
   }
 
   .bookshelf-title {

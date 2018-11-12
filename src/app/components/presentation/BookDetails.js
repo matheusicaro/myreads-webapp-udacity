@@ -53,11 +53,11 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
         </article>
 
         <aside style={styles.infoAtributes.root}>
-          <div style={styles.infoAtributes.atribute }><b>{ language.authors }</b> {authors} </div>
-          <div style={styles.infoAtributes.atribute }><b>{ language.categories }</b> {categories} </div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.authors }</b> {(authors) ? authors: '--' } </div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.categories }</b> {(categories) ? categories: '--' } </div>
           <div style={styles.infoAtributes.atribute }><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
-          <div style={styles.infoAtributes.atribute }><b>{ language.publishedIn }</b>  {publishedDate} </div>
-          <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}>{ language.buy }</a></div>
+          <div style={styles.infoAtributes.atribute }><b>{ language.publishedIn }</b>  {(publishedDate) ? publishedDate: '--' } </div>
+          <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}> <b>{ language.buy }</b></a></div>
         </aside>
 
       </Dialog>
@@ -93,7 +93,7 @@ const styles = {
 
   title: {
     marginBlockEnd: '-2em',
-    color: 'rgb(0, 151, 167)'
+    color: '#b21412'
   },
 
   bodyStyle: {
@@ -103,7 +103,7 @@ const styles = {
 
   rasedButton: {
     boxShadow: '0',
-    labelColor: 'rgb(0, 151, 167)',
+    labelColor: '#b21412',
     background:'transparent',
   },
 
@@ -123,7 +123,7 @@ const styles = {
     
     atributeLink: {
       padding: '1% 0% 0% 0%',
-      color:"rgb(0, 151, 167)",
+      color:'#b21412',
     }
   }
 }
