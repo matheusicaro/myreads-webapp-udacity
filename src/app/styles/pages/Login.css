@@ -217,22 +217,42 @@ button {
 }
 
 /******************************** DEVICES RESPONSIBLES ****************/
+@media only screen and (min-width: 769px) and (max-width: 1600px) {
 
+  .parchment,
+  .parchment-secondary {
+    background-position-x: -130px !important;
+  }
+
+  .how-work {
+    font-size: 40px !important;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1600px) {
 
   .parchment {
     width: 100%;
     height: 100%;
-    opacity: 0.8;
-    left: 0%;
-    top: -10%;
+    background-size: 130% 100%;
+    background-position-x: -85px;
+    background-position-y: -45px;
   }
 
   .parchment-secondary {
     width: 100%;
     height: 100%;
-    left: 0%;
-    top: -10%;
+    background-size: 130% 100%;
+    background-position-x: -85px;
+    background-position-y: -45px;
+    top: -7%;
+    left: 0;
+  }
+
+  .parchment-content {
+    height: 65%;
+    width: 65%;
+    top: 12%;
+    left: 4%;
   }
 
   .parchment-text-title {
@@ -265,13 +285,16 @@ button {
   }
 
   .how-work {
-    margin: 25% 0% 0% 0% !important;
-    font-size: 40px !important;
+    margin: 20% 0% 0% 10%;
+    font-size: 30px;
+    width: 65%;
+    height: 60%;
   }
 
   .login-wrap {
-    margin: 30% 0% 0% 0% !important;
-  }
+    margin: 20% 0% 0% 5% !important;
+    height: 55%;
+    }
 
   .login-wrap hr {
     height: 2px !important;
@@ -301,7 +324,7 @@ button {
 }
 
 @media only screen and (min-width: 400px) and (max-width: 1023px) {
-
+ 
   .parchment-text-title {
     font-size: 90px;
   }
@@ -328,14 +351,13 @@ button {
   }
 
   .how-work {
-    margin: 25% 0% 0% 0% !important;
+    margin: 25% 0% 0% 10%;
     font-size: 30px !important;
   }
 
   .login-button-close svg {
     margin: 260% 0% 0% 0% !important;
     background: #000000ed;
-    fill: #cecaca;
     border-radius: 10px;
     padding: 50%;
   }
@@ -356,20 +378,23 @@ button {
     width: 100%;
     height: 100%;
     background-size: 125% 100%;
-    background-position-x: -25px;
+    background-position-x: -50px;
     background-position-y: 35px;
   }
 
   .parchment-content {
-    width: 37% !important;
-    top: 20% !important;
+    width: 60% !important;
+    top: 25% !important;
     position: relative !important;
   }
 
   .parchment-secondary {
-    width: 110%;
-    height: 90%;
-    left: -11%;
+    width: 100%;
+    height: 100%;
+    background-size: 125% 100%;
+    background-position-x: -50px;
+    background-position-y: 35px;
+    left: 0;
     top: -10%;
   }
 
@@ -404,8 +429,10 @@ button {
   }
 
   .how-work {
-    margin: 22% 0% 0% 0% !important;
+    margin: 45% 0% 0% 0% !important;
     font-size: 19px !important;
+    width: 50%;
+    height: 60%;
   }
 
   .login-html {
@@ -418,90 +445,92 @@ button {
 
   .login-button-close svg {
     margin: 120% 0% 0% 0% !important;
-    background: #000000ed;
-    fill: #cecaca;
-    border-radius: 10px;
-    padding: 50%;
   }
 
   .login-wrap {
-    margin: 31% 0% 0% 0%;
+    margin: 45% 0% 0% 0%;
   }
 
 }
 
 @media only screen and (max-width: 399px) {
 
-  .parchment { 
+  .parchment,
+  .parchment-secondary { 
     width: 100%;
     height: 100%;
-    background-size: 125% 100%;
-    background-position-x: -25px;
+    background-size: 130% 100%;
+    background-position-x: -50px;
     background-position-y: 35px;
   }
 
-  .parchment-secondary { 
-    top: -17% !important;
-    height: 170% !important;
-    width: 200% !important;
-    left: -8% !important;
-  }
 
   .parchment-text-title {
-    font-size: 100px;
+    font-size: 30px;
   }
 
   .parchment-text-welcome { 
-    font-size: 60px;
+    font-size: 25px;
   }
 
   .parchment-button-click {
-    font-size: 40px;
-  }
-
-  .footer-social-overwrite a {
-    margin: 0px 25px 0px 0px !important;
+    font-size: 20px;
   }
 
   .footer-social-btn-overwrite svg {
-    width: 30px;
+    width: 20px;
     height: 30px;
   }
 
   .languagesBtn-overwrite button {
-    width: 80px !important;
-    height: 80px !important;
+    width: 50px !important;
+    height: 50px !important;
   }
 
   .buttons-sign-in-up button { 
-    font-size: 40px !important;
+    font-size: 20px !important;
   }
 
   .how-work { 
-    margin: 35% 0% 0% 0% !important;
-    font-size: 30px !important;
+    margin: 45% 0% 0% 0% !important;
+    font-size: 18px !important;
   }
 
   .login-html { 
-    font-size: 30px !important;
+    font-size: 10px !important;
   }
 
    .group label {
-    font-size: 45px !important;
+    font-size: 25px !important;
   }
 
   .login-button-close svg { 
-    margin: 220% 0% 0% 0% !important;
-    width: 41px;
-    height: 41px;
+    margin: 0% 0% 0% 0% !important;
+    width: 20px;
+    height: 20px;
     background: #000000ed;
-    fill: #cecaca;
     border-radius: 10px;
     padding: 50%;
   }
 
   .login-wrap {
-    margin: 35% 0% 0% 0%;
+    margin: 45% 0% 0% 0%;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+  .how-work {
+    font-size: 16px !important;
+  }
+
+  .group label {
+    font-size: 20px !important;
+  }
+
+  .hr {
+    margin: 15px 0 25px 0;
   }
 
 }
