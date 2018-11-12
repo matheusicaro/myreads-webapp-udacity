@@ -24,10 +24,10 @@
             "titleRead": "Leer",
             "book": {
                 "bookAdd": {
-                    "currently": "mover a lectura actual",
-                    "want": "mover a desea leer",
+                    "currently": "mover a Leyendo Actualmente",
+                    "want": "mover a Quiero Leer",
                     "read": "mover a Leer",
-                    "remove": "Quitar"
+                    "remove": "quitar"
                 },
                 "bookDetails": {
                     "btnClose": "Cerrar",
@@ -50,8 +50,8 @@
             },
             "book": {
                 "bookAdd": {
-                    "currently": "mover a lectura actual",
-                    "want": "mover a desea leer",
+                    "currently": "mover a Leyendo Actualmente",
+                    "want": "mover a Quiero Leer",
                     "read": "mover a Leer",
                     "remove": "quitar"
                 },

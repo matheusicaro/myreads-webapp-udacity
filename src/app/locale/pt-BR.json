@@ -24,8 +24,8 @@
             "titleRead": "Ler",
             "book": {
                 "bookAdd": {
-                    "currently": "mover para Leitura atual",
-                    "want": "mover para Deseja Ler",
+                    "currently": "mover para Lendo Atualmente",
+                    "want": "mover para Quero Ler",
                     "read": "mover para Ler",
                     "remove": "Remover"
                 },
@@ -50,8 +50,8 @@
             },
             "book": {
                 "bookAdd": {
-                    "currently": "mover para Leitura atual",
-                    "want": "mover para Deseja Ler",
+                    "currently": "mover para Lendo Atualmente",
+                    "want": "mover para Quero Ler",
                     "read": "mover para Ler",
                     "remove": "remover"
                 },
