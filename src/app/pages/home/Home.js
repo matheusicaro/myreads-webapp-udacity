@@ -35,9 +35,9 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
     const topic = event.target.textContent;
     const height = (document.body.scrollHeight) / 3;
 
-    if (topic === 'Quero ler' || topic === 'Want To Read') window.scroll(0, (height));
-    else if (topic === 'Read' || topic === 'Ler') window.scroll(0, (height * 3.5));
-    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente') window.scroll(0, (height / 2.5));
+    if (topic === 'Quero ler' || topic === 'Want To Read' || topic === 'Quiero leer') window.scroll(0, (height));
+    else if (topic === 'Read' || topic === 'Ler' || topic === 'Leer') window.scroll(0, (height * 3.5));
+    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente' || topic === 'Leyendo Actualmente') window.scroll(0, (height / 2.5));
 
   }
 

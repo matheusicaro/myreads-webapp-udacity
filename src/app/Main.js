@@ -20,7 +20,7 @@ import './styles/slide-background.css'
 const Main = () => {
 
   const isAuthorized = ({ changeLanguage, logOut, state, hideBackground}) => {
-
+    console.log(translations)
     const { home, search, header, userProfile } = translations[state.language];
 
     return (
@@ -35,9 +35,9 @@ const Main = () => {
     )
   }
 
-  const notAuthorized = ({logon, state}) => {
+  const notAuthorized = ({logon, changeLanguage, state}) => {
     const { login } = translations[state.language];
-    return <Route exact path='/' render={() => <Login isLogged={logon} language={login} />} ></Route>
+    return <Route exact path='/' render={() => <Login isLogged={logon} language={login} changeLanguage={changeLanguage} />} ></Route>
   }
 
   return (

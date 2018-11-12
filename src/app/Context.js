@@ -17,7 +17,6 @@ export class MyProvider extends Component {
   }
 
   changeLanguage = (value) => {
-
     this.setState({
       language: value
     })

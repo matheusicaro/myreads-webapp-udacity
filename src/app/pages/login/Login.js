@@ -27,7 +27,7 @@ import LanguagesBtn from '../../components/presentation/LanguagesBtn'
 const Login = (props) => {
 
   const { errorAcess, stopAnimeted, LoginForm, HowWork, language } = props;
-
+  console.log(language)
   const create = (user) => {
     props.createUser(user)
   }
@@ -57,7 +57,7 @@ const Login = (props) => {
         <div className="parchment-content">
 
           <span className="languagesBtn-overwrite">
-            <LanguagesBtn changeLanguage={'props.changeLanguage'} button={'header.buttonLanguage'} />
+            <LanguagesBtn changeLanguage={props.changeLanguage} button={language.buttonLanguage} />
           </span>
 
           <div className="parchment-text-title">

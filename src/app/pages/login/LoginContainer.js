@@ -88,7 +88,7 @@ class LoginContainer extends Component {
 
     render() {
         const { errorAcess, LoginForm, HowWork} = this.state;
-        const { language } = this.props;
+        const { language, changeLanguage } = this.props;
         return (
             <div>
                 <Login 
@@ -99,6 +99,7 @@ class LoginContainer extends Component {
                     errorAcess={errorAcess}
                     LoginForm={LoginForm}
                     HowWork={HowWork}
+                    changeLanguage={changeLanguage}
                     language={language}
                 > </Login>
             </div>
