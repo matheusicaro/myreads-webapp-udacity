@@ -15,9 +15,6 @@
 
 import React, { Component } from 'react'
 
-// Import languages
-import * as translations from '../../translations'
-
 import Header from '../presentation/Header'
 
 class HeaderContainer extends Component {

@@ -13,14 +13,14 @@ import Login from './pages/login/LoginContainer'
 import User from './pages/user/UserContainer'
 
 // Import Languages
-import * as translations from './translations'
+import * as translations from './locale'
 
 import './styles/slide-background.css'
 
 const Main = () => {
 
   const isAuthorized = ({ changeLanguage, logOut, state, hideBackground}) => {
-    console.log(translations)
+
     const { home, search, header, userProfile } = translations[state.language];
 
     return (

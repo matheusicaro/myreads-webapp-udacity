@@ -25,7 +25,7 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
   const booksWantToRead = [];
   const booksRead = [];
 
-  books.map(element => {
+  books.forEach(element => {
     if (element.shelf === 'wantToRead') booksWantToRead.push(element);
     else if (element.shelf === 'currentlyReading') booksCurrentlyReading.push(element);
     else if (element.shelf === 'read') booksRead.push(element);
@@ -45,18 +45,18 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
     <section className="home" style={(styleHide) ? styleHide : {}}>
 
       <div className="topics">
-        <FlatButton label={`> ${language.titleCurrently}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={`> ${language.titleCurrently}`} primary={true} onClick={scrollMove} style={{ background: "#ffffff0f" }} />
+        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove}/>
+        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove}/>
       </div>
 
       <div className="bookshelf-title">{language.titleCurrently}</div>
       <BookCase classes="home-book-case" books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCase}></BookCase>
 
       <div className="topics">
-        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={`> ${language.titleWant}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove}/>
+        <FlatButton label={`> ${language.titleWant}`} primary={true} onClick={scrollMove} style={{ background: "#ffffff0f" }} />
+        <FlatButton label={language.titleRead} primary={true} onClick={scrollMove}/>
       </div>
 
       <div className="bookshelf-title">{language.titleWant}</div>
@@ -66,9 +66,9 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
       <BookCase classes="home-book-case" books={booksRead} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCaseLast}></BookCase>
 
       <div className="topics">
-        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ color: "black", margin: "5% 5% 0% 0% !important" }} />
-        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove} style={{ color: "black" }} />
-        <FlatButton label={`> ${language.titleRead}`} primary={true} onClick={scrollMove} style={{ color: "black" }} />
+        <FlatButton label={language.titleCurrently} primary={true} onClick={scrollMove} style={{ margin: "5% 5% 0% 0% !important" }} />
+        <FlatButton label={language.titleWant} primary={true} onClick={scrollMove}/>
+        <FlatButton label={`> ${language.titleRead}`} primary={true} onClick={scrollMove} style={{ background: "#ffffff0f" }} />
       </div>
 
     </section>

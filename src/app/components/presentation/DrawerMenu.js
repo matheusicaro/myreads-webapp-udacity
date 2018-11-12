@@ -14,11 +14,9 @@ import IconButton from 'material-ui/IconButton';
 import Clear from 'material-ui/svg-icons/content/clear';
 import FlatButton from 'material-ui/FlatButton';
 
-import PropTypes from 'prop-types';
-
 import '../../styles/components/DrawerMenu.css'
 
-const SearchTip = (props) => {
+const DrawerMenu = (props) => {
 
   const { isOpen, topicsMenuDrawer, language, icon, openRigth, width, styleButton } = props;
   const handleToggle = () => props.actionOpen(!isOpen);
@@ -33,10 +31,10 @@ const SearchTip = (props) => {
         onClick={handleToggle}
         icon={icon}
         style={ (styleButton) ? styleButton.root : {}}
-        hoverColor={ (styleButton) ? styleButton.hover : {}}
+        hoverColor={ (styleButton) ? styleButton.hover : ''}
       />
 
-      <Drawer width={ (width) ? width : '40%'} openSecondary={openRigth} open={isOpen} >
+      <Drawer width={ (width) ? width : '40%'} openSecondary={openRigth} open={isOpen}>
 
         <div className="menu-title">
           <IconButton tooltip={language.btnClose}>
@@ -46,7 +44,7 @@ const SearchTip = (props) => {
           <h1> {language.tittle} </h1>
         </div>
 
-        <div className="menu-body">
+        <div className="menu-body" onClick={handleToggle}>
 
           {(language.text) ? language.text : ''}
 
@@ -67,18 +65,17 @@ const SearchTip = (props) => {
   );
 }
 
-export default SearchTip
+export default DrawerMenu
 
-SearchTip.propTypes = {
-
-  actionSearchTip: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool.isRequired,
-};
-
-const styles = {
+  const styles = {
 
   li: {
-    padding: '0% 0% 1.5% 0%'
+    padding: '0% 0% 1.5% 0%',
+  },
+
+  body: {
+    background: 'rgba(0, 0, 0, 0.84)',
+    color: '#b21412'
   },
 
   button: {

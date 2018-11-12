@@ -70,7 +70,7 @@ span {
 }
 
 .parchment-text-title {
-  font-size: 60px;
+  font-size: 45px;
   align-self: end;
 }
 
@@ -100,7 +100,7 @@ span {
   font-size: 33px;
   width: 40%;
   height: 60%;
-  margin: 10% 0% 0% 0%;
+  margin: 15% 0% 0% 0%;
   color: #ba2c2c;
 }
 /*************************** FORMS STYLES ****************************/
@@ -217,20 +217,91 @@ button {
 }
 
 /******************************** DEVICES RESPONSIBLES ****************/
-@media only screen and (min-width: 769px) and (max-width: 1600px) {
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+
+  .buttons-sign-in-up button {
+    font-size: 35px;
+  }
+
+  .login-form .group .label {
+    color: #ba2c2c;
+    font-size: 30px;
+  }
+
+  .login-form 
+  .group 
+  .input {
+    padding: 5px 0px;
+  }
+
+  .hr {
+    margin: 10px 0 20px 0;
+  }
+
+  .login-wrap {
+    margin: 15% 0% 0% 0% !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1450px) {
 
   .parchment,
   .parchment-secondary {
-    background-position-x: -130px !important;
+  }
+
+  .parchment-secondary {
+    width: 75%;
+    height: 120%;
+    opacity: 1;
+    left: 35%;
+    top: -15%;
+    display: flex;
+    flex-direction: column;
   }
 
   .how-work {
-    font-size: 40px !important;
+    font-size: 24px !important;
+    margin: 15% 0% 0% 0%;
+  }
+
+  .login-wrap {
+    margin: 20% 0% 0% 0%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1600px) {
 
-  .parchment {
+@media only screen and (max-height: 768px) and (max-width: 1366px) {
+
+  .parchment-text-title {
+    font-size: 40px !important;
+  }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+
+  .how-work {
+    font-size: 28px !important;
+    margin: 25% 0% 0% 0%;
+  }
+
+  .parchment-text-title {
+    font-size: 50px;
+  }
+
+  .parchment-button-click {
+    font-size: 20px;
+  }
+
+  .parchment-content { 
+    grid-gap: 1%;
+  }
+
+  /* .parchment {
     width: 100%;
     height: 100%;
     background-size: 130% 100%;
@@ -317,13 +388,83 @@ button {
 
   .group label {
     font-size: 70px !important;
-  }
+  } */
 
 
 
 }
 
-@media only screen and (min-width: 400px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .parchment-text-title {
+    font-size: 30px;
+  }
+
+  .login-wrap {
+    margin: 30% 0% 0% 0%;
+  }
+
+  .buttons-sign-in-up button {
+    font-size: 40px;
+  }
+
+  .login-form,
+  .group,
+  .input {
+    padding: 0px 0px !important;
+  }
+
+  .login-form,
+  .group,
+  .label {
+    font-size: 30px;
+  }
+
+  .how-work {
+    font-size: 24px !important;
+    margin: 25% 0% 0% 0%;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) and (min-height: 1000px) and (max-height: 1300px) and (max-width: 1300px) {
+
+  .parchment-text-title {
+    font-size: 55px;
+  }
+
+  .parchment-text-welcome {
+    font-size: 40px;
+  }
+
+  .parchment-button-click {
+    font-size: 35px;
+  }
+
+  .how-work {
+    font-size: 40px !important;
+    margin: 25% 0% 0% 0%;
+  }
+
+  .parchment {
+    left: -20%;
+    top: -7%;
+    width: 90%;
+  }
+
+  .parchment-secondary {
+    width: 120%;
+    height: 120%;
+    opacity: 1;
+    left: 8%;
+    top: -15%;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 900px) {
  
   .parchment-text-title {
     font-size: 90px;
@@ -430,7 +571,7 @@ button {
 
   .how-work {
     margin: 45% 0% 0% 0% !important;
-    font-size: 19px !important;
+    font-size: 19px;
     width: 50%;
     height: 60%;
   }
@@ -451,6 +592,16 @@ button {
     margin: 45% 0% 0% 0%;
   }
 
+}
+
+@media only screen and (min-width: 360px) and (min-height: 650px) and (max-height: 999px) {
+  .login-wrap {
+    margin: 55% 0% 0% 0% !important;
+  }
+
+  .how-work {
+    font-size: 19px !important;
+  }
 }
 
 @media only screen and (max-width: 399px) {
@@ -493,7 +644,7 @@ button {
 
   .how-work { 
     margin: 45% 0% 0% 0% !important;
-    font-size: 18px !important;
+    font-size: 16px;
   }
 
   .login-html { 
@@ -522,7 +673,7 @@ button {
 @media only screen and (max-width: 320px) {
 
   .how-work {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 
   .group label {
@@ -534,3 +685,4 @@ button {
   }
 
 }
+

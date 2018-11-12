@@ -27,7 +27,7 @@ import LanguagesBtn from '../../components/presentation/LanguagesBtn'
 const Login = (props) => {
 
   const { errorAcess, stopAnimeted, LoginForm, HowWork, language } = props;
-  console.log(language)
+
   const create = (user) => {
     props.createUser(user)
   }
@@ -61,11 +61,11 @@ const Login = (props) => {
           </span>
 
           <div className="parchment-text-title">
-            <span class="animated infinite flash slower" id="title"> { language.title } </span>
+            <span className="animated infinite flash slower" id="title"> { language.title } </span>
           </div>
 
           <div className="parchment-text-welcome">
-            <span class="animated zoomIn delay-3s"
+            <span className="animated zoomIn delay-3s"
               onAnimationIterationCapture={stopAnimeted} id="welcome">  { language.welcome } </span>
           </div>
 
@@ -98,7 +98,7 @@ const Login = (props) => {
         <div className="parchment-secondary animated bounceInDown">
           <div className="how-work">
 
-            { language.contentHowWork.map(element => <p> {element} </p> ) }
+            { language.contentHowWork.map( (element, index) => <p key={index}> {element} </p> ) }
 
             <Footer tooltipGit={language.tooltipGit} tooltipFacebook={language.tooltipFacebook} tooltipLinkedin={language.tooltipLinkedin} color={'styles.color'}></Footer>
 

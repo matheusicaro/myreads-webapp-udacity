@@ -129,7 +129,7 @@ span {
 
     .header-menu-btn {
         display: flex;
-        margin: 13% 0% 0% 0%;
+        margin: 13% 0% 0% 5%;
     }
     
     .header-navegate {
@@ -166,7 +166,7 @@ span {
 
     .header-menu-btn {
         display: flex;
-        margin: 12% 0% 0% 0%;
+        margin: 12% 0% 0% 5%;
     }
 
     .header {
@@ -257,7 +257,6 @@ span {
     }
 
     .header-title {
-        width: 100% !important;
         font-size: 30px !important;
     }
 }
@@ -273,7 +272,6 @@ span {
     }
 
     .header-title {
-        width: 75%;
         font-size: 35px;
     }
 
@@ -286,7 +284,6 @@ span {
 @media only screen and (min-width: 1220px) and (max-width: 1500px) { 
 
     .header-title {
-        width: 75%;
         font-size: 50px;
     }
 }

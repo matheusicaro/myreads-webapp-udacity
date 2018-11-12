@@ -89,8 +89,6 @@ class SearchContainer extends Component {
 
   verifyReturnUpdate = (status) =>{
 
-    window.alert("FAZER POP-UP ERROR NA PAGINA")
-
     // ERROR IN RETURN API
     if(status !== 200) {
       this.setState( currentState => ({ books: currentState.oldBooks }));

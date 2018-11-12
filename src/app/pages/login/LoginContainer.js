@@ -34,7 +34,7 @@ class LoginContainer extends Component {
         const { users } = this.state;
 
         if(users.length > 0) {
-            users.map(userdb =>{
+            users.forEach(userdb =>{
                 if(userdb.email === user.email)
                     if(userdb.pass === user.pass)
                         this.props.isLogged(true)

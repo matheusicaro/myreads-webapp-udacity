@@ -31,7 +31,7 @@ export default class UpdateMoveAPI {
         // PERCORE ALL THE ELEMENTS AND CHECK IF THE BOOK IS IN THE SHELF,
         // CASE WAS NOT FOUND, LAUNCH ERROR AND RETURN TRUE
         for (const key in result) {
-            result[key].map(bookId => {
+            result[key].forEach(bookId => {
                 if (bookId === id) isError = false
             })
         }

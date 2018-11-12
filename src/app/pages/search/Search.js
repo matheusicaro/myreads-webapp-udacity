@@ -72,7 +72,7 @@ DrawerMenu.propTypes = {
     moveBookCategorie: PropTypes.func,
     isLoading: PropTypes.bool,
     isDisabledInput: PropTypes.func,
-    actionSearchTip: PropTypes.func.isRequired,
+    actionSearchTip: PropTypes.func,
     books: PropTypes.array,
     contentsMenuDrawer: PropTypes.array,
 };

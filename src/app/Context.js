@@ -6,7 +6,7 @@ export const MyContext = React.createContext()
 // Then create a Provider Component
 export class MyProvider extends Component {
   state = {
-    auth: true,
+    auth: false,
     language: 'pt-BR',
     styleHide: {},
     loading: false,

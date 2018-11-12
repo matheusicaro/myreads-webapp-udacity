@@ -14,8 +14,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import './app/styles/index.css';
 
-
-
 const App = () => {
     return (
       <MyProvider>
@@ -30,10 +28,6 @@ const App = () => {
     )
   }
   
-
-
-
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

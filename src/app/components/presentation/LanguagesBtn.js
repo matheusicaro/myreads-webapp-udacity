@@ -26,9 +26,15 @@ const ButtonsTranslate = (props) => {
     return (
         <React.Fragment>
             <span style={{ display: 'flex' }}>
-                <div className="b-hover b-hover-overwrite IconButton"> <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} /> </div>
-                <div className="b-hover b-hover-overwrite IconButton"> <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} /> </div>
-                <div className="b-hover b-hover-overwrite IconButton"> <IconButton style={styles.icon.spain} onClick={changeToEs} tooltip={button.ES} /> </div>
+                <div className="b-hover b-hover-overwrite IconButton"> 
+                    <IconButton style={styles.icon.brazil} onClick={changeToBr} tooltip={button.BR} tooltipStyles={styles.tooltip}/>
+                </div>
+                <div className="b-hover b-hover-overwrite IconButton">
+                    <IconButton style={styles.icon.usa} onClick={changeToEn} tooltip={button.EN} tooltipStyles={styles.tooltip}/> 
+                </div>
+                <div className="b-hover b-hover-overwrite IconButton">
+                    <IconButton style={styles.icon.spain} onClick={changeToEs} tooltip={button.ES} tooltipStyles={styles.tooltip}/> 
+                </div>
             </span>
         </React.Fragment>
     )
@@ -38,6 +44,10 @@ export default ButtonsTranslate
 
 
 const styles = {
+    
+    tooltip: {
+        background: 'rgba(0,0,0,0)'
+    },
 
     icon: {
         brazil: {
