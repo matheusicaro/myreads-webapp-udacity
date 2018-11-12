@@ -28,16 +28,22 @@ const BookAdd = ({ moveBook, language, page }) => {
 
   const click = (event) => {
 
+    console.dir(event.target.innerHTML)
     let categorie = event.target.innerHTML;
 
+    
     if (categorie === 'move to Currently Reading' 
-        || categorie === 'mover para Leitura atual') categorie = 'currentlyReading'
+        || categorie === 'mover para Lendo Atualmente'
+        || categorie === 'mover a Leyendo Actualmente') categorie = 'currentlyReading'
     else if (categorie === 'move to Want to Read' 
-          ||  categorie === 'mover para Deseja Ler') categorie = 'wantToRead'
+          ||  categorie === 'mover para Quero Ler'
+          ||  categorie === 'mover a Quiero Leer') categorie = 'wantToRead'
     else if (categorie === 'move to Read' 
-          ||  categorie === 'mover para Ler') categorie = 'read'
+          ||  categorie === 'mover para Ler'
+          ||  categorie === 'mover a Leer') categorie = 'read'
     else if (categorie === 'Remove' 
-          ||  categorie === 'Remover') categorie = 'remove'
+          ||  categorie === 'Remover'
+          ||  categorie === 'Quitar') categorie = 'remove'
 
     moveBook(categorie);
   }
@@ -50,7 +56,7 @@ const BookAdd = ({ moveBook, language, page }) => {
       onItemClick={click}
       menuStyle={{style:{background:'red'}}}
     > 
-      <MenuItem primaryText={ language.currently }/>
+      <MenuItem primaryText={ language.currently } />
       <MenuItem primaryText={ language.want } />
       <MenuItem primaryText={ language.read } />
       <MenuItem primaryText={ language.remove } />
