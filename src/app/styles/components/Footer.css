@@ -1,0 +1,21 @@
+.footer-social {
+    display: grid;
+    align-self: center;
+    grid-gap: 5%;
+    align-items: center;
+    justify-content: center;
+    color: #b21412 !important;
+    width: 30%;
+}
+
+.footer-social-btn {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.footer-social-copyright {
+    font: menu !important;
+    margin: 2% 0% 1% 0%;
+    text-align: end;
+}

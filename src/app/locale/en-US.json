@@ -1,0 +1,107 @@
+{
+  "en-US": {
+    "header": {
+      "tooltipGit": "Repository on Github",
+      "tooltipLinkedin": "Matheus no Linkedin",
+      "tooltipFacebook": "Matheus on Facebook",
+      "title": "My Readings",
+      "home": "Access to Home",
+      "profile": "Edit Profile",
+      "logout": "Exit",
+      "addBooks": "Add Books",
+      "buttonLanguage": {
+        "BR": "change to PORTUGUESE",
+        "ES": "switch to SPANISH"
+      },
+      "drawerMenu": {
+        "tittle": "Menu",
+        "btnClose": "Close"
+      }
+    },
+    "home": {
+      "titleCurrently": "Currently Reading",
+      "titleWant": "I want to read",
+      "titleRead": "Read",
+      "book": {
+        "bookAdd": {
+          "currently": "move to Current Reading",
+          "want": "move to Want to Read",
+          "read": "move to read",
+          "remove": "Remove"
+        },
+        "bookDetails": {
+          "btnClose": "Close",
+          "btnDetails": "Details",
+          "authors": "Author:",
+          "categories": "Category:",
+          "language": "Language:",
+          "publishedIn": "Published in:",
+          "buy": "Click to buy"
+        }
+      }
+    },
+    "search": {
+      "inputPlaceHolder": "Type a category, name, or initials to find a book ...",
+      "drawerMenu": {
+        "btnWhatToSearch": "What to search",
+        "tittle": "Search Tips",
+        "text": "Search for books based on the categories below, or you can only put your initials as 'An', 'Ba', for example.",
+        "btnClose": "Close"
+      },
+      "book": {
+        "bookAdd": {
+          "currently": "move to Current Reading",
+          "want": "move to Want to Read",
+          "read": "move to read",
+          "remove": "remove"
+        },
+        "bookDetails": {
+          "btnClose": "Close",
+          "btnDetails": "Details",
+          "authors": "Author:",
+          "categories": "Category:",
+          "language": "Language:",
+          "publishedIn": "Published in:",
+          "buy": "Click to buy"
+        }
+      }
+    },
+    "login": {
+      "title": "My Readings",
+      "welcome": "Welcome!",
+      "howWork": "How does it work?",
+      "login": "enter",
+      "buttonLanguage": {
+        "BR": "change to PORTUGUESE",
+        "ES": "switch to SPANISH"
+      },
+      "contentHowWork": [
+        "My Readings is a bookcase application that allows you to select and categorize the books you have read, are currently reading or want to read.",
+        "This project was proposed by the React course conducted by Udacity in October 2018.",
+        "The project emphasizes using React and for more technical details of the application, check the repository in Github below."
+      ],
+      "tooltipGit": "Repository on Github",
+      "tooltipLinkedin": "Matheus no Linkedin",
+      "tooltipFacebook": "Matheus on Facebook",
+      "tooltipClose": "Close",
+      "formLogin": {
+        "inscribeClick": "> sign me up?",
+        "loginClick": "< Log in",
+        "labelPassword": "Password",
+        "labelEmail": "Your email",
+        "labelName": "Your name",
+        "btnRegister": "Sign me up",
+        "btnLogin": "Login"
+      }
+    },
+    "userProfile": {
+      "intro": "This page is under construction, so it is possible to implement functionalities such as:",
+      "topics": [
+        "Editing profile, data, profile photo, among others ...",
+        "The bookcase of each book will be saved in database, probably in Firebase, with this, each user can save his profile.",
+        "Alternation with social networks.",
+        "Among other news ..."
+      ]
+    }
+  }
+}

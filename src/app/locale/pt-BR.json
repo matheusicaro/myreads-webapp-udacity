@@ -1,0 +1,107 @@
+{
+    "pt-BR": {
+        "header": {
+            "tooltipGit": "Repositorio no Github",
+            "tooltipLinkedin": "Matheus no Linkedin",
+            "tooltipFacebook": "Matheus no Facebook",
+            "title": "Minhas Leituras",
+            "home": "Acessar a Home",
+            "profile": "Editar Perfil",
+            "logout": "Sair",
+            "addBooks": "Adicionar Livros",
+            "buttonLanguage": {
+                "EN": "mudar para INGLES",
+                "ES": "mudar para ESPANHOL"
+            },
+            "drawerMenu": {
+                "tittle": "Menu",
+                "btnClose": "Fechar"
+            }
+        },
+        "home": {
+            "titleCurrently": "Lendo Atualmente",
+            "titleWant": "Quero ler",
+            "titleRead": "Ler",
+            "book": {
+                "bookAdd": {
+                    "currently": "mover para Lendo Atualmente",
+                    "want": "mover para Quero Ler",
+                    "read": "mover para Ler",
+                    "remove": "Remover"
+                },
+                "bookDetails": {
+                    "btnClose": "Fechar",
+                    "btnDetails": "Detalhes",
+                    "authors": "Autor: ",
+                    "categories": "Categoria: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado em: ",
+                    "buy": "Clique para comprar"
+                }
+            }
+        },
+        "search": {
+            "inputPlaceHolder": "Digite uma categoria, nome, ou inicias para encontrar um livro...",
+            "drawerMenu": {
+                "btnWhatToSearch": "O que pesquisar",
+                "tittle": "Dicas para Pesquisar",
+                "text": "Busque por livros com base nas categorias abaixo, ou ainda, pode puscar apenas por suas iniciais como 'An', 'Ba', por exemplo.",
+                "btnClose": "Fechar"
+            },
+            "book": {
+                "bookAdd": {
+                    "currently": "mover para Lendo Atualmente",
+                    "want": "mover para Quero Ler",
+                    "read": "mover para Ler",
+                    "remove": "remover"
+                },
+                "bookDetails": {
+                    "btnClose": "Fechar",
+                    "btnDetails": "Detalhes",
+                    "authors": "Autor: ",
+                    "categories": "Categoria: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado em: ",
+                    "buy": "Clique para comprar"
+                }
+            }
+        },
+        "login": {
+            "title": "Minhas Leituras",
+            "welcome": "Bem Vindo!",
+            "howWork": "Como funciona?",
+            "login": "entrar",
+            "buttonLanguage": {
+                "EN": "mudar para INGLES",
+                "ES": "mudar para ESPANHOL"
+            },
+            "contentHowWork": [
+                "Minhas Leituras é um aplicativo de estante de livros que permite selecionar e categorizar os livros que leu, está lendo no momento ou deseja ler.",
+                "Este projeto foi proposto pelo curso de React realizado pela Udacity em Outubro de 2018.",
+                "O projeto enfatiza o uso do React e para mais detalhes tecnicos do aplicativo, verifique o repositorio no Github abaixo."
+            ],
+            "tooltipGit": "Repositorio no Github",
+            "tooltipLinkedin": "Matheus no Linkedin",
+            "tooltipFacebook": "Matheus no Facebook",
+            "tooltipClose": "Fechar",
+            "formLogin": {
+                "inscribeClick": "> me inscrever?",
+                "loginClick": "< Efetuar Login",
+                "labelPassword": "Senha",
+                "labelEmail": "Seu e-mail",
+                "labelName": "Seu nome",
+                "btnRegister": "Me inscrever",
+                "btnLogin": "Logar"
+            }
+        },
+        "userProfile": {
+            "intro": "Está página está em construção, assim que possivel será implementado funcionalidades como:",
+            "topics": [
+                "Edição do perfil, dados, foto de perfil, entre outros...",
+                "A estante de cada livro será salvo em banco de dados, provalvemente no Firebase, com isto, cada usuario poderá guardar o seu perfil.",
+                "Altentição com redes sociais.",
+                "Entre outras novidades..."
+            ]
+        }
+    }
+}

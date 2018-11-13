@@ -1,9 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
+// Import context provider
+import { MyProvider } from './app/Context'
+
+import Main from './app/Main';
+
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+import './app/styles/index.css';
+
+const App = () => {
+    return (
+      <MyProvider>
+        <BrowserRouter>
+         <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+
+            <Main />
+
+          </MuiThemeProvider>
+        </BrowserRouter>
+      </MyProvider>
+    )
+  }
+  
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,0 +1,85 @@
+.home-casesbook {
+    margin: 5%;
+}
+  
+.home {
+  padding: 0 2% 10%;
+}
+  
+@media (min-width: 600px) {
+  .bookshelf {
+    padding: 0 20px 40px;
+  }
+}
+  
+.bookshelf-title {
+  border-bottom: 10px solid #b21412;
+  padding: 2%;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  color: #b21412;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .topics {
+    margin: 7% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
+  }
+
+  .topics span {
+    font-size: 10px !important;
+  }
+
+  .bookshelf-title {
+    padding: 3% 0% 3% 0% !important;
+    font-size: 25px !important;
+  }
+
+  .home-book-case {
+    justify-content: end !important;
+    padding: 5px 0px 0px 10px !important;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+  
+  .topics {
+    margin: 7% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
+  }
+
+  .topics span {
+    font-size: 10px !important;
+  }
+
+  .bookshelf-title {
+    padding: 7% 0% 3% 0% !important;
+    font-size: 40px !important;
+  }
+
+  .home-book-case {
+    justify-content: end !important;
+    padding: 5px 0px 0px 10px !important;
+  }
+
+}
+
+@media only screen and (min-width: 901px) { 
+
+  .home {
+    padding: 0 2% 10%;
+  }
+
+  .topics {
+    margin: 0% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
+  }
+
+  .bookshelf-title {
+    padding: 5% 0% 1% 0% !important;
+    font-size: 40px;
+  }
+}

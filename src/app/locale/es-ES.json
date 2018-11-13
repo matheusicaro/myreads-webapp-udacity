@@ -1,0 +1,107 @@
+{
+    "es-ES": {
+        "header": {
+            "tooltipGit": "Repositorio en Github",
+            "tooltipLinkedin": "Matheus en el Linkedin",
+            "tooltipFacebook": "Matheus en Facebook",
+            "title": "Mis Lecturas",
+            "home": "Acceder a la casa",
+            "profile": "Editar perfil",
+            "logout": "Salir",
+            "addBooks": "Agregar libros",
+            "buttonLanguage": {
+                "BR": "cambiar a PORTUGUES",
+                "EN": "cambiar a INGLES"
+            },
+            "drawerMenu": {
+                "tittle": "Menú",
+                "btnClose": "Cerrar"
+            }
+        },
+        "home": {
+            "titleCurrently": "Leyendo Actualmente",
+            "titleWant": "Quiero leer",
+            "titleRead": "Leer",
+            "book": {
+                "bookAdd": {
+                    "currently": "mover a Leyendo Actualmente",
+                    "want": "mover a Quiero Leer",
+                    "read": "mover a Leer",
+                    "remove": "quitar"
+                },
+                "bookDetails": {
+                    "btnClose": "Cerrar",
+                    "btnDetails": "Detalles",
+                    "authors": "Autor: ",
+                    "categories": "Categoría: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado en: ",
+                    "buy": "Haga clic para comprar"
+                }
+            }
+        },
+        "search": {
+            "inputPlaceHolder": "Escriba una categoría, nombre, o iniciales para encontrar un libro ...",
+            "drawerMenu": {
+                "btnWhatToSearch": "Qué buscar",
+                "tittle": "Consejos para buscar",
+                "text": "Busque por libros en base a las categorías abajo, o aún, puede poner sólo por sus iniciales como 'An', 'Ba', por ejemplo.",
+                "btnClose": "Cerrar"
+            },
+            "book": {
+                "bookAdd": {
+                    "currently": "mover a Leyendo Actualmente",
+                    "want": "mover a Quiero Leer",
+                    "read": "mover a Leer",
+                    "remove": "quitar"
+                },
+                "bookDetails": {
+                    "btnClose": "Cerrar",
+                    "btnDetails": "Detalles",
+                    "authors": "Autor: ",
+                    "categories": "Categoría: ",
+                    "language": "Idioma: ",
+                    "publishedIn": "Publicado en: ",
+                    "buy": "Haga clic para comprar"
+                }
+            }
+        },
+        "login": {
+            "title": "Mis Lecturas",
+            "welcome": "Bienvenida!",
+            "howWork": "Cómo funciona?",
+            "login": "entrar",
+            "buttonLanguage": {
+                "BR": "cambiar a PORTUGUES",
+                "EN": "cambiar a INGLES"
+            },
+            "contentHowWork": [
+                "Mis lecturas es una aplicación de estante de libros que permite seleccionar y categorizar los libros que ha leído, está leyendo en el momento o desea leer.",
+                "Este proyecto fue propuesto por el curso de React realizado por la Udacity en Octubre de 2018.", 
+                "El proyecto enfatiza el uso de React y para más detalles técnicos de la aplicación, verifique el repositorio en el Github abajo."
+            ],
+            "tooltipGit": "Repositorio en Github",
+            "tooltipLinkedin": "Matheus en el Linkedin",
+            "tooltipFacebook": "Matheus en Facebook",
+            "tooltipClose": "Cerrar",
+            "formLogin": {
+                "inscribeClick": "> me inscriben?",
+                "loginClick": "< Inicio de sesión",
+                "labelPassword": "Contraseña",
+                "labelEmail": "Su e-mail",
+                "labelName": "Su nombre",
+                "btnRegister": "Me inscribo",
+                "btnLogin": "Logar"
+            }
+        },
+        "userProfile": {
+            "intro": "Esta página está en construcción, así que posible se implementarán funcionalidades como:",
+            "topics": [
+                "Edición del perfil, datos, foto de perfil, entre otros ...",
+                "La estantería de cada libro se guardará en la base de datos, proferidamente en el Firebase, con esto, cada usuario podrá guardar su perfil.",
+                "Altentición con redes sociales.",
+                "Entre otras novedades ..."
+            ]
+        }
+    }
+}
