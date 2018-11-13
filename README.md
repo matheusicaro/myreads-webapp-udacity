@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MY READS UDACITY - v1.0#
 
-## Available Scripts
+In the MyReads project, it is a bookcase application that allows you to select and categorize the books you have read, are currently reading or want to read. The project emphasizes using React to create the application.
 
-In the project directory, you can run:
+Also, this app uses a back-end API that is a virtual library made available by Udacity, which consists of hundreds of books to be queried and persists as you interact with the application.
 
-### `npm start`
+### Starting from scratch ###
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application started through the Create React App to create a new React application. However, all visual styles and design, were proposed by myself, Matheus Icarus.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### App Functionality ###
 
-### `npm test`
+In this application, the main page displays a list of "shelves" (ie categories), each containing a number of books. The three shelves are:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Currently reading
+* I want to read
+* Read
 
-### `npm run build`
+Each book has a control that allows you to select the bookcase from that book. When you select a different shelf, the book is moved there.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Future Projects ###
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+This project is still under development and will in the future have new features and bug fixes, especially for mobile devices, soon v2.0 version.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Live Demo
 
-### `npm run eject`
+* [Demo](http://myreads-udacity.mybluemix.net/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![desktops](https://user-images.githubusercontent.com/29001162/48417441-ebcc7f80-e739-11e8-9624-ff9c4b7ef3f7.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![mobile](https://user-images.githubusercontent.com/29001162/48417450-f2f38d80-e739-11e8-9dd8-0fa996be756c.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How to build the project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 1. Install project dependencies
 
-## Learn More
+```bash
+npm install
+```
+## How to run the project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
+Go to http://localhost:3000.
