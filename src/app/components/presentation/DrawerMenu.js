@@ -1,42 +1,41 @@
 /*
 * DESCRIPTION
 *
-* This component is responsible for demonstrating information on how to perform the research of books, 
+* This component is responsible for demonstrating information on how to perform the research of books,
 * is activated by a click controlled by 'isOpen'.
 *
 * Author: Matheus Icaro - matheusicaro2@hotmail.com
 *
 */
 
-import React from 'react';
-import Drawer from 'material-ui/Drawer';
-import IconButton from 'material-ui/IconButton';
-import Clear from 'material-ui/svg-icons/content/clear';
-import FlatButton from 'material-ui/FlatButton';
+import React from 'react'
+import Drawer from 'material-ui/Drawer'
+import IconButton from 'material-ui/IconButton'
+import Clear from 'material-ui/svg-icons/content/clear'
+import FlatButton from 'material-ui/FlatButton'
 
 import '../../styles/components/DrawerMenu.css'
 
 const DrawerMenu = (props) => {
-
-  const { isOpen, topicsMenuDrawer, language, icon, openRigth, width, styleButton } = props;
-  const handleToggle = () => props.actionOpen(!isOpen);
+  const { isOpen, topicsMenuDrawer, language, icon, openRigth, width, styleButton } = props
+  const handleToggle = () => props.actionOpen(!isOpen)
 
   return (
     <div>
 
       <FlatButton
         label={(language.btnWhatToSearch) ? language.btnWhatToSearch : ''}
-        labelPosition="before"
-        primary={true}
+        labelPosition='before'
+        primary
         onClick={handleToggle}
         icon={icon}
-        style={ (styleButton) ? styleButton.root : {}}
-        hoverColor={ (styleButton) ? styleButton.hover : ''}
+        style={(styleButton) ? styleButton.root : {}}
+        hoverColor={(styleButton) ? styleButton.hover : ''}
       />
 
-      <Drawer width={ (width) ? width : '40%'} openSecondary={openRigth} open={isOpen}>
+      <Drawer width={(width) || '40%'} openSecondary={openRigth} open={isOpen}>
 
-        <div className="menu-title">
+        <div className='menu-title'>
           <IconButton tooltip={language.btnClose}>
             <Clear onClick={handleToggle} color='#b21412' />
           </IconButton>
@@ -44,7 +43,7 @@ const DrawerMenu = (props) => {
           <h1> {language.tittle} </h1>
         </div>
 
-        <div className="menu-body" onClick={handleToggle}>
+        <div className='menu-body' onClick={handleToggle}>
 
           {(language.text) ? language.text : ''}
 
@@ -52,25 +51,25 @@ const DrawerMenu = (props) => {
             Array.isArray(topicsMenuDrawer) ? (
               <ul>
                 { topicsMenuDrawer.map((topics, index) => (
-                    <li key={index} style={styles.li}>  {topics} </li>
+                  <li key={index} style={styles.li}>  {topics} </li>
                 ))}
               </ul>
-            
+
             ) : (topicsMenuDrawer)
           }
         </div>
       </Drawer>
 
     </div>
-  );
+  )
 }
 
 export default DrawerMenu
 
-  const styles = {
+const styles = {
 
   li: {
-    padding: '0% 0% 1.5% 0%',
+    padding: '0% 0% 1.5% 0%'
   },
 
   body: {
@@ -101,15 +100,10 @@ export default DrawerMenu
     userSelect: 'none',
     overflow: 'hidden',
     backgroundColor: 'rgba(0, 0, 0, 0)',
-    textAlign: 'center',
+    textAlign: 'center'
   },
 
   rasedButton: {
     boxShadow: '0'
   }
 }
-
-
-
-
-

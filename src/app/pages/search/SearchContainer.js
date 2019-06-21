@@ -2,9 +2,9 @@
 * DESCRIPTION
 *
 * Component responsible for the logic of the data passed
-* in the visualization component 'Search'. The data is updated 
+* in the visualization component 'Search'. The data is updated
 * before the call in the api for a performasse in the front end,
-* soon after the update, in the last life cycle of the 
+* soon after the update, in the last life cycle of the
 * React update, the call is made in the api, and in case of an
 * error is informed to the user if no, the user did not notice
 * a communication delay.
@@ -16,38 +16,36 @@
 import React, { Component } from 'react'
 
 import { search } from '../../api/BooksAPI'
-import UpdateMoveAPI from '../../api/utils/UpdateMoveAPI';
+import UpdateMoveAPI from '../../api/utils/UpdateMoveAPI'
 
-import Search from './Search';
+import Search from './Search'
 
 class SearchContainer extends Component {
- 
-  constructor() {
-    super()    
-    this.update = new UpdateMoveAPI();
+  constructor () {
+    super()
+    this.update = new UpdateMoveAPI()
     this.state = {
       query: '',
       books: '',
-      oldBooks:'',
+      oldBooks: '',
       loading: false,
       isDisabledInput: false,
       isOpenSearchTip: false,
       updateBooks: {
         book: '',
         newCategorieBook: '',
-        isUpdate: false,
-      },
+        isUpdate: false
+      }
     }
   }
 
   search = () => {
-    const { query } = this.state;
+    const { query } = this.state
 
-    this.setState({ loading: true, isDisabledInput: true });
+    this.setState({ loading: true, isDisabledInput: true })
 
     search(query).then(result => {
-
-      if (!result.length > 0) result = false;
+      if (!result.length > 0) result = false
       setTimeout(() => this.setState({ books: result, loading: false, isDisabledInput: false }), 1000)
     })
   }
@@ -65,12 +63,11 @@ class SearchContainer extends Component {
   }
 
   moveBookCategorie = (book, newCategorieBook) => {
+    const { books } = this.state
 
-    const { books } = this.state;
-
-    const index = books.indexOf(book);
-    books.splice(index, 1);
-    const newBooks = books;
+    const index = books.indexOf(book)
+    books.splice(index, 1)
+    const newBooks = books
 
     this.setState(currentState => ({
       books: newBooks,
@@ -87,34 +84,31 @@ class SearchContainer extends Component {
     this.setState({ isOpenSearchTip: isOpen })
   }
 
-  verifyReturnUpdate = (status) =>{
-
+  verifyReturnUpdate = (status) => {
     // ERROR IN RETURN API
-    if(status !== 200) {
-      this.setState( currentState => ({ books: currentState.oldBooks }));
+    if (status !== 200) {
+      this.setState(currentState => ({ books: currentState.oldBooks }))
       // TODO POP-UP
     }
 
-    // DO NOT USE SETSTATE NOT TO CALL THE METHODS OF THE REACT LIFE 
-    // CYCLE AS THIS REPRODUCTIVE VARIABLE DOES NOT NEED 
-    this.state.updateBooks.isUpdate = false;
+    // DO NOT USE SETSTATE NOT TO CALL THE METHODS OF THE REACT LIFE
+    // CYCLE AS THIS REPRODUCTIVE VARIABLE DOES NOT NEED
+    this.state.updateBooks.isUpdate = false
   }
 
-  componentDidUpdate() {
-
-    const { isUpdate } = this.state.updateBooks;
+  componentDidUpdate () {
+    const { isUpdate } = this.state.updateBooks
 
     if (isUpdate) {
-      const { book, newCategorieBook } = this.state.updateBooks;
-      this.verifyReturnUpdate( this.update.move(book, newCategorieBook) );
+      const { book, newCategorieBook } = this.state.updateBooks
+      this.verifyReturnUpdate(this.update.move(book, newCategorieBook))
     }
-
   }
 
-  render() {
-    const { language } = this.props;
-    const books = (this.state.books) ? (this.state.books) : (false);
-    const { isDisabledInput, loading, isOpenSearchTip } = this.state;
+  render () {
+    const { language } = this.props
+    const books = (this.state.books) ? (this.state.books) : (false)
+    const { isDisabledInput, loading, isOpenSearchTip } = this.state
 
     return (
       <Search
@@ -126,14 +120,12 @@ class SearchContainer extends Component {
         query={this.searchQuery}
         onKeyPress={this.searchBooks}
 
-
         isOpenSearchTip={isOpenSearchTip}
         contentsMenuDrawer={topicsMenuDrawer}
         actionSearchTip={this.isOpenSearchTip}
 
         language={language}
-      >
-      </Search>
+      />
     )
   }
 }
@@ -150,5 +142,5 @@ const topicsMenuDrawer = [
   ['Lahiri, Larsson, Learn, Literary Fiction, Make, Manage, Marquez, Money, Mystery'],
   ['Negotiate, Painting, Philosophy, Photography, Poetry, Production, Programming'],
   ['React, Redux, River, Robotics, Rowling, Satire, Science Fiction, Shakespeare, Singh, Swimming'],
-  ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development'],
+  ['Tale, Thrun, Time, Tolstoy, Travel, Ultimate, Virtual Reality, Web Development']
 ]

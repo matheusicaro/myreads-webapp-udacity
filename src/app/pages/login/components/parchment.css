@@ -1,0 +1,72 @@
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+
+
+}
+
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+.parchment-content {
+    height: 50% !important;
+    width: 70% !important;
+} 
+
+.parchment-text-title,
+.parchment-text-welcome,
+.parchment-button-click {
+  font-size: 30px !important;
+}
+
+}
+
+.parchment-content {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 60%;
+  width: 40%;
+  top: 20%;
+  position: relative;
+  z-index: 2;
+}
+
+.languagesBtn-overwrite:hover {
+  background-color: transparent !important;
+}
+
+.parchment-text-title {
+  font-size: 70px;
+  align-self: center;
+}
+
+.parchment-text-welcome {
+  font-size: 60px;
+}
+
+.parchment-button {
+  min-width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.parchment-button-click {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.parchment-button-click:hover {
+  border: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}

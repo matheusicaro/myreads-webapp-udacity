@@ -9,7 +9,7 @@ export class MyProvider extends Component {
     auth: false,
     language: 'pt-BR',
     styleHide: {},
-    loading: false,
+    loading: false
   }
 
   logon = (auth) => {
@@ -21,23 +21,23 @@ export class MyProvider extends Component {
       language: value
     })
   }
-  
+
   hideBackground = (value) => {
-    (value) ? this.setState({ styleHide: {display: 'none'} }) : this.setState({ styleHide: {} });
+    (value) ? this.setState({ styleHide: { display: 'none' } }) : this.setState({ styleHide: {} })
   }
 
   logout = () => {
     this.setState({ auth: false })
   }
 
-  render() {
+  render () {
     return (
       <MyContext.Provider value={{
         state: this.state,
         logon: this.logon,
         changeLanguage: this.changeLanguage,
         hideBackground: this.hideBackground,
-        logOut: this.logout,
+        logOut: this.logout
       }}>
 
         {this.props.children}

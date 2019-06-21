@@ -8,29 +8,28 @@
 *
 */
 
-import React from 'react';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import React from 'react'
+import Dialog from 'material-ui/Dialog'
+import FlatButton from 'material-ui/FlatButton'
+import RaisedButton from 'material-ui/RaisedButton'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageLinks, authors,
   infoLink, categories, description, bookLanguage, publishedDate, language }) => {
-
   const actions = [
     <FlatButton
       label={language.btnClose}
-      primary={true}
+      primary
       onClick={onRequestClose}
-    />,
-  ];
+    />
+  ]
 
   return (
     <div className='details'>
-      <RaisedButton buttonStyle={{borderRadius:'7px'}} 
-                    label={language.btnDetails} onClick={handleOpen} 
-                    style={styles.rasedButton} labelColor={styles.rasedButton.labelColor}
+      <RaisedButton buttonStyle={{ borderRadius: '7px' }}
+        label={language.btnDetails} onClick={handleOpen}
+        style={styles.rasedButton} labelColor={styles.rasedButton.labelColor}
       />
       <Dialog
         title={title}
@@ -42,21 +41,21 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
         bodyStyle={styles.bodyStyle}
       >
 
-        <h4> { (subtitle) ? (subtitle) : (title) } </h4>
+        <h4> { (subtitle) || (title) } </h4>
 
         <article>
           <span style={styles.imgDescription}>
-            <img src={imageLinks.smallThumbnail} alt="Avatar" />
+            <img src={imageLinks.smallThumbnail} alt='Avatar' />
           </span>
 
           {description}
         </article>
 
         <aside style={styles.infoAtributes.root}>
-          <div style={styles.infoAtributes.atribute }><b>{ language.authors }</b> {(authors) ? authors: '--' } </div>
-          <div style={styles.infoAtributes.atribute }><b>{ language.categories }</b> {(categories) ? categories: '--' } </div>
-          <div style={styles.infoAtributes.atribute }><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
-          <div style={styles.infoAtributes.atribute }><b>{ language.publishedIn }</b>  {(publishedDate) ? publishedDate: '--' } </div>
+          <div style={styles.infoAtributes.atribute}><b>{ language.authors }</b> {(authors) || '--' } </div>
+          <div style={styles.infoAtributes.atribute}><b>{ language.categories }</b> {(categories) || '--' } </div>
+          <div style={styles.infoAtributes.atribute}><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
+          <div style={styles.infoAtributes.atribute}><b>{ language.publishedIn }</b>  {(publishedDate) || '--' } </div>
           <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}> <b>{ language.buy }</b></a></div>
         </aside>
 
@@ -80,15 +79,15 @@ BookDetails.propTypes = {
   categories: PropTypes.array,
   description: PropTypes.string,
   language: PropTypes.object.isRequired,
-  publishedDate: PropTypes.string,
+  publishedDate: PropTypes.string
 
-};
+}
 
 const styles = {
 
   button: {
     marginRight: '0px',
-    float: 'right',
+    float: 'right'
   },
 
   title: {
@@ -98,32 +97,32 @@ const styles = {
 
   bodyStyle: {
     overflowY: 'scroll',
-    marginTop: '6%',
+    marginTop: '6%'
   },
 
   rasedButton: {
     boxShadow: '0',
     labelColor: '#b21412',
-    background:'transparent',
+    background: 'transparent'
   },
 
   imgDescription: {
     padding: '5px 15px 10px 0px',
-    float: 'left',
+    float: 'left'
   },
 
   infoAtributes: {
     root: {
-      padding: '3% 0% 0% 0%',
+      padding: '3% 0% 0% 0%'
     },
 
-    atribute:{
-      padding: '1% 0% 0% 0%',
-    }, 
-    
+    atribute: {
+      padding: '1% 0% 0% 0%'
+    },
+
     atributeLink: {
       padding: '1% 0% 0% 0%',
-      color:'#b21412',
+      color: '#b21412'
     }
   }
 }

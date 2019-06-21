@@ -1,0 +1,100 @@
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+.login-wrap {
+  margin: 35% 0% 0% 0% !important;
+}
+.buttons-sign-in-up button {
+  font-size: 45px !important;
+}
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+
+  .login-wrap {
+    margin: 35% 0% 0% 0% !important;
+  }
+  .buttons-sign-in-up button {
+    font-size: 35px !important;
+  }
+  
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+
+    .login-wrap {
+      margin: 35% 0% 0% 0% !important;
+    }
+    .buttons-sign-in-up button,
+    .login-form .group .label {
+      font-size: 25px !important;
+    }
+    
+}
+
+.login-wrap {
+  width: 50%; 
+  margin: 20% 0% 0% 0%;
+}
+
+.login-html{
+  width: 100%;
+  height: 100%;
+}
+
+.buttons-sign-in-up button {
+  background: none;
+  color: #ba2c2c;
+  border: none;
+  font-size: 60px;
+}
+
+.buttons-sign-in-up > button:hover {
+cursor: pointer
+}
+
+.hr{
+	height:2px;
+	margin: 30px 0 25px 0;
+	background:rgba(255,255,255,.2);
+}
+
+.login-form .group{
+	margin-bottom:15px;
+}
+
+.group button {
+  font-size: 30px,
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+  width: 70%;
+  display: block;
+}
+
+.input {
+  color: black
+}
+
+.login-form .group .input,
+.login-form .group .button{
+  border: none;
+  padding: 8px 13px;
+  background: rgba(255,255,255,.3);
+}
+
+.login-form .group .label {
+  color: #ba2c2c;
+  font-size: 40px;
+}
+.login-form .group .button{
+  background: #ba2c2c;
+  border-radius: 6px;
+}
+
+.button {
+  color: #bbb;
+  font-size: 25px;
+}

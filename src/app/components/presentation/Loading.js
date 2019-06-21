@@ -7,24 +7,24 @@
 *
 */
 
-import React from 'react';
-import CircularProgress from 'material-ui/CircularProgress';
+import React from 'react'
+import CircularProgress from 'material-ui/CircularProgress'
 
 const Loading = () => (
   <div style={styles}>
-    <CircularProgress style={styles.childre} color="#b21412" size={60} thickness={7} />
+    <CircularProgress style={styles.childre} color='#b21412' size={60} thickness={7} />
   </div>
-);
+)
 
-export default Loading;
+export default Loading
 
 const styles = {
   alignItems: 'center',
   height: '-webkit-fill-available',
 
-  childre:{
+  childre: {
     display: 'absolute',
     left: '50%',
-    top: '20%',
+    top: '20%'
   }
 }
