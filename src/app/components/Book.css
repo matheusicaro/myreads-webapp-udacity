@@ -1,0 +1,17 @@
+
+.book {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-top {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.cover img {
+  height: 150px;
+  width: 80%;
+}

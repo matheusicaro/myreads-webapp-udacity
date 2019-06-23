@@ -13,12 +13,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../styles/pages/Search.css'
+import './Search.css'
 
 // Import Components
-import BookCase from '../../components/presentation/BookCase'
-import Loading from '../../components/presentation/Loading'
-import DrawerMenu from '../../components/presentation/DrawerMenu'
+import { BookCase, Loading, DrawerMenu } from '../../components'
 import Arrow from 'material-ui/svg-icons/action/help'
 import searchGif from '../../media/gifs/search-help.gif'
 

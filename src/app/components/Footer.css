@@ -1,0 +1,14 @@
+.xfooter-container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  align-content: center;
+}
+
+.xfooter-text {
+  color: white;
+  font: menu;
+  font-size: 1em;
+}

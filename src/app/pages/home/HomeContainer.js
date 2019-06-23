@@ -17,11 +17,12 @@ import Home from './Home'
 import { getAll } from '../../api/BooksAPI'
 import UpdateMoveAPI from '../../api/utils/UpdateMoveAPI'
 
-import Loading from '../../components/presentation/Loading'
+import { Loading } from '../../components'
 
 class HomeContainer extends Component {
-  constructor () {
+  constructor (props) {
     super()
+    if (!props.background) props.changeStyle(true)
     this.update = new UpdateMoveAPI()
     this.state = {
       books: '',

@@ -11,9 +11,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import '../../styles/pages/Home.css'
+import './Home.css'
 
-import BookCase from '../../components/presentation/BookCase'
+import { BookCase } from '../../components'
 import FlatButton from 'material-ui/FlatButton'
 
 const Home = ({ books, moveBookCategorie, language, styleHide }) => {
@@ -29,45 +29,37 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
     else if (element.shelf === 'read') booksRead.push(element)
   })
 
-  const scrollMove = (event) => {
-    const topic = event.target.textContent
-    const height = (document.body.scrollHeight) / 3
-
-    if (topic === 'Quero ler' || topic === 'Want To Read' || topic === 'Quiero leer') window.scroll(0, (height))
-    else if (topic === 'Read' || topic === 'Ler' || topic === 'Leer') window.scroll(0, (height * 3.5))
-    else if (topic === 'Currently Reading' || topic === 'Lendo Atualmente' || topic === 'Leyendo Actualmente') window.scroll(0, (height / 2.5))
-  }
+  const shelves = [
+    {
+      title: language.titleCurrently,
+      books: booksCurrentlyReading
+    },
+    {
+      title: language.titleWant,
+      books: booksWantToRead
+    },
+    {
+      title: language.titleRead,
+      books: booksRead
+    }
+  ]
 
   return (
     <section className='home' style={(styleHide) || {}}>
 
-      <div className='topics'>
-        <FlatButton label={`> ${language.titleCurrently}`} primary onClick={scrollMove} style={{ background: '#ffffff0f' }} />
-        <FlatButton label={language.titleWant} primary onClick={scrollMove} />
-        <FlatButton label={language.titleRead} primary onClick={scrollMove} />
-      </div>
-
-      <div className='bookshelf-title'>{language.titleCurrently}</div>
-      <BookCase classes='home-book-case' books={booksCurrentlyReading} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCase} />
-
-      <div className='topics'>
-        <FlatButton label={language.titleCurrently} primary onClick={scrollMove} />
-        <FlatButton label={`> ${language.titleWant}`} primary onClick={scrollMove} style={{ background: '#ffffff0f' }} />
-        <FlatButton label={language.titleRead} primary onClick={scrollMove} />
-      </div>
-
-      <div className='bookshelf-title'>{language.titleWant}</div>
-      <BookCase classes='home-book-case' books={booksWantToRead} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCase} />
-
-      <div className='bookshelf-title'>{language.titleRead}</div>
-      <BookCase classes='home-book-case' books={booksRead} moveBookCategorie={moveBookCategorie} language={language.book} styles={styles.bookCaseLast} />
-
-      <div className='topics'>
-        <FlatButton label={language.titleCurrently} primary onClick={scrollMove} style={{ margin: '5% 5% 0% 0% !important' }} />
-        <FlatButton label={language.titleWant} primary onClick={scrollMove} />
-        <FlatButton label={`> ${language.titleRead}`} primary onClick={scrollMove} style={{ background: '#ffffff0f' }} />
-      </div>
-
+      { shelves.map(({ title, books }) => (
+        <div>
+          <h3 className='bookshelf-title'>{title}</h3>
+          <BookCase
+            classes='home-book-case'
+            books={books}
+            moveBookCategorie={moveBookCategorie}
+            language={language.book}
+            styles={styles.bookCase}
+          />
+        </div>
+      ))
+      }
     </section>
   )
 }
@@ -87,7 +79,7 @@ const styles = {
       textAlign: 'center',
       overflowX: 'auto',
       marginTop: '4%',
-      margin: '5% 5% 15% 5%',
+      margin: '5% 5% 0%',
       position: 'relative'
     }
   },

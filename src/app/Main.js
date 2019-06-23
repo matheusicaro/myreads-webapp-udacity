@@ -1,61 +1,79 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 // Import Context
 import { MyContext } from './Context'
 
-import HeaderContainer from './components/container/HeaderContainer'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
-// Import pages
 import Home from '../app/pages/home/HomeContainer'
 import Search from '../app/pages/search/SearchContainer'
 import Login from './pages/login/LoginContainer'
 import User from './pages/user/UserContainer'
+import { HeaderContainer as Header } from './components/header'
 
 // Import Languages
 import * as translations from './locale'
 
-import './styles/slide-background.css'
+import './Main.css'
 
-const Main = () => {
-  const isAuthorized = ({ changeLanguage, logOut, state, hideBackground }) => {
+class Main extends Component {
+  state = { background: true, isDarkTheme: false }
+
+  setBackground = (value) => this.setState({ background: value })
+
+  isAuthorized = ({ changeLanguage, logOut, state, hideBackground }) => {
     const { home, search, header, userProfile } = translations[state.language]
+
+    const homeScreen = () => <Home language={home} styleHide={state.styleHide} changeStyle={this.setBackground} background={this.state.background} />
+    const searchScreen = () => <Search language={search} changeStyle={this.setBackground} background={this.state.background} />
+    const userScreen = () => <User language={userProfile} changeStyle={this.setBackground} background={this.state.background} />
+
+    const none = {}
+    const extendBackground = { 'position': 'relative' }
+
+    const changeTheme = () => this.setState({ isDarkTheme: !this.state.isDarkTheme })
 
     return (
       <section>
-        <div className='loader slider' style={style.backgroungImage} />
-        <HeaderContainer changeLanguage={changeLanguage} logout={logOut} language={header} background={hideBackground} />
-        <Route exact path='/' render={() => <Home language={home} styleHide={state.styleHide} />} />
-        <Route exact path='/search' render={() => <Search language={search} />} />
-        <Route exact path='/user-profile' render={() => <User language={userProfile} />} />
+
+        <div className='background slider' style={this.state.background ? extendBackground : none}>
+          <Header
+            changeLanguage={changeLanguage}
+            logout={logOut} language={header}
+            background={hideBackground}
+            changeTheme={changeTheme}
+          />
+
+          <Route exact path='/' render={homeScreen} />
+          <Route exact path='/search' render={searchScreen} />
+          <Route exact path='/user-profile' render={userScreen} />
+        </div>
 
       </section>
     )
   }
 
-  const notAuthorized = ({ logon, changeLanguage, state }) => {
+  notAuthorized = ({ logon, changeLanguage, state }) => {
     const { login } = translations[state.language]
     return <Route exact path='/' render={() => <Login isLogged={logon} language={login} changeLanguage={changeLanguage} />} />
   }
 
-  return (
-    <MyContext.Consumer>
-      {(context) => (
-        (context.state.auth) ? isAuthorized(context) : notAuthorized(context)
-      )}
-    </MyContext.Consumer>
-  )
+  render () {
+    const { isDarkTheme } = this.state
+    return (
+      <MuiThemeProvider muiTheme={isDarkTheme ? getMuiTheme(darkBaseTheme) : ''}>
+        <MyContext.Consumer>
+
+          {(context) => (
+            (context.state.auth) ? this.isAuthorized(context) : this.notAuthorized(context)
+          )}
+        </MyContext.Consumer>
+      </MuiThemeProvider>
+    )
+  }
 }
 
 export default Main
-
-const style = {
-
-  backgroungImage: {
-    width: '100%',
-    height: '100%',
-    position: 'fixed',
-    opacity: '0.2'
-  }
-
-}

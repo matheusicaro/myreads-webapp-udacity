@@ -7,22 +7,15 @@ import * as serviceWorker from './serviceWorker'
 import { MyProvider } from './app/Context'
 
 import Main from './app/Main'
-
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
-
-import './app/styles/index.css'
+import './index.css'
 
 const App = () => {
   return (
     <MyProvider>
       <BrowserRouter>
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
 
-          <Main />
+        <Main />
 
-        </MuiThemeProvider>
       </BrowserRouter>
     </MyProvider>
   )

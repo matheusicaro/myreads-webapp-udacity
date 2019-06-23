@@ -21,8 +21,10 @@ import UpdateMoveAPI from '../../api/utils/UpdateMoveAPI'
 import Search from './Search'
 
 class SearchContainer extends Component {
-  constructor () {
+  constructor (props) {
     super()
+    console.log(props.background)
+    if (!props.background) props.changeStyle(true)
     this.update = new UpdateMoveAPI()
     this.state = {
       query: '',
