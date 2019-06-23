@@ -11,9 +11,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Home.css'
+import './Home.scss'
 
 import { BookCase } from '../../components'
+import { MyContext } from '../../Context'
 
 const Home = ({ books, moveBookCategorie, language, styleHide }) => {
   if (books === '') { return '' }
@@ -44,22 +45,28 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
   ]
 
   return (
-    <section className='home' style={(styleHide) || {}}>
+    <MyContext.Consumer>
+      {({ state }) => (
 
-      { shelves.map(({ title, books }) => (
-        <div>
-          <h3 className='bookshelf-title'>{title}</h3>
-          <BookCase
-            classes='home-book-case'
-            books={books}
-            moveBookCategorie={moveBookCategorie}
-            language={language.book}
-            styles={styles.bookCase}
-          />
-        </div>
-      ))
-      }
-    </section>
+        <section className='home' style={(styleHide) || {}}>
+
+          { shelves.map(({ title, books }) => (
+            <div>
+              <h3 className={`bookshelf-title bookshelf-title-${state.theme}`}>{title}</h3>
+              <BookCase
+                classes='home-book-case'
+                books={books}
+                moveBookCategorie={moveBookCategorie}
+                language={language.book}
+                styles={styles.bookCase}
+              />
+            </div>
+          ))
+          }
+        </section>
+      )}
+
+    </MyContext.Consumer>
   )
 }
 

@@ -13,7 +13,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Search.css'
+import './Search.scss'
 
 // Import Components
 import { BookCase, Loading, DrawerMenu as SearchMenu } from '../../components'

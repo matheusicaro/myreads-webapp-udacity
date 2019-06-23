@@ -1,0 +1,30 @@
+
+@import '../../../index.scss';
+
+.book-details-DARK span,
+.book-details-DARK h3
+ {
+  @extend %dark-color;
+}
+
+.book-details-DARK span {
+  @extend %dark-color;
+}
+
+.book-details-DARK button {
+  @extend %dark-background-color;
+  border-radius: 9px !important;
+}
+
+.book-details-DARK button > div {
+  @extend %dark-background-color;
+  border-radius: 7px;
+}
+
+.book-details-background-DARK > div {
+  @extend %dark-background-color
+}
+
+.book-details-LIGHT span {
+  @extend %light-color;
+}

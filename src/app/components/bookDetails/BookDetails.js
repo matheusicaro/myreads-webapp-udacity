@@ -15,6 +15,10 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 import PropTypes from 'prop-types'
 
+import './BookDetails.scss'
+import { MyContext } from '../../Context'
+import { STYLES } from '../../constants'
+
 const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageLinks, authors,
   infoLink, categories, description, bookLanguage, publishedDate, language }) => {
   const actions = [
@@ -26,41 +30,60 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
   ]
 
   return (
-    <div className='details'>
-      <RaisedButton buttonStyle={{ borderRadius: '7px' }}
-        label={language.btnDetails} onClick={handleOpen}
-        style={styles.rasedButton} labelColor={styles.rasedButton.labelColor}
-      />
-      <Dialog
-        title={title}
-        actions={actions}
-        modal={false}
-        open={open}
-        onRequestClose={onRequestClose}
-        titleStyle={styles.title}
-        bodyStyle={styles.bodyStyle}
-      >
+    <MyContext.Consumer>
+      {({ state }) => {
+        const styles = {
+          title: {
+            marginBlockEnd: '-2em',
+            color: STYLES.theme.title[state.theme]
+          },
+          bodyStyle: {
+            marginTop: '6%',
+            color: STYLES.theme.text[state.theme]
+          }
+        }
 
-        <h4> { (subtitle) || (title) } </h4>
+        return (
+          <div className={`book-details-${state.theme}`}>
+            <RaisedButton buttonStyle={{ borderRadius: '7px' }}
+              label={language.btnDetails} onClick={handleOpen}
+              style={defaultStyles.rasedButton} labelColor={defaultStyles.rasedButton.labelColor}
+            />
+            <Dialog
+              title={title}
+              actions={actions}
+              modal={false}
+              open={open}
+              onRequestClose={onRequestClose}
+              titleStyle={styles.title}
+              contentClassName={`book-details-background-${state.theme}`}
+              autoScrollBodyContent
+              bodyStyle={styles.bodyStyle}
+            >
 
-        <article>
-          <span style={styles.imgDescription}>
-            <img src={imageLinks.smallThumbnail} alt='Avatar' />
-          </span>
+              <h4 style={defaultStyles.subtitle[state.theme]}> { (subtitle) || (title) } </h4>
 
-          {description}
-        </article>
+              <article>
+                <span style={defaultStyles.imgDescription}>
+                  <img src={imageLinks.smallThumbnail} alt='Avatar' />
+                </span>
 
-        <aside style={styles.infoAtributes.root}>
-          <div style={styles.infoAtributes.atribute}><b>{ language.authors }</b> {(authors) || '--' } </div>
-          <div style={styles.infoAtributes.atribute}><b>{ language.categories }</b> {(categories) || '--' } </div>
-          <div style={styles.infoAtributes.atribute}><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
-          <div style={styles.infoAtributes.atribute}><b>{ language.publishedIn }</b>  {(publishedDate) || '--' } </div>
-          <div style={styles.infoAtributes.atributeLink}> <a href={infoLink}> <b>{ language.buy }</b></a></div>
-        </aside>
+                {description}
+              </article>
 
-      </Dialog>
-    </div>
+              <aside style={defaultStyles.infoAtributes.root}>
+                <div style={defaultStyles.infoAtributes.atribute}><b>{ language.authors }</b> {(authors) || '--' } </div>
+                <div style={defaultStyles.infoAtributes.atribute}><b>{ language.categories }</b> {(categories) || '--' } </div>
+                <div style={defaultStyles.infoAtributes.atribute}><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
+                <div style={defaultStyles.infoAtributes.atribute}><b>{ language.publishedIn }</b>  {(publishedDate) || '--' } </div>
+                <div style={defaultStyles.infoAtributes.atributeLink}> <a href={infoLink}> <b>{ language.buy }</b></a></div>
+              </aside>
+
+            </Dialog>
+          </div>
+        )
+      }}
+    </MyContext.Consumer>
   )
 }
 
@@ -83,20 +106,20 @@ BookDetails.propTypes = {
 
 }
 
-const styles = {
+const defaultStyles = {
+
+  subtitle: {
+    DARK: {
+      color: 'white'
+    },
+    LIGHT: {
+      color: 'black'
+    }
+  },
 
   button: {
     marginRight: '0px',
     float: 'right'
-  },
-
-  title: {
-    marginBlockEnd: '-2em'
-  },
-
-  bodyStyle: {
-    overflowY: 'scroll',
-    marginTop: '6%'
   },
 
   rasedButton: {

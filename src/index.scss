@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+%dark-color {
+  color: rgb(0, 188, 212) !important;
+}
+
+%dark-svg-color {
+  fill: rgb(0, 188, 212) !important;
+}
+
+%dark-background-color {
+  background-color: #3e3d3d !important;
+}
+
+%dark-title-with-border  {
+  border-bottom: 10px solid #00bcd496 !important;
+}
+
+%light-color {
+  color: black !important;
+}
+
+%light-svg-color {
+  fill: black !important;
+}
+
+%light-title-with-border  {
+  border-bottom: 10px solid  black !important;
+}
+
+

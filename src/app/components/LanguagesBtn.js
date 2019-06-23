@@ -5,7 +5,7 @@ import Brazil from '../media/icons/brazil.svg'
 import USA from '../media/icons/usa.svg'
 import Spain from '../media/icons/spain.svg'
 
-import './LanguagesBtn.css'
+import './LanguagesBtn.scss'
 
 export const LanguagesBtn = (props) => {
   const changeToBr = () => {

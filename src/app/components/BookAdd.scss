@@ -1,0 +1,10 @@
+
+@import '../../index.scss';
+
+.book-add-DARK svg {
+  @extend %dark-color;
+}
+
+.book-add-LIGHT svg {
+  @extend %light-color;
+}

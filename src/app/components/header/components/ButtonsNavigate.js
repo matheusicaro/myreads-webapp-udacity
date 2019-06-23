@@ -7,7 +7,7 @@ import Search from 'material-ui/svg-icons/action/search'
 import { Icon } from '../../'
 import { ICONS } from '../../../media/icons/IconsSvg'
 
-import './ButtonsNavigate.css'
+import './ButtonsNavigate.scss'
 
 const ButtonsNavigate = ({ language }) => {
   return (
@@ -39,7 +39,7 @@ const ButtonsNavigate = ({ language }) => {
       </Link>
 
       <Link to='/search'>
-        <FlatButton label={language.addBooks} labelPosition='before' primary icon={<Search />} />
+        <FlatButton labelStyle={{ color: 'white' }} label={language.addBooks} labelPosition='before' primary icon={<Search />} />
       </Link>
 
     </div>

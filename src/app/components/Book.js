@@ -11,7 +11,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Book.css'
+import './Book.scss'
 
 import { BookDetailsContainer as BookDetails } from './bookDetails'
 import { BookAdd } from './'

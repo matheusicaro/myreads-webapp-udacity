@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { PATH } from './constants'
 
 // Create new context
 export const MyContext = React.createContext()
@@ -10,7 +11,7 @@ export class MyProvider extends Component {
     language: 'pt-BR',
     styleHide: {},
     loading: false,
-    theme: 'Dark'
+    theme: PATH.theme.dark
   }
 
   logon = (auth) => {
@@ -32,8 +33,8 @@ export class MyProvider extends Component {
   }
 
   changeTheme = () => {
-    const oldTheme = this.state.theme === 'Dark'
-    this.setState({ theme: (oldTheme ? 'Light' : 'Dark') })
+    const oldTheme = this.state.theme === PATH.theme.dark
+    this.setState({ theme: (oldTheme ? PATH.theme.light : PATH.theme.dark) })
   }
 
   render () {

@@ -1,0 +1,84 @@
+@import '../../../index.scss';
+@import url(https://fonts.googleapis.com/css?family=Lobster|Spicy+Rice);
+
+
+.header-menu-mobile-devices {
+  position: fixed;
+  left: 5%;
+  border: solid;
+  border-width: 1px;
+  border-color:  #00bcd496;
+  background: black;
+}
+.header-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  }
+
+.header-title {
+  font-family: 'Lobster', cursive;
+  font-size: 60px !important;
+  padding: 0% 5%;
+
+  margin-block-start: 1%;
+  margin-block-end: 1%;
+}
+
+.header-title > h2 {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.header-navigate-container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  align-content: center;
+}
+
+.header-footer,
+.header-navigate {
+  width: 15%
+}
+
+.header-title-DARK {
+  @extend %dark-color;
+}
+
+.header-footer-DARK svg,
+.header-navigate-DARK svg  {
+  @extend %dark-svg-color;
+}
+
+.header-footer-DARK h2,
+.header-navigate-DARK h2  {
+  @extend %dark-color;
+}
+
+.header-navigate-DARK h4  {
+  @extend %dark-color;
+}
+
+.header-title-LIGHT {
+  @extend %light-color;
+}
+
+.header-footer-LIGHT svg,
+.header-navigate-LIGHT svg  {
+  @extend %light-svg-color;
+}
+
+.header-footer-LIGHT h2,
+.header-navigate-LIGHT h2  {
+    @extend %light-color;
+}
+
+.header-navigate-LIGHT h4  {
+  @extend %light-color;
+}

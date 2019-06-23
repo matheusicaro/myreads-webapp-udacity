@@ -19,7 +19,7 @@ import ArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down'
 import PropTypes from 'prop-types'
 import { MyContext } from '../Context'
 
-import './styles.css'
+import './BookAdd.scss'
 
 /**
  * Simple Icon Menus demonstrating some of the layouts possible using the `anchorOrigin` and
@@ -49,13 +49,12 @@ export const BookAdd = ({ moveBook, language, page }) => {
   return (
     <MyContext.Consumer>
       {({ state }) => (
-        <div className={theme[state.theme]}>
+        <div className={`book-add-${state.theme}`}>
           <IconMenu
             iconButtonElement={<IconButton > { (page === 'search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
             anchorOrigin={styles.iconMenu}
             targetOrigin={styles.iconMenu}
             onItemClick={click}
-            menuStyle={{ style: { background: 'red' } }}
           >
             <MenuItem primaryText={language.currently} />
             <MenuItem primaryText={language.want} />
@@ -68,10 +67,6 @@ export const BookAdd = ({ moveBook, language, page }) => {
   )
 }
 
-const theme = {
-  Dark: 'Dark',
-  Light: 'Light'
-}
 const styles = {
   iconMenu: {
     horizontal: 'left',

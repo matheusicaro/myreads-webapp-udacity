@@ -14,7 +14,7 @@ import IconButton from 'material-ui/IconButton'
 import Clear from 'material-ui/svg-icons/content/clear'
 import FlatButton from 'material-ui/FlatButton'
 
-import './DrawerMenu.css'
+import './DrawerMenu.scss'
 
 export const DrawerMenu = (props) => {
   const { isOpen, topicsMenuDrawer, language, icon, openRigth, styleButton } = props

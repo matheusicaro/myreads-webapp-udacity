@@ -1,3 +1,5 @@
+@import '../../../index.scss';
+
 .home-casesbook {
     margin: 5%;
 }
@@ -9,7 +11,6 @@
   
 .bookshelf-title {
   margin-top: 5%;
-  border-bottom: 10px solid #afacac;
   text-align: center;
   font-family: Roboto, sans-serif;
   font-size: 40px;
@@ -17,3 +18,17 @@
   padding-bottom: 3%;
   margin-block-end: 0;
 }
+
+.bookshelf-title-DARK {
+  @extend %dark-color;
+  @extend %dark-title-with-border 
+
+}
+
+.bookshelf-title-LIGHT {
+  @extend %light-color;
+  @extend %light-title-with-border  
+}
+
+
+

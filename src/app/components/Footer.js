@@ -6,7 +6,7 @@ import IconButton from 'material-ui/IconButton'
 import { Icon } from './'
 import { ICONS } from '../media/icons/IconsSvg'
 
-import './Footer.css'
+import './Footer.scss'
 
 const url = {
   git: 'https://github.com/matheusicaro/my-reads-udacity',

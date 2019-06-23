@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker'
 import { MyProvider } from './app/Context'
 
 import Main from './app/Main'
-import './index.css'
+import './index.scss'
 
 const App = () => {
   return (

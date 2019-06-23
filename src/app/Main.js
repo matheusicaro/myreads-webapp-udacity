@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
-import { merge } from 'lodash'
-
 // Import Context
 import { MyContext } from './Context'
 
@@ -21,7 +19,7 @@ import { HeaderContainer as Header } from './components/header'
 // Import Languages
 import * as translations from './locale'
 
-import './Main.css'
+import './Main.scss'
 
 class Main extends Component {
   state = { background: true }
@@ -63,7 +61,7 @@ class Main extends Component {
     return (
       <section>
 
-        <div className='background slider' style={this.state.background ? extendBackground : none}>
+        <div className={`background background-${state.theme} slider`} style={this.state.background ? extendBackground : none}>
           <Header
             changeLanguage={changeLanguage}
             logout={logOut}
@@ -87,17 +85,20 @@ class Main extends Component {
   }
 
   render () {
-    const { isDarkTheme } = this.state
+    const theme = {
+      DARK: getMuiTheme(darkBaseTheme),
+      LIGHT: getMuiTheme(lightBaseTheme)
+    }
 
     return (
-      <MuiThemeProvider muiTheme={isDarkTheme ? getMuiTheme(darkBaseTheme) : getMuiTheme(lightBaseTheme)}>
-        <MyContext.Consumer>
+      <MyContext.Consumer>
+        {(context) => (
+          <MuiThemeProvider muiTheme={theme[context.state.theme]}>
+            { context.state.auth ? this.isAuthorized(context) : this.notAuthorized(context) }
 
-          {(context) => (
-            (context.state.auth) ? this.isAuthorized(context) : this.notAuthorized(context)
-          )}
-        </MyContext.Consumer>
-      </MuiThemeProvider>
+          </MuiThemeProvider>
+        )}
+      </MyContext.Consumer>
     )
   }
 }
