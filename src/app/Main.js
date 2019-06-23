@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
+import { merge } from 'lodash'
+
 // Import Context
 import { MyContext } from './Context'
 
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
@@ -20,21 +24,41 @@ import * as translations from './locale'
 import './Main.css'
 
 class Main extends Component {
-  state = { background: true, isDarkTheme: false }
+  state = { background: true }
 
   setBackground = (value) => this.setState({ background: value })
 
-  isAuthorized = ({ changeLanguage, logOut, state, hideBackground }) => {
+  isAuthorized = ({ changeLanguage, changeTheme, logOut, state, hideBackground }) => {
     const { home, search, header, userProfile } = translations[state.language]
 
-    const homeScreen = () => <Home language={home} styleHide={state.styleHide} changeStyle={this.setBackground} background={this.state.background} />
-    const searchScreen = () => <Search language={search} changeStyle={this.setBackground} background={this.state.background} />
-    const userScreen = () => <User language={userProfile} changeStyle={this.setBackground} background={this.state.background} />
+    const homeScreen = () => (
+      <Home
+        theme={state.theme}
+        language={home}
+        styleHide={state.styleHide}
+        changeStyle={this.setBackground}
+        background={this.state.background}
+      />
+    )
+    const searchScreen = () => (
+      <Search
+        theme={state.theme}
+        language={search}
+        changeStyle={this.setBackground}
+        background={this.state.background}
+      />
+    )
+    const userScreen = () => (
+      <User
+        theme={state.theme}
+        language={userProfile}
+        changeStyle={this.setBackground}
+        background={this.state.background}
+      />
+    )
 
     const none = {}
     const extendBackground = { 'position': 'relative' }
-
-    const changeTheme = () => this.setState({ isDarkTheme: !this.state.isDarkTheme })
 
     return (
       <section>
@@ -42,7 +66,8 @@ class Main extends Component {
         <div className='background slider' style={this.state.background ? extendBackground : none}>
           <Header
             changeLanguage={changeLanguage}
-            logout={logOut} language={header}
+            logout={logOut}
+            language={header}
             background={hideBackground}
             changeTheme={changeTheme}
           />
@@ -63,8 +88,9 @@ class Main extends Component {
 
   render () {
     const { isDarkTheme } = this.state
+
     return (
-      <MuiThemeProvider muiTheme={isDarkTheme ? getMuiTheme(darkBaseTheme) : ''}>
+      <MuiThemeProvider muiTheme={isDarkTheme ? getMuiTheme(darkBaseTheme) : getMuiTheme(lightBaseTheme)}>
         <MyContext.Consumer>
 
           {(context) => (

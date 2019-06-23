@@ -17,6 +17,9 @@ import AddCicle from 'material-ui/svg-icons/content/add-circle'
 import ArrowDown from 'material-ui/svg-icons/hardware/keyboard-arrow-down'
 
 import PropTypes from 'prop-types'
+import { MyContext } from '../Context'
+
+import './styles.css'
 
 /**
  * Simple Icon Menus demonstrating some of the layouts possible using the `anchorOrigin` and
@@ -44,29 +47,38 @@ export const BookAdd = ({ moveBook, language, page }) => {
   }
 
   return (
-    <IconMenu
-      iconButtonElement={<IconButton > { (page === 'search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
-      anchorOrigin={styles.iconMenu}
-      targetOrigin={styles.iconMenu}
-      onItemClick={click}
-      menuStyle={{ style: { background: 'red' } }}
-    >
-      <MenuItem primaryText={language.currently} />
-      <MenuItem primaryText={language.want} />
-      <MenuItem primaryText={language.read} />
-      <MenuItem primaryText={language.remove} />
-    </IconMenu>
+    <MyContext.Consumer>
+      {({ state }) => (
+        <div className={theme[state.theme]}>
+          <IconMenu
+            iconButtonElement={<IconButton > { (page === 'search') ? <AddCicle /> : <ArrowDown /> } </IconButton>}
+            anchorOrigin={styles.iconMenu}
+            targetOrigin={styles.iconMenu}
+            onItemClick={click}
+            menuStyle={{ style: { background: 'red' } }}
+          >
+            <MenuItem primaryText={language.currently} />
+            <MenuItem primaryText={language.want} />
+            <MenuItem primaryText={language.read} />
+            <MenuItem primaryText={language.remove} />
+          </IconMenu>
+        </div>
+      )}
+    </MyContext.Consumer>
   )
 }
 
-BookAdd.propTypes = {
-  moveBook: PropTypes.func
+const theme = {
+  Dark: 'Dark',
+  Light: 'Light'
 }
-
 const styles = {
-
   iconMenu: {
     horizontal: 'left',
     vertical: 'top'
   }
+}
+
+BookAdd.propTypes = {
+  moveBook: PropTypes.func
 }

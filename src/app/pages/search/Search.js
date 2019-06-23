@@ -16,7 +16,7 @@ import PropTypes from 'prop-types'
 import './Search.css'
 
 // Import Components
-import { BookCase, Loading, DrawerMenu } from '../../components'
+import { BookCase, Loading, DrawerMenu as SearchMenu } from '../../components'
 import Arrow from 'material-ui/svg-icons/action/help'
 import searchGif from '../../media/gifs/search-help.gif'
 
@@ -26,7 +26,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
 
       <div className='search-help'>
         <input placeholder={language.inputPlaceHolder} onChange={query} onKeyPress={onKeyPress} disabled={isDisabledInput} />
-        <DrawerMenu
+        <SearchMenu
           actionOpen={actionSearchTip}
           isOpen={isOpenSearchTip}
           topicsMenuDrawer={contentsMenuDrawer}
@@ -47,6 +47,7 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
             moveBookCategorie={moveBookCategorie}
             language={language.book}
             page='search'
+            styles={styles}
           />
           }
           {!books &&
@@ -60,9 +61,11 @@ const Search = ({ books, query, onKeyPress, moveBookCategorie, isLoading, isDisa
   )
 }
 
-export default Search
+const styles = {
+  bookStyle: { padding: '0% 4% 4% 0%', textAlign: 'left' }
+}
 
-DrawerMenu.propTypes = {
+SearchMenu.propTypes = {
 
   query: PropTypes.func,
   onKeyPress: PropTypes.func,
@@ -73,3 +76,5 @@ DrawerMenu.propTypes = {
   books: PropTypes.array,
   contentsMenuDrawer: PropTypes.array
 }
+
+export default Search

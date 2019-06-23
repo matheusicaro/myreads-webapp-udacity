@@ -9,7 +9,8 @@ export class MyProvider extends Component {
     auth: true,
     language: 'pt-BR',
     styleHide: {},
-    loading: false
+    loading: false,
+    theme: 'Dark'
   }
 
   logon = (auth) => {
@@ -30,6 +31,11 @@ export class MyProvider extends Component {
     this.setState({ auth: false })
   }
 
+  changeTheme = () => {
+    const oldTheme = this.state.theme === 'Dark'
+    this.setState({ theme: (oldTheme ? 'Light' : 'Dark') })
+  }
+
   render () {
     return (
       <MyContext.Provider value={{
@@ -37,7 +43,8 @@ export class MyProvider extends Component {
         logon: this.logon,
         changeLanguage: this.changeLanguage,
         hideBackground: this.hideBackground,
-        logOut: this.logout
+        logOut: this.logout,
+        changeTheme: this.changeTheme
       }}>
 
         {this.props.children}

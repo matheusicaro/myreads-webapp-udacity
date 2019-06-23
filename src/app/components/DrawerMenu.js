@@ -17,7 +17,7 @@ import FlatButton from 'material-ui/FlatButton'
 import './DrawerMenu.css'
 
 export const DrawerMenu = (props) => {
-  const { isOpen, topicsMenuDrawer, language, icon, openRigth, width, styleButton } = props
+  const { isOpen, topicsMenuDrawer, language, icon, openRigth, styleButton } = props
   const handleToggle = () => props.actionOpen(!isOpen)
 
   return (
@@ -33,7 +33,7 @@ export const DrawerMenu = (props) => {
         hoverColor={(styleButton) ? styleButton.hover : ''}
       />
 
-      <Drawer width={(width) || '40%'} openSecondary={openRigth} open={isOpen}>
+      <Drawer openSecondary={openRigth} open={isOpen}>
 
         <div className='menu-title'>
           <IconButton tooltip={language.btnClose}>

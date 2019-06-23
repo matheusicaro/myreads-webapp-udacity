@@ -21,6 +21,8 @@ export const BookCase = ({ books, moveBookCategorie, styles, classes, language, 
   let section = false
   if (styles && styles.hasOwnProperty('section')) { section = true }
 
+  const { bookStyle } = styles
+
   return (
 
     <section style={(section) ? (styles.section) : (stylesDefault.section)} >
@@ -28,7 +30,7 @@ export const BookCase = ({ books, moveBookCategorie, styles, classes, language, 
 
         {books.map((book, index) => (
 
-          <li style={stylesDefault.li} key={index}>
+          <li style={bookStyle || stylesDefault.bookStyle} key={index}>
             <Book book={book} moveBookCategorie={moveBookCategorie} language={language} page={page} />
           </li>
 
@@ -77,7 +79,7 @@ const stylesDefault = {
     justifyContent: 'end'
   },
 
-  li: {
+  bookStyle: {
     padding: '0% 4% 0% 0%',
     textAlign: 'left'
   }

@@ -45,13 +45,13 @@ const styles = {
     backgroundColor: '#808080'
   },
   trackOff: {
-    backgroundColor: '#696969'
+    backgroundColor: 'rgb(0, 188, 212)'
   },
   thumbSwitched: {
     backgroundColor: '#ffffff'
   },
   trackSwitched: {
-    backgroundColor: '#cecece'
+    backgroundColor: 'rgb(0, 188, 212)'
   }
 }
 

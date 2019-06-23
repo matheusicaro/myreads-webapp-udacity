@@ -89,7 +89,9 @@ class HomeContainer extends Component {
             books={books}
             moveBookCategorie={this.moveBookCategorie}
             language={language}
-            styleHide={styleHide} />}
+            styleHide={styleHide}
+          />
+          }
         </React.Fragment>
       )
     }

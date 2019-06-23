@@ -1,35 +1,3 @@
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: black;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: black;
-}
-
-
-@media only screen and (max-width: 900px) { 
-  
-  .search-help {
-    display: block !important;
-  }
-
-  .search-help input {
-    margin: 0% 2% 2% 0% !important;
-    width: 100% !important;
-  }
-}
-
-.search {
-  padding: 0 2% 10%;
-  position: sticky;
-  width: 100%;
-}
-
 .search-help {
   display: flex;
   align-items: center;
@@ -40,7 +8,7 @@
 
 input {
   width: 70%;
-  padding: 20px 20px 20px 60px;
+  padding: 1% 2% 1% 3%;
   margin: 0% 2% 0% 0%;
   background-image: url('../../media/icons/search.svg');
   background-repeat: no-repeat;
@@ -62,10 +30,9 @@ input {
 
 .search-book-case {
   list-style-type: none !important;
-  padding: 0 !important;
   margin: 0 !important;
 
-  display: flex !important;
+  display: flex;
   justify-content: center !important;
   flex-flow: wrap !important;
 }

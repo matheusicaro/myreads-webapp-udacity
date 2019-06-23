@@ -4,9 +4,3 @@
   -webkit-margin-before: 0em;
   margin-block-start: 0em;
 }
-
-.ButtonsNavigate-b-hover:hover {
-  color: #303030;
-  background-color: #303030;
-  border-radius: 5px;
-}

@@ -14,7 +14,6 @@ import PropTypes from 'prop-types'
 import './Home.css'
 
 import { BookCase } from '../../components'
-import FlatButton from 'material-ui/FlatButton'
 
 const Home = ({ books, moveBookCategorie, language, styleHide }) => {
   if (books === '') { return '' }
