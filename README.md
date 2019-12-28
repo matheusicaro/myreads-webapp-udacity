@@ -26,9 +26,9 @@ This project is still under development and will in the future have new features
 
 * [Demo](http://myreads-udacity.mybluemix.net/)
 
-![desktops](https://user-images.githubusercontent.com/29001162/48417441-ebcc7f80-e739-11e8-9624-ff9c4b7ef3f7.png)
-
-![mobile](https://user-images.githubusercontent.com/29001162/48417450-f2f38d80-e739-11e8-9dd8-0fa996be756c.jpg)
+![desktops](https://user-images.githubusercontent.com/29001162/71549145-5325ad00-2997-11ea-88a3-be19ca473c57.png)
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/29001162/71549155-66d11380-2997-11ea-9c73-5438d6e08c42.gif)
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/29001162/71549158-77818980-2997-11ea-912b-6e60123b6297.gif)
 
 ## How to build the project
 
