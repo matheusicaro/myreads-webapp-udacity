@@ -71,13 +71,13 @@ const BookDetails = ({ handleOpen, onRequestClose, open, title, subtitle, imageL
                 {description}
               </article>
 
-              <aside style={defaultStyles.infoAtributes.root}>
+              <section style={defaultStyles.infoAtributes.root}>
                 <div style={defaultStyles.infoAtributes.atribute}><b>{ language.authors }</b> {(authors) || '--' } </div>
                 <div style={defaultStyles.infoAtributes.atribute}><b>{ language.categories }</b> {(categories) || '--' } </div>
                 <div style={defaultStyles.infoAtributes.atribute}><b>{ language.language }</b>  {bookLanguage.toUpperCase()}</div>
                 <div style={defaultStyles.infoAtributes.atribute}><b>{ language.publishedIn }</b>  {(publishedDate) || '--' } </div>
-                <div style={defaultStyles.infoAtributes.atributeLink}> <a href={infoLink}> <b>{ language.buy }</b></a></div>
-              </aside>
+                <div style={defaultStyles.infoAtributes.atributeLink}> <a style={{color: '#3dc4ec'}} href={infoLink}> <b>{ language.buy }</b></a></div>
+              </section>
 
             </Dialog>
           </div>

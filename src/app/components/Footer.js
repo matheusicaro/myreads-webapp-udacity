@@ -26,8 +26,9 @@ export const Footer = ({ tooltipGit, tooltipLinkedin, tooltipFacebook, color }) 
       <h2 className='xfooter-text'> © Copyright 2018, Matheus Ícaro </h2>
 
       <div className=''>
-        { icons.map(icon => (
+        { icons.map((icon, i) => (
           <IconButton
+            key={i}
             tooltip={icon.tooltip}
             touch
             tooltipPosition='bottom-center'
@@ -59,5 +60,5 @@ Footer.propTypes = {
   tooltipGit: PropTypes.string.isRequired,
   tooltipFacebook: PropTypes.string.isRequired,
   tooltipLinkedin: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string
 }

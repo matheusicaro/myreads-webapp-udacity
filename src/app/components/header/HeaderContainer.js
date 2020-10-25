@@ -35,7 +35,6 @@ export class HeaderContainer extends Component {
     const { isOpenMenu } = this.state
 
     return (
-      <div>
         <Header
           isOpenMenu={isOpenMenu}
           actionOpenMenu={this.isOpenMenu}
@@ -44,7 +43,6 @@ export class HeaderContainer extends Component {
           logout={logout}
           changeTheme={changeTheme}
         />
-      </div>
     )
   }
 }

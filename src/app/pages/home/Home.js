@@ -16,7 +16,7 @@ import './Home.scss'
 import { BookCase } from '../../components'
 import { MyContext } from '../../Context'
 
-const Home = ({ books, moveBookCategorie, language, styleHide }) => {
+const Home = ({ books, moveBookCategorie, language }) => {
   if (books === '') { return '' }
 
   const booksCurrentlyReading = []
@@ -48,10 +48,10 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
     <MyContext.Consumer>
       {({ state }) => (
 
-        <section className='home' style={(styleHide) || {}}>
+        <React.Fragment>
 
           { shelves.map(({ title, books }) => (
-            <div>
+            <section key={title}>
               <h3 className={`bookshelf-title bookshelf-title-${state.theme}`}>{title}</h3>
               <BookCase
                 classes='home-book-case'
@@ -60,10 +60,10 @@ const Home = ({ books, moveBookCategorie, language, styleHide }) => {
                 language={language.book}
                 styles={styles.bookCase}
               />
-            </div>
+            </section>
           ))
           }
-        </section>
+        </React.Fragment>
       )}
 
     </MyContext.Consumer>

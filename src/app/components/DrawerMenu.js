@@ -21,7 +21,7 @@ export const DrawerMenu = (props) => {
   const handleToggle = () => props.actionOpen(!isOpen)
 
   return (
-    <div>
+    <React.Fragment>
 
       <FlatButton
         label={(language.btnWhatToSearch) ? language.btnWhatToSearch : ''}
@@ -35,32 +35,34 @@ export const DrawerMenu = (props) => {
 
       <Drawer openSecondary={openRigth} open={isOpen}>
 
-        <div className='menu-title'>
-          <IconButton tooltip={language.btnClose}>
-            <Clear onClick={handleToggle} />
-          </IconButton>
+        <div style={{padding: '20px'}}>
+          <header className='menu-title'>
+            <IconButton tooltip={language.btnClose}>
+              <Clear onClick={handleToggle} />
+            </IconButton>
 
-          <h1> {language.tittle} </h1>
-        </div>
+            <h1> {language.tittle} </h1>
+          </header>
 
-        <div className='menu-body' onClick={handleToggle}>
+          <section className='menu-body' onClick={handleToggle}>
 
-          {(language.text) ? language.text : ''}
+            {(language.text) ? language.text : ''}
 
-          {
-            Array.isArray(topicsMenuDrawer) ? (
-              <ul>
-                { topicsMenuDrawer.map((topics, index) => (
-                  <li key={index} style={styles.li}>  {topics} </li>
-                ))}
-              </ul>
+            {
+              Array.isArray(topicsMenuDrawer) ? (
+                <ul>
+                  { topicsMenuDrawer.map((topics, index) => (
+                    <li key={index} style={styles.li}>  {topics} </li>
+                  ))}
+                </ul>
 
-            ) : (topicsMenuDrawer)
-          }
+              ) : (topicsMenuDrawer)
+            }
+          </section>
         </div>
       </Drawer>
 
-    </div>
+    </React.Fragment>
   )
 }
 

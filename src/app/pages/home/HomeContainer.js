@@ -83,16 +83,15 @@ class HomeContainer extends Component {
       const { language, styleHide } = this.props
 
       return (
-        <React.Fragment>
+        <article className='home'>
           {loading && <Loading />}
           {!loading && <Home
             books={books}
             moveBookCategorie={this.moveBookCategorie}
             language={language}
-            styleHide={styleHide}
           />
           }
-        </React.Fragment>
+        </article>
       )
     }
 }

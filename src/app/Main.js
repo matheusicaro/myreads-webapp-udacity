@@ -59,9 +59,7 @@ class Main extends Component {
     const extendBackground = { 'position': 'relative' }
 
     return (
-      <section>
-
-        <div className={`background background-${state.theme} slider`} style={this.state.background ? extendBackground : none}>
+        <main className={`background background-${state.theme} slider`} style={this.state.background ? extendBackground : none}>
           <Header
             changeLanguage={changeLanguage}
             logout={logOut}
@@ -73,9 +71,7 @@ class Main extends Component {
           <Route exact path='/' render={homeScreen} />
           <Route exact path='/search' render={searchScreen} />
           <Route exact path='/user-profile' render={userScreen} />
-        </div>
-
-      </section>
+        </main>
     )
   }
 

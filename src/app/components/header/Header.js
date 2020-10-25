@@ -29,9 +29,9 @@ const Header = (props) => {
     <MyContext.Consumer>
       {({ state }) => (
 
-        <div className='header-container' style={{ }}>
+        <header className='header-container' style={{ }}>
 
-          <div className='header-menu-mobile-devices'>
+          <menu className='header-menu-mobile-devices'>
             <MenuToMobileDevices
               topicsMenuDrawer={getHeaderToMenuToMobileDevices}
               openRigth={false}
@@ -42,7 +42,7 @@ const Header = (props) => {
               width={'80%'}
               styleButton={{ root: { background: '#0000008a', borderRadius: '25px' }, hover: '#000000' }}
             />
-          </div>
+          </menu>
 
           <div className={`header-footer header-footer-${state.theme}`}>
             <Footer
@@ -64,7 +64,7 @@ const Header = (props) => {
             <ButtonsNavigate language={language} />
           </div>
 
-        </div>
+        </header>
       )}
     </MyContext.Consumer>
   )
