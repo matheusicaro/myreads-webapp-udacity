@@ -35,7 +35,7 @@ export const DrawerMenu = (props) => {
 
       <Drawer openSecondary={openRigth} open={isOpen}>
 
-        <div style={{padding: '20px'}}>
+        <div style={{ padding: '20px' }}>
           <header className='menu-title'>
             <IconButton tooltip={language.btnClose}>
               <Clear onClick={handleToggle} />

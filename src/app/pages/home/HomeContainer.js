@@ -80,7 +80,7 @@ class HomeContainer extends Component {
 
     render () {
       const { books, loading } = this.state
-      const { language, styleHide } = this.props
+      const { language } = this.props
 
       return (
         <article className='home'>

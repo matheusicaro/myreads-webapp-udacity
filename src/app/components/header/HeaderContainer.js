@@ -35,14 +35,14 @@ export class HeaderContainer extends Component {
     const { isOpenMenu } = this.state
 
     return (
-        <Header
-          isOpenMenu={isOpenMenu}
-          actionOpenMenu={this.isOpenMenu}
-          changeLanguage={changeLanguage}
-          language={language}
-          logout={logout}
-          changeTheme={changeTheme}
-        />
+      <Header
+        isOpenMenu={isOpenMenu}
+        actionOpenMenu={this.isOpenMenu}
+        changeLanguage={changeLanguage}
+        language={language}
+        logout={logout}
+        changeTheme={changeTheme}
+      />
     )
   }
 }
