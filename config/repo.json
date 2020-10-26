@@ -1,12 +1,14 @@
 {
-    "frontend": {
-        "name": "React",
-        "color": "#03A9F4",
-        "tags": [
-            "Material-ui",
+   "frontend":[
+      {
+         "name":"React",
+         "color":"#03A9F4",
+         "tags":[
+            "Material-ui v0",
             "Css Sass",
             "React 16.5v",
             "React ContextAPI"
-        ]
-    }
+         ]
+      }
+   ]
 }
