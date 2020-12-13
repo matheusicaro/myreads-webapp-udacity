@@ -1,25 +1,27 @@
 {
   "profile": {
     "pt": {
-      "kind": "For studies",
+      "kind": "Estudos",
       "name": "My Reads - Uma biblioteca online usando React Web App para estudos no curso da Udacity",
       "intro": "MyReads é um biblioteca online com uma estante de livros que permite selecionar e categorizar os livros que você leu, está lendo atualmente ou deseja ler. O projeto enfatiza o uso do React para criar o aplicativo e foi desenvolvido durante o curso da Udacity."
     },
     "en": {
-      "kind": "For studies",
+      "kind": "Studies",
       "name": "My Reads - A Library online using React Web App for studies in Udacity's Course",
       "intro": "MyReads is an online library with a bookcase that allows you to select and categorize the books that you have read, are currently reading or want to read. The project emphasizes the use of React to create the application and was developed during the Udacity course."
     },
     "es": {
-      "kind": "Para estudios",
+      "kind": "Estudios",
       "name": "Mis lecturas: una biblioteca en línea que usa la aplicación web React para estudios en el curso Udacity",
       "intro": "MyReads es una biblioteca en línea con una estantería que le permite seleccionar y clasificar los libros que ha leído, está leyendo actualmente o desea leer. El proyecto enfatiza el uso de React para crear la aplicación y fue desarrollado durante el curso Udacity."
     }
   },
-  "frontend": [
-    {
-      "name": "React",
-      "tags": ["Material-ui v0", "Css Sass", "React 16.5v", "React Context API"]
-    }
-  ]
+  "stack":{    
+    "frontend": [
+      {
+        "name": "React",
+        "tags": ["Material-ui v0", "Css Sass", "React 16.5v", "React Context API"]
+      }
+    ]
+  }
 }
