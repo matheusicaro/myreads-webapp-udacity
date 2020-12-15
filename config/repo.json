@@ -3,12 +3,12 @@
     "pt": {
       "kind": "Estudos",
       "name": "My Reads - Uma Biblioteca Online Para Organizar Suas Leituras",
-      "intro": "My Reads  é um biblioteca online com uma estante de livros que permite selecionar e categorizar os livros que você leu, está lendo atualmente ou deseja ler. O projeto enfatiza o uso do React para criar o aplicativo e foi desenvolvido durante o curso da Udacity."
+      "intro": "My Reads é um biblioteca online com uma estante de livros que permite selecionar e categorizar os livros que você leu, está lendo atualmente ou deseja ler. O projeto enfatiza o uso do React para criar o aplicativo e foi desenvolvido durante o curso da Udacity."
     },
     "en": {
       "kind": "Studies",
       "name": "My Reads - An Online Library To Organize Your Readings",
-      "intro": "My Reads  is an online library with a bookcase that allows you to select and categorize the books that you have read, are currently reading or want to read. The project emphasizes the use of React to create the application and was developed during the Udacity course."
+      "intro": "My Reads is an online library with a bookcase that allows you to select and categorize the books that you have read, are currently reading or want to read. The project emphasizes the use of React to create the application and was developed during the Udacity course."
     },
     "es": {
       "kind": "Estudios",
