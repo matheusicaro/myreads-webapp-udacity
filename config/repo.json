@@ -12,8 +12,8 @@
     },
     "es": {
       "kind": "Estudios",
-      "name": "Mis lecturas: una biblioteca en línea que usa la aplicación web React para estudios en el curso Udacity",
-      "intro": "MyReads es una biblioteca en línea con una estantería que le permite seleccionar y clasificar los libros que ha leído, está leyendo actualmente o desea leer. El proyecto enfatiza el uso de React para crear la aplicación y fue desarrollado durante el curso Udacity."
+      "name": "MyReads: una biblioteca en línea que usa la aplicación web React para estudios en el curso Udacity",
+      "intro": "My Reads es una biblioteca en línea con una estantería que le permite seleccionar y clasificar los libros que ha leído, está leyendo actualmente o desea leer. El proyecto enfatiza el uso de React para crear la aplicación y fue desarrollado durante el curso Udacity."
     }
   },
   "stack":{    
