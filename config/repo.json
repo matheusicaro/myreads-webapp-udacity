@@ -20,7 +20,7 @@
     "frontend": [
       {
         "name": "React",
-        "tags": ["Material-ui v0", "Css Sass", "React 16.5v", "React Context API"]
+        "tags": ["Material-ui - v0", "Css Sass", "React", "React Context API"]
       }
     ]
   }
