@@ -1,5 +1,7 @@
 # MY READS UDACITY - v1.0#
 
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/matheusicaro/myreads-webapp-udacity/blob/master/LICENSE)
+
 In the MyReads project, it is a bookcase application that allows you to select and categorize the books you have read, are currently reading or want to read. The project emphasizes using React to create the application.
 
 Also, this app uses a back-end API that is a virtual library made available by Udacity, which consists of hundreds of books to be queried and persists as you interact with the application.
