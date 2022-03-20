@@ -21,11 +21,12 @@
         "intro": "My Reads es una biblioteca en línea con una estantería que le permite seleccionar y clasificar los libros que ha leído, está leyendo actualmente o desea leer. El proyecto enfatiza el uso de React para crear la aplicación y fue desarrollado durante el curso Udacity."
       }
     },
+    "tags": ["React", "Material-UI", "Css Sass", "JavaScript", "Front-end"],
     "stack":{    
       "frontend": [
         {
           "name": "React",
-          "tags": ["Material-ui - v0", "Css Sass", "React", "React Context API", "JavaScript"]
+          "tags": ["Material-ui - v0", "Css Sass", "React Context API", "JavaScript"]
         }
       ]
     }
